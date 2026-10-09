@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { route, acceptEvidence, compactContext, authorizeTool, validateCompactContext, type Request, type Evidence } from '../controller/contracts.js';
+import { redact } from '../server/lib.mjs';
 
 const input: Request = { flow: 'F01', environment: 'isolated-lab', actor: 'HR Admin', runId: 'fixture-r02', attempt: 'a1',
   employeeId: 'E2E-AOCE-fixture-r02-a1-F01', revision: 'a'.repeat(40), budgetRemainingMs: 1200000, roleReady: true };
@@ -41,4 +42,9 @@ test('context truncation dropping source or actor detected; valid context accept
   assert.equal(validateCompactContext(context,input),true);
   assert.equal(validateCompactContext(context.replace('AC-EMP-02',''),input),false);
   assert.equal(validateCompactContext(context.replace(input.actor,''),input),false);
+});
+test('report error strings redact session/capability/auth header values', () => {
+  const raw='cookie: lab_session=synthetic-session\nx-lab-token: synthetic-capability\nAuthorization: Bearer synthetic-bearer';
+  const sanitized=redact(raw);
+  for (const value of ['synthetic-session','synthetic-capability','synthetic-bearer']) assert.equal(sanitized.includes(value),false);
 });

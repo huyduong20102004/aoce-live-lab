@@ -40,8 +40,13 @@ export function assertLabUrl() {
 }
 export function redact(value) {
   let text = typeof value === 'string' ? value : JSON.stringify(value);
-  for (const key of ['LAB_PASSWORD', 'LAB_VIEWER_PASSWORD', 'LAB_TOKEN']) {
-    if (process.env[key]) text = text.split(process.env[key]).join('[REDACTED]');
+  const secrets=['LAB_PASSWORD','LAB_VIEWER_PASSWORD','LAB_TOKEN'].map(key=>process.env[key]).filter(Boolean);
+  if (/^[a-zA-Z0-9-]{5,40}$/.test(process.env.LAB_RUN_ID || '')) {
+    const grant=readJson(path.join(PRIVATE,'grants',process.env.LAB_RUN_ID+'.json'));
+    if (grant?.token) secrets.push(grant.token);
   }
+  for (const secret of secrets) text=text.split(secret).join('[REDACTED]');
+  text=text.replace(/((?:authorization|x-lab-token|cookie)\s*:\s*)[^\r\n]+/gi,'$1[REDACTED]');
+  text=text.replace(/lab_session=[^;\s"'\\]+/g,'lab_session=[REDACTED]');
   return text;
 }

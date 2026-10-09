@@ -157,9 +157,11 @@ export function exportEvidence() {
   const manifest = readJson(path.join(runDir(), 'manifest.json'));
   const destination = path.join(path.dirname(ROOT), 'bai-nop-AOCE', 'live', 'runs', runId());
   fs.mkdirSync(destination, { recursive: true });
+  const sanitize=value=>typeof value==='string' ? redact(value) : Array.isArray(value) ? value.map(sanitize) :
+    value && typeof value==='object' ? Object.fromEntries(Object.entries(value).map(([key,item])=>[key,sanitize(item)])) : value;
   for (const name of ['manifest.json','preflight.json','discovery.json','cleanup.json','evidence-check.json']) {
     const file = path.join(runDir(), name);
-    if (fs.existsSync(file)) fs.writeFileSync(path.join(destination, name), redact(fs.readFileSync(file, 'utf8')));
+    if (fs.existsSync(file)) fs.writeFileSync(path.join(destination, name), JSON.stringify(sanitize(readJson(file)),null,2)+'\n');
   }
   for (const item of manifest?.cases || []) for (const artifact of item.artifacts) {
     const file = path.join(ROOT, artifact.path);
