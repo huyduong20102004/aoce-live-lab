@@ -77,6 +77,9 @@ test('F01 @control collision and cleanup outside exact ownership are rejected', 
   expect((await lab.admin.post('/api/lab/reservations',{data:{flow:'F01',attempt:'a1',caseId,employeeId:lab.id}})).status()).toBe(409);
   expect((await lab.admin.delete('/api/lab/records/EMP-1001')).status()).toBe(403);
   expect((await (await lab.admin.get('/api/employees?id=EMP-1001')).json()).records.length).toBe(1);
+  await lab.seed();
+  expect((await lab.admin.post('/api/employees',{data:{employeeId:lab.id,department:'QA'}})).status()).toBe(409);
+  expect((await lab.lookup()).writes).toBe(1);
 });
 test('F01 @control INC-64 controlled missing executable is environment blocked', async ({ lab, playwright }, info) => {
   lab.annotate(['LOCAL-INC-64','LAB-AOCE-05'], 'Browser launch failure before app actions is environment issue, not app flaky');

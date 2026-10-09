@@ -46,6 +46,8 @@ finally {
     try { evidence(); } catch (issue) { error ||= issue; finalize(error); console.error(redact(issue.message)); }
     exportEvidence();
     const manifest = readJson(path.join(runDir(), 'manifest.json'));
+    if (manifest.label === 'RUN-PASSED' && suite === 'smoke' && trigger === 'manual-local')
+      atomicJson(path.join(PRIVATE,'manual-validation.json'), { code_revision:manifest.code_revision, run_id:manifest.run_id, validated_at:manifest.finished_at });
     console.log(JSON.stringify({ run_id: manifest.run_id, revision: manifest.code_revision, trigger: manifest.trigger,
       label: manifest.label, selected: manifest.selected_count, executed: manifest.executed_count, cleanup: manifest.cleanup_status }));
   }

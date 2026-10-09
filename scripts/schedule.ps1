@@ -3,6 +3,11 @@ $ErrorActionPreference = 'Stop'
 $aoceLabRoot = Split-Path -Parent $PSScriptRoot
 $aoceEvidence = Join-Path (Split-Path -Parent $aoceLabRoot) 'bai-nop-AOCE/live'
 $aoceTaskName = 'AOCE-PortalLite-Live-Smoke'
+$aoceProofPath = Join-Path $aoceLabRoot '.lab/manual-validation.json'
+if (-not (Test-Path -LiteralPath $aoceProofPath)) { throw 'Successful manual smoke proof required before scheduling.' }
+$aoceProof = Get-Content -LiteralPath $aoceProofPath -Raw | ConvertFrom-Json
+$aoceRevision = & git -C $aoceLabRoot rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or $aoceProof.code_revision -ne $aoceRevision) { throw 'Manual smoke proof must match current source revision.' }
 if ((Get-TimeZone).BaseUtcOffset.TotalHours -ne 7) { throw 'This definition requires UTC+7 Windows timezone for 01:17 Vietnam.' }
 $aoceEntry = Join-Path $PSScriptRoot 'scheduled-entry.ps1'
 $aoceAction = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument ('-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "' + $aoceEntry + '"') -WorkingDirectory $aoceLabRoot
