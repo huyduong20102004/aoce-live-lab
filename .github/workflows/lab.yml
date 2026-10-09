@@ -1,0 +1,67 @@
+name: AOCE isolated local application
+"on":
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 18 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: aoce-lab-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'live' }}
+  cancel-in-progress: false
+jobs:
+  pr:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      LAB_LANE: pr
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run context:regression
+      - run: npm run lab:discover
+      - if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-design-${{ github.run_id }}
+          path: evidence-export/pr/
+          if-no-files-found: error
+  live:
+    if: >-
+      ${{ github.event_name != 'pull_request' &&
+          github.ref_name == github.event.repository.default_branch &&
+          (github.event_name == 'workflow_dispatch' ||
+           (vars.AOCE_SCHEDULE_ENABLED == 'true' && vars.AOCE_MANUAL_VALIDATED_REVISION == github.sha)) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Generate ephemeral private lab accounts
+        run: npm run lab:init
+      - run: node node_modules/playwright/cli.js install --with-deps chromium
+      - run: npm run typecheck
+      - run: npm run context:regression
+      - name: Execute local application smoke
+        run: node scripts/live-run.mjs --suite=smoke --trigger=${{ github.event_name == 'schedule' && 'github-schedule' || 'github-manual' }}
+      - if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ../bai-nop-AOCE/live/runs/
+          if-no-files-found: error
+          retention-days: 7
