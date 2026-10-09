@@ -40,7 +40,6 @@ export const test = base.extend<{ lab: Lab }>({
     const context = await browser.newContext({ baseURL: process.env.LAB_BASE_URL, extraHTTPHeaders: headers, viewport: { width: 1365, height: 900 } });
     const cookies = (await actorApi.storageState()).cookies; // Memory only. Never write auth state to evidence/source.
     await context.addCookies(cookies);
-    await context.tracing.start({ screenshots: true, snapshots: true, sources: true });
     const page = await context.newPage(); const employee = new EmployeePage(page);
     const lookup = async () => {
       const response = await admin.get(`/api/lab/records/${id}`); expect(response.ok()).toBeTruthy(); return response.json();
@@ -66,10 +65,6 @@ export const test = base.extend<{ lab: Lab }>({
         expect((await lookup()).found).toBe(false);
         testInfo.annotations.push({ type: 'cleanup', description: 'success' });
       } else testInfo.annotations.push({ type: 'cleanup', description: 'not-applicable' });
-      if (testInfo.status !== testInfo.expectedStatus) {
-        const trace = testInfo.outputPath('trace.zip'); await context.tracing.stop({ path: trace });
-        await testInfo.attach('private-trace', { path: trace, contentType: 'application/zip' });
-      } else await context.tracing.stop();
       await context.close(); if (actorApi !== admin) await actorApi.dispose(); await admin.dispose();
     }
   },

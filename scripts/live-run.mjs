@@ -17,7 +17,11 @@ process.env.LAB_RUN_ID ||= `${Date.now().toString(36)}-${crypto.randomBytes(4).t
 const grep = suite === 'smoke' ? '@smoke' : null;
 let server, error, initialized = false;
 async function ready() {
-  try { return (await fetch(assertLabUrl() + '/api/health', { signal: AbortSignal.timeout(1000) })).ok; }
+  try {
+    const response = await fetch(assertLabUrl() + '/api/health', { headers: { Connection: 'close' }, signal: AbortSignal.timeout(1000) });
+    const value = await response.json();
+    return response.ok && value.app === 'AOCE PortalLite' && value.environment === 'isolated-lab';
+  }
   catch { return false; }
 }
 try {

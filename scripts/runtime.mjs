@@ -31,7 +31,7 @@ export function bootstrap(trigger = 'manual-local', suite = 'smoke') {
 }
 export async function client(role = 'HR Admin', owned = true) {
   const base = assertLabUrl();
-  const login = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+  const login = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', Connection: 'close' },
     body: JSON.stringify({ username: process.env[role === 'Viewer' ? 'LAB_VIEWER_USERNAME' : 'LAB_USERNAME'],
       password: process.env[role === 'Viewer' ? 'LAB_VIEWER_PASSWORD' : 'LAB_PASSWORD'] }), signal: AbortSignal.timeout(5000) });
   if (!login.ok) throw new Error(`BLOCKED: ${role} login failed (${login.status})`);
@@ -39,7 +39,7 @@ export async function client(role = 'HR Admin', owned = true) {
   const grant = owned ? readJson(path.join(PRIVATE, 'grants', runId() + '.json')) : null;
   if (owned && !grant) throw new Error('Owned grant missing; preflight required');
   return async (url, options = {}) => {
-    const response = await fetch(base + url, { ...options, headers: { 'Content-Type': 'application/json', Cookie: cookie,
+    const response = await fetch(base + url, { ...options, headers: { 'Content-Type': 'application/json', Connection: 'close', Cookie: cookie,
       ...(grant ? { 'x-lab-run-id': runId(), 'x-lab-token': grant.token } : {}), ...options.headers }, signal: options.signal || AbortSignal.timeout(5000) });
     const data = await response.json();
     if (!response.ok) throw Object.assign(new Error(data.error || 'Lab helper failed'), { status: response.status });
@@ -52,7 +52,7 @@ export async function preflight() {
     throw new Error(`BLOCKED: required ${key} missing`);
   const manifest = readJson(path.join(runDir(), 'manifest.json'));
   if (!manifest || manifest.deadline < Date.now()) throw new Error('Run bootstrap/budget missing or exhausted');
-  const health = await fetch(assertLabUrl() + '/api/health', { signal: AbortSignal.timeout(5000) });
+  const health = await fetch(assertLabUrl() + '/api/health', { headers: { Connection: 'close' }, signal: AbortSignal.timeout(5000) });
   const app = await health.json();
   if (!health.ok || app.environment !== 'isolated-lab' || app.build !== BUILD || !app.persistent) throw new Error('Wrong app/readiness/build');
   const admin = await client('HR Admin', false), viewer = await client('Viewer', false);
