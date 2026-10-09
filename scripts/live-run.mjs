@@ -17,7 +17,7 @@ process.env.LAB_RUN_ID ||= `${Date.now().toString(36)}-${crypto.randomBytes(4).t
 const grep = suite === 'smoke' ? '@smoke' : null;
 let server, error, initialized = false;
 async function ready() {
-  try { return (await fetch(assertLabUrl() + '/api/health', { signal: AbortSignal.timeout(1000) })).ok(); }
+  try { return (await fetch(assertLabUrl() + '/api/health', { signal: AbortSignal.timeout(1000) })).ok; }
   catch { return false; }
 }
 try {
