@@ -31,10 +31,12 @@ export const test = base.extend<{ lab: Lab }>({
     expect(auth.ok()).toBeTruthy();
     const reserve = await admin.post('/api/lab/reservations', { data: { flow, attempt, caseId, employeeId: id } });
     expect(reserve.status()).toBe(201);
-    const decision = route({ flow, environment: process.env.LAB_ENVIRONMENT!, actor, runId: caseRunId, attempt, employeeId: id,
+    const routeInput = { flow, environment: process.env.LAB_ENVIRONMENT!, actor, runId: caseRunId, attempt, employeeId: id,
       revision: capability.revision, budgetRemainingMs: capability.deadline - Date.now(), roleReady: true,
-      seedOwned: flow === 'F02', seedDepartment: flow === 'F02' ? 'QA' : undefined });
-    expect(decision.allowed, decision.reason).toBeTruthy();
+      seedOwned: false, seedDepartment: undefined as string | undefined };
+    const decision = route(routeInput);
+    if (flow === 'F02') expect(decision.outcome).toBe('BLOCKED'); // Setup may reserve/seed; edit cannot execute yet.
+    else expect(decision.allowed, decision.reason).toBeTruthy();
     const actorApi = actor === 'HR Admin' ? admin : await playwright.request.newContext({ baseURL: process.env.LAB_BASE_URL, extraHTTPHeaders: headers });
     if (actor === 'Viewer') expect((await actorApi.post('/api/login', { data: { username: process.env.LAB_VIEWER_USERNAME, password: process.env.LAB_VIEWER_PASSWORD } })).ok()).toBeTruthy();
     const context = await browser.newContext({ baseURL: process.env.LAB_BASE_URL, extraHTTPHeaders: headers, viewport: { width: 1365, height: 900 } });
@@ -47,6 +49,12 @@ export const test = base.extend<{ lab: Lab }>({
     const seed = async (department = 'QA') => {
       const response = await admin.post('/api/employees', { data: { employeeId: id, department } });
       expect(response.status()).toBe(201);
+      const created=await response.json();
+      expect(created.record.owner).toBe(runId); expect(created.record.employeeId).toBe(id);
+      if (flow === 'F02') {
+        const ready=route({...routeInput,seedOwned:created.record.owner===runId,seedDepartment:created.record.department});
+        expect(ready.allowed,ready.reason).toBeTruthy();
+      }
     };
     testInfo.annotations.push({ type: 'flow', description: flow }, { type: 'actor', description: actor },
       { type: 'employee_id', description: id }, { type: 'attempt_id', description: attempt },

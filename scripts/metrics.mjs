@@ -16,13 +16,14 @@ for (const run of runs) {
 }
 const result={mode:'LIVE-LOCAL',generated_at:new Date().toISOString(),cost_total:'UNKNOWN',cost_reason:'No provider calls at runner runtime; no monetary rate for local compute/CI. Synthetic packet ledger excluded.',groups:[]};
 for (const group of Object.values(groups)) {
-  const executed=group.business.filter(c=>c.status!=='skipped'), passes=executed.filter(c=>c.status==='passed');
+  const executed=group.business.filter(c=>c.status!=='skipped' && c.oracle && c.source_refs.length), passes=executed.filter(c=>c.status==='passed');
+  const blockedBeforeBody=group.business.filter(c=>c.status!=='skipped' && (!c.oracle || !c.source_refs.length));
   const needs=executed.filter(c=>c.flow!=='F03'), cleanupSuccess=needs.filter(c=>c.cleanup==='success');
   const full=executed.filter(c=>c.oracle && c.source_refs.length && c.artifacts.length);
   const attempts=executed.reduce((n,c)=>n+c.attempts,0), times=executed.map(c=>c.test_seconds);
   const scheduled=group.runs.filter(r=>r.trigger==='windows-schedule'||r.trigger==='github-schedule');
   result.groups.push({revision:group.revision,runs:group.runs,
-    business_metrics:{selected:group.business.length,executed:executed.length,first_pass:passes.filter(c=>c.attempts===1).length,
+    business_metrics:{selected:group.business.length,executed:executed.length,blocked_before_body:blockedBeforeBody.length,first_pass:passes.filter(c=>c.attempts===1).length,
       eventual_pass:passes.length,failed:executed.filter(c=>c.status==='failed'||c.status==='timedOut').length,
       flaky_pass:passes.filter(c=>c.attempts>1).length,attempts,retry_overhead:attempts-executed.length,
       evidence_full:full.length,cleanup_needed:needs.length,cleanup_success:cleanupSuccess.length,
@@ -41,6 +42,7 @@ for (const group of result.groups) {
   lines.push(`| ${group.revision} | ${group.runs.length} | ${m.selected}/${m.executed} | ${m.first_pass}/${m.eventual_pass} | ${m.flaky_pass}/${m.failed} | ${m.cleanup_success}/${m.cleanup_needed} | ${m.evidence_full}/${m.executed} | ${c.passed}/${c.selected} | ${group.observed_scheduled_runs} |`);
   lines.push('');
   lines.push(`Test duration: n=${m.test_seconds.n}, median=${m.test_seconds.median}s, range=${m.test_seconds.min}–${m.test_seconds.max}s. Queue/install/cleanup excluded. No inference of production reliability from this small local cohort.`);
+  lines.push(`Blocked before application test body: ${m.blocked_before_body}; retained in selected, excluded from executed denominator. Reporter-started count can differ from business-executed count on fixture failures.`);
 }
 lines.push('','Runner model calls=0 (deterministic tests), usage=N/A, model cost=0; total local execution/CI money UNKNOWN because no compute rate supplied. Scheduled observed count requires OS/CI trigger evidence in separate reports; expected daily slots must not be invented.','');
 fs.writeFileSync(path.join(evidenceRoot,'actual-metrics.md'),lines.join('\n'));
