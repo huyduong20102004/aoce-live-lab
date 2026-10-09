@@ -78,9 +78,13 @@ function flatten(suites = []) {
 export function discover(grep = '@smoke') {
   const args = ['test', '--project=chromium', '--list', '--reporter=json', ...(grep ? [`--grep=${grep}`] : [])];
   const output = cli(args, { capture: true });
-  if (output.status) throw new Error('Discovery failed: ' + redact(output.stderr || 'selector error'));
-  const data = JSON.parse(output.stdout);
+  let data;
+  try { data = JSON.parse(output.stdout); }
+  catch { throw new Error('Discovery failed: ' + redact(output.stderr || 'invalid reporter output')); }
   const cases = flatten(data.suites).map(s => ({ id: s.id, title: s.title, flow: /\b(F0[123])\b/.exec(s.title)?.[1] }));
+  if (!cases.length && (data.errors || []).some(e => /No tests found/.test(e.message)))
+    throw Object.assign(new Error('NO-TESTS: selector chose zero cases'), { exitCode: 8 });
+  if (output.status) throw new Error('Discovery failed: ' + redact((data.errors || []).map(e=>e.message).join('; ') || output.stderr || 'selector error'));
   if (!cases.length) throw Object.assign(new Error('NO-TESTS: selector chose zero cases'), { exitCode: 8 });
   if (grep === '@smoke' && (cases.length !== 3 || new Set(cases.map(c => c.flow)).size !== 3)) throw new Error('Smoke must select exactly F01/F02/F03');
   const target = process.env.LAB_LANE === 'pr' ? path.join(ROOT, 'evidence-export/pr') : runDir();
