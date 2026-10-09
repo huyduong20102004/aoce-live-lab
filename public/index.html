@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PortalLite · AOCE Lab</title><link rel="stylesheet" href="/style.css"><link rel="icon" href="/favicon.svg"><script type="module" src="/app.js"></script></head>
+<body>
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="/">P<span>PortalLite</span></a><div class="lab-badge">AOCE · isolated lab</div><nav><a href="/" aria-current="page">Employee directory</a></nav><div class="sidebar-footer">Dữ liệu thử trên máy của bạn.<br>Không kết nối hệ thống thật.</div></aside>
+    <main>
+      <section id="login-panel" class="login-panel">
+        <div class="eyebrow">EMPLOYEE WORKSPACE</div><h1>Đăng nhập PortalLite</h1><p class="muted">Sử dụng tài khoản HR Admin hoặc Viewer của lab.</p>
+        <form id="login-form"><label>Username<input name="username" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button type="submit" class="primary">Sign in</button><p id="login-error" role="alert"></p></form>
+        <p class="muted small">Tài khoản local được lưu trong file .env của project.</p>
+      </section>
+      <section id="workspace" hidden>
+        <header class="topbar"><div class="breadcrumb">Workspace / Employees</div><div class="account"><span id="account-role"></span><button id="logout" class="subtle">Sign out</button></div></header>
+        <div class="page-heading"><div><div class="eyebrow">PEOPLE & ORGANIZATION</div><h1>Employee directory</h1><p class="muted">Tạo hồ sơ và quản lý department của nhân viên.</p></div><button id="create" class="primary">Create employee</button></div>
+        <div id="scenario-bar" class="scenario-bar" hidden><span>Locator recovery fixture</span><button id="background-save">Save</button></div>
+        <div id="notice" role="status" class="notice" hidden></div>
+        <div class="directory-card"><iframe title="Employee directory" src="/directory"></iframe></div>
+        <div class="workspace-footer"><span id="session-name"></span><span>Exact ID search · local persistent data</span></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="employee-dialog" aria-labelledby="dialog-title">
+    <form id="employee-form"><div class="dialog-header"><div><div class="eyebrow">EMPLOYEE RECORD</div><h2 id="dialog-title">Create employee</h2></div><button type="button" id="close-dialog" aria-label="Close dialog" class="icon-button">×</button></div>
+      <label>Employee ID<input id="employee-id" name="employeeId" required pattern="[A-Za-z0-9-]{3,100}" maxlength="100"></label>
+      <label>Department<select id="department" name="department"><option>QA</option><option>Engineering</option><option>Sales</option></select></label>
+      <p id="form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="cancel">Cancel</button><button type="submit" class="primary">Save</button></div>
+    </form>
+    <div id="busy-overlay" class="overlay" hidden role="status">Preparing form…</div>
+  </dialog>
+</body></html>

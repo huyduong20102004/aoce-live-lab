@@ -1,0 +1,29 @@
+{
+  "name": "aoce-portallite-live-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22 <23" },
+  "scripts": {
+    "lab:init": "node scripts/init.mjs",
+    "start": "node server/server.mjs",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "context:regression": "node node_modules/tsx/dist/cli.mjs --test tests/controller-regression.test.ts",
+    "test": "node scripts/live-run.mjs --suite=all",
+    "lab:smoke": "node scripts/live-run.mjs --suite=smoke",
+    "lab:preflight": "node scripts/cli.mjs preflight",
+    "lab:discover": "node scripts/cli.mjs discover",
+    "lab:execute": "node scripts/cli.mjs execute",
+    "lab:reconcile": "node scripts/cli.mjs reconcile",
+    "lab:evidence": "node scripts/cli.mjs evidence",
+    "lab:watchdog": "node scripts/watchdog.mjs",
+    "lab:metrics": "node scripts/metrics.mjs",
+    "lab:scheduled": "node scripts/live-run.mjs --suite=smoke --trigger=windows-schedule"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.5",
+    "tsx": "4.20.6",
+    "typescript": "7.0.2"
+  }
+}
