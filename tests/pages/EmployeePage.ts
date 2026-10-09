@@ -11,7 +11,7 @@ export class EmployeePage {
     await this.elements.create.click();
     await expect(this.elements.dialog).toHaveAccessibleName('Create employee');
     await this.elements.dialog.getByLabel('Employee ID', { exact: true }).fill(id);
-    await this.elements.dialog.getByLabel('Department', { exact: true }).selectOption(department);
+    await this.elements.dialog.getByRole('combobox', { name: 'Department', exact: true }).selectOption(department);
     await expect(this.elements.save).toHaveCount(1);
     await this.elements.save.click();
     if (expectUnknown) await expect(this.elements.dialog.getByRole('alert')).toContainText('Write outcome UNKNOWN');
@@ -25,7 +25,7 @@ export class EmployeePage {
     await this.search(id); await this.elements.row(id).getByRole('button', { name: 'Edit', exact: true }).click();
     await expect(this.elements.dialog).toHaveAccessibleName('Edit employee');
     await expect(this.elements.dialog.getByLabel('Employee ID', { exact: true })).toHaveValue(id);
-    await this.elements.dialog.getByLabel('Department', { exact: true }).selectOption(department);
+    await this.elements.dialog.getByRole('combobox', { name: 'Department', exact: true }).selectOption(department);
     await this.elements.save.click(); await expect(this.elements.dialog).not.toBeVisible();
     await this.search(id);
   }

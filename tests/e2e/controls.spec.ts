@@ -8,7 +8,7 @@ test('F01 @control INC-61 ambiguous Save rejected then scoped overlay recovery',
   lab.annotate(['AC-EMP-01','AC-EMP-02','LAB-AOCE-05','LOCAL-INC-61'], 'Two Save targets reject naive locator; scoped dialog preserves ID/QA');
   await lab.employee.open('ambiguous-save'); await lab.employee.elements.create.click();
   await lab.employee.elements.dialog.getByLabel('Employee ID', { exact: true }).fill(lab.id);
-  await lab.employee.elements.dialog.getByLabel('Department', { exact: true }).selectOption('QA');
+  await lab.employee.elements.dialog.getByRole('combobox', { name: 'Department', exact: true }).selectOption('QA');
   await expect(lab.employee.page.getByRole('button', { name: 'Save', exact: true })).toHaveCount(2);
   await expect(lab.employee.page.getByRole('button', { name: 'Save', exact: true }).click({ timeout: 500 })).rejects.toThrow(/strict mode violation/);
   expect((await lab.lookup()).found).toBe(false);

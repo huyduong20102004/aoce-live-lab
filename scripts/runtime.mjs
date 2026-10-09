@@ -159,7 +159,7 @@ export function exportEvidence() {
   }
   for (const item of manifest?.cases || []) for (const artifact of item.artifacts) {
     const file = path.join(ROOT, artifact.path);
-    if (fs.existsSync(file)) fs.copyFileSync(file, path.join(destination, `${item.flow}-${item.logical_case_id.slice(0, 12)}-${artifact.name}.png`));
+    if (fs.existsSync(file)) fs.copyFileSync(file, path.join(destination, `${item.flow}-${crypto.createHash('sha256').update(item.logical_case_id).digest('hex').slice(0,12)}-${artifact.name}.png`));
   }
   console.log(`Sanitized evidence exported: bai-nop-AOCE/live/runs/${runId()}`);
   return destination;

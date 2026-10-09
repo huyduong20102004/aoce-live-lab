@@ -23,7 +23,7 @@
   <dialog id="employee-dialog" aria-labelledby="dialog-title">
     <form id="employee-form"><div class="dialog-header"><div><div class="eyebrow">EMPLOYEE RECORD</div><h2 id="dialog-title">Create employee</h2></div><button type="button" id="close-dialog" aria-label="Close dialog" class="icon-button">×</button></div>
       <label>Employee ID<input id="employee-id" name="employeeId" required pattern="[A-Za-z0-9-]{3,100}" maxlength="100"></label>
-      <label>Department<select id="department" name="department"><option>QA</option><option>Engineering</option><option>Sales</option></select></label>
+      <label for="department">Department</label><select id="department" name="department"><option>QA</option><option>Engineering</option><option>Sales</option></select>
       <p id="form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="cancel">Cancel</button><button type="submit" class="primary">Save</button></div>
     </form>
     <div id="busy-overlay" class="overlay" hidden role="status">Preparing form…</div>

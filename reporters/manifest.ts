@@ -12,9 +12,12 @@ export default class ManifestReporter implements Reporter {
   }
   onTestEnd(test: TestCase, result: TestResult) {
     const annotation = (type: string) => test.annotations.find(a => a.type === type)?.description ?? null;
-    const artifacts = result.attachments.filter(a => a.path && a.contentType === 'image/png').map(a => ({
-      name: a.name, path: path.relative(ROOT, a.path!), sha256: createHash('sha256').update(fs.readFileSync(a.path!)).digest('hex'),
-    }));
+    const imageDir=path.join(ROOT,'.lab','runs',process.env.LAB_RUN_ID!,'screenshots');
+    const artifacts = result.attachments.filter(a => (a.path || a.body) && a.contentType === 'image/png').map((a,index) => {
+      const file=a.path || path.join(imageDir,`${test.id}-${result.retry}-${index}.png`);
+      if (!a.path) { fs.mkdirSync(imageDir,{recursive:true}); fs.writeFileSync(file,a.body!); }
+      return {name:a.name,path:path.relative(ROOT,file),sha256:createHash('sha256').update(fs.readFileSync(file)).digest('hex')};
+    });
     this.cases.push({ logical_case_id: test.id, title: test.title, kind: test.title.includes('@smoke') ? 'business-smoke' : 'lab-control',
       flow: annotation('flow'), actor: annotation('actor'), employee_id: annotation('employee_id'), case_run_id: annotation('case_run_id'),
       attempt_id: annotation('attempt_id'), attempts: result.retry + 1, status: result.status, expected_status: test.expectedStatus,
