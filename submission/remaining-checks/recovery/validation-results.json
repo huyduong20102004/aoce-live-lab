@@ -1,14 +1,10 @@
 {
   "scope": "INDEPENDENT EXPORTED-EVIDENCE CONSISTENCY CHECKS",
   "tested_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
-  "status": "PENDING",
-  "passed": 15,
+  "status": "VERIFIED",
+  "passed": 24,
   "failed": 0,
-  "pending": [
-    "actual scheduled run",
-    "final GitHub scheduler state",
-    "Windows task retirement"
-  ],
+  "pending": [],
   "checks": [
     {
       "check": "workflow_dispatch: actual API event and successful tested revision",
@@ -68,6 +64,42 @@
     },
     {
       "check": "windows: catch-up enabled, waking disabled, interactive identity",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: actual API event and successful tested revision",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: source and API run agree",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: three executed F01-F03 business assertions pass",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: cleanup resolved and records absent",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: exported assertion screenshots match manifest hashes",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: evidence completeness",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: genuine timer context and reviewed verification purpose",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: diagnostic disabled and daily enabled with validated source",
+      "result": "PASSED"
+    },
+    {
+      "check": "windows: own task disabled; GitHub chosen as primary",
       "result": "PASSED"
     }
   ]

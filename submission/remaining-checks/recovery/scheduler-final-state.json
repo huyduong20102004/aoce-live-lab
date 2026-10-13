@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-13T03:48:21.674150+00:00",
+  "tested_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+  "scheduled_run_id": 38343335559,
+  "scheduled_run_url": "https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38343335559",
+  "diagnostic_workflow_state": "disabled_manually",
+  "diagnostic_variable": "false",
+  "daily_workflow_state": "active",
+  "daily_variable": "true",
+  "validated_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+  "daily_cron_utc": "17 18 * * *",
+  "daily_target_vietnam": "01:17 UTC+7",
+  "scope_note": "Actual schedule event verified using temporary five-minute cron; next daily slot is future."
+}

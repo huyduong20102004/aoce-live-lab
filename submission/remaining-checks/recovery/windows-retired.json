@@ -1,0 +1,10 @@
+﻿{
+    "captured_at":  "2026-10-13T10:48:55.4965774+07:00",
+    "task":  "AOCE-PortalLite-Live-Smoke",
+    "state":  "Disabled",
+    "description":  "AOCE isolated PortalLite smoke owned by this local lab",
+    "action":  "Disabled only this lab task; definition retained for reversible re-enable",
+    "primary_scheduler":  "GitHub Actions",
+    "verified_scheduled_run":  "https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38343335559",
+    "daily_target_vietnam":  "01:17 UTC+7"
+}
