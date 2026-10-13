@@ -1,0 +1,11 @@
+eid,flow,outcome,attempts,evidence,cleanup,model_calls,usage_status,measured_subtotal,test_seconds
+E01,F01,first-pass,1,full,success,0,not-applicable,.10,80
+E02,F02,flaky-pass,2,full,success,1,complete,.16,150
+E03,F03,first-pass,1,full,not-applicable,0,not-applicable,.04,40
+E04,F01,failed,2,full,failed,1,complete,.18,170
+E05,F02,flaky-pass,2,partial,success,1,complete,.17,145
+E06,F03,blocked,0,none,not-applicable,0,not-applicable,.02,not-executed
+E07,F01,skipped,0,none,not-applicable,0,not-applicable,.00,not-executed
+E08,F02,first-pass,1,full,unknown,1,missing,.08,85
+E09,F03,failed,1,full,not-applicable,0,not-applicable,.05,55
+E10,F01,first-pass,1,full,success,0,not-applicable,.09,75

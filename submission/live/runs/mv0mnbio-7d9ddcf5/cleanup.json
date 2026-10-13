@@ -1,0 +1,8 @@
+{
+  "mode": "LIVE",
+  "run_id": "mv0mnbio-7d9ddcf5",
+  "cleanup_status": "resolved",
+  "unresolved_count": 0,
+  "records": [],
+  "rationale": "Preflight did not issue capability; runner never dispatched."
+}

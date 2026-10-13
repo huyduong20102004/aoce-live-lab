@@ -1,0 +1,36 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "A",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "REQ-PACKET-AOCE",
+    "AC-EMP-01",
+    "AC-EMP-02",
+    "POLICY-PACKET-AOCE",
+    "LAB-AOCE-05",
+    "tests/e2e/smoke.spec.ts",
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing",
+    "Search SLA, API endpoint, audit schema, backend role enforcement, actual pricing and production permissions: Not specified.",
+    "No live budget was granted in POLICY-PACKET-AOCE; actual budget compliance is not established by the supplied evidence."
+  ],
+  "rationale": "Matching actual local Playwright evidence for this run, attempt, flow and revision on portallite-local-1 reports passed. Reviewed F01 assertions prove absence before creation, exactly one search row with the exact employee ID, visible QA department, exact-ID lookup and one owned write, satisfying AC-EMP-01/02. Owned-only cleanup succeeded and the record was absent afterward. Supplied manifest SHA-256: 5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78. The reference archive remains SYNTHETIC / SIMULATED: EV-bench-1, EV-other-1 and CONTEXT-PACKET-02/CTX-08 describe fixture or other-run states and are excluded as current proof. LAB-AOCE-05 requires stopping mutations and reconciling unknown writes before retry. Policy limits of one safe runner retry, one read recovery and 20 minutes per run are design parameters. No new write, retry or cleanup is needed. Runtime model calls were 0; subscription tokens do not establish billable monetary cost."
+}

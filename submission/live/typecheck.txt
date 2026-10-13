@@ -1,0 +1,3 @@
+Command: node node_modules/typescript/bin/tsc --noEmit
+Revision: 68ae69680f53e68e541813c0f044c5d22067389a
+Exit code: 0

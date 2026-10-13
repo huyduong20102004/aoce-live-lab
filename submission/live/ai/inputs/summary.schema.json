@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "attempt_id": {
+      "type": "string"
+    },
+    "flow_id": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "string"
+    },
+    "code_revision": {
+      "type": "string"
+    },
+    "config": {
+      "type": "string"
+    },
+    "employee_id": {
+      "type": "string"
+    },
+    "expected_department": {
+      "type": "string"
+    },
+    "observed_department": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "oracle_checks": {
+      "type": "object",
+      "properties": {
+        "unique_id": {
+          "type": "boolean"
+        },
+        "exact_search_id": {
+          "type": "boolean"
+        },
+        "department": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "unique_id",
+        "exact_search_id",
+        "department"
+      ],
+      "additionalProperties": false
+    },
+    "runner_evidence_ref": {
+      "type": "string"
+    },
+    "verdict": {
+      "type": "string"
+    },
+    "cleanup_scope": {
+      "type": "string"
+    },
+    "cleanup_outcome": {
+      "type": "string"
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "mode",
+    "run_id",
+    "attempt_id",
+    "flow_id",
+    "actor",
+    "code_revision",
+    "config",
+    "employee_id",
+    "expected_department",
+    "observed_department",
+    "source_refs",
+    "oracle_checks",
+    "runner_evidence_ref",
+    "verdict",
+    "cleanup_scope",
+    "cleanup_outcome",
+    "unknowns",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

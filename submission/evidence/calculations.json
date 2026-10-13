@@ -1,0 +1,182 @@
+{
+  "label": "SIMULATED",
+  "rate": "RATE-SYN-01",
+  "U1": {
+    "A": {
+      "input_total_known": {
+        "n": 3,
+        "median": 18000,
+        "min": 17500,
+        "max": 19000
+      },
+      "output_known": {
+        "n": 3,
+        "median": 2400,
+        "min": 2300,
+        "max": 2500
+      },
+      "total_tokens_known": {
+        "n": 3,
+        "median": 20400,
+        "min": 19800,
+        "max": 21500
+      },
+      "e2e_seconds": {
+        "n": 3,
+        "median": 301,
+        "min": 290,
+        "max": 318
+      },
+      "qa_minutes": {
+        "n": 3,
+        "median": 9,
+        "min": 8,
+        "max": 9
+      },
+      "ci_minutes": {
+        "n": 3,
+        "median": 4.1,
+        "min": 4.0,
+        "max": 4.2
+      },
+      "accepted": 3,
+      "known_complete_rows_cost": "0.325175",
+      "cost_lower_bound": "0.325175",
+      "cost_total": "0.325175",
+      "cost_per_accepted": "0.1083916666666666666666666667",
+      "cost_per_accepted_lower_bound": "0.1083916666666666666666666667"
+    },
+    "B": {
+      "input_total_known": {
+        "n": 3,
+        "median": 6000,
+        "min": 5900,
+        "max": 6200
+      },
+      "output_known": {
+        "n": 3,
+        "median": 920,
+        "min": 900,
+        "max": 950
+      },
+      "total_tokens_known": {
+        "n": 3,
+        "median": 6900,
+        "min": 6820,
+        "max": 7150
+      },
+      "e2e_seconds": {
+        "n": 3,
+        "median": 239,
+        "min": 233,
+        "max": 245
+      },
+      "qa_minutes": {
+        "n": 3,
+        "median": 12,
+        "min": 11,
+        "max": 13
+      },
+      "ci_minutes": {
+        "n": 3,
+        "median": 3.5,
+        "min": 3.4,
+        "max": 3.6
+      },
+      "accepted": 0,
+      "known_complete_rows_cost": "0.237005",
+      "cost_lower_bound": "0.237005",
+      "cost_total": "0.237005",
+      "cost_per_accepted": "N/A",
+      "cost_per_accepted_lower_bound": "N/A"
+    },
+    "C": {
+      "input_total_known": {
+        "n": 2,
+        "median": 8350.0,
+        "min": 8200,
+        "max": 8500
+      },
+      "output_known": {
+        "n": 2,
+        "median": 1425.0,
+        "min": 1400,
+        "max": 1450
+      },
+      "total_tokens_known": {
+        "n": 2,
+        "median": 9775.0,
+        "min": 9650,
+        "max": 9900
+      },
+      "e2e_seconds": {
+        "n": 3,
+        "median": 260,
+        "min": 251,
+        "max": 267
+      },
+      "qa_minutes": {
+        "n": 3,
+        "median": 7,
+        "min": 6,
+        "max": 8
+      },
+      "ci_minutes": {
+        "n": 3,
+        "median": 3.8,
+        "min": 3.7,
+        "max": 3.9
+      },
+      "accepted": 2,
+      "known_complete_rows_cost": "0.176075",
+      "cost_lower_bound": "0.254075",
+      "cost_total": "UNKNOWN",
+      "cost_per_accepted": "UNKNOWN",
+      "cost_per_accepted_lower_bound": "0.1270375"
+    }
+  },
+  "U7": {
+    "selected": 10,
+    "executed": 8,
+    "attempts": 11,
+    "retry_overhead": 3,
+    "first_pass": 4,
+    "eventual_pass": 6,
+    "flaky": 2,
+    "full_evidence": 7,
+    "cleanup_needed": 6,
+    "cleanup_success": 4,
+    "evidence_complete_pass_ids": [
+      "E01",
+      "E02",
+      "E03",
+      "E08",
+      "E10"
+    ],
+    "measured_subtotal": "0.89",
+    "total_cost": "UNKNOWN",
+    "evidence_complete_pass_cost_lower_bound": "0.178",
+    "test_seconds": {
+      "n": 8,
+      "median": 82.5,
+      "min": 40,
+      "max": 170
+    },
+    "schedule_completeness": {
+      "numerator": 3,
+      "denominator": 4
+    },
+    "dispatch_delay_minutes": {
+      "n": 3,
+      "median": 2,
+      "min": 0,
+      "max": 3
+    },
+    "queue_delay_minutes": {
+      "n": 3,
+      "median": 2,
+      "min": 1,
+      "max": 8
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fixture": "RG-04",
+  "mode": "SIMULATED",
+  "action": "READ_RECOVERY",
+  "verdict": "UNKNOWN",
+  "tool_calls": ["read_run_result"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "AC-EMP-01/02: unique employee ID E2E-AOCE-r02-a1-F01",
+    "Exact search for E2E-AOCE-r02-a1-F01",
+    "Selected department equals QA",
+    "Matching runner assertions bound to the validated run, attempt, flow and revision"
+  ],
+  "evidence_gaps": [
+    "Runner result and assertion evidence are missing.",
+    "Reported department Sales conflicts with expected QA.",
+    "Explicit attempt, revision and allowlisted environment validation are absent."
+  ],
+  "reason": "Propose one read-only result recovery. Verified ownership does not establish runner success. Do not retry Save or start another write; stop UNKNOWN if recovery cannot establish matching evidence."
+}

@@ -1,0 +1,6 @@
+{
+  "gate": "REJECT",
+  "findings": [
+    "fixture identity/synthetic label mismatch"
+  ]
+}

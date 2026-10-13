@@ -1,0 +1,137 @@
+{
+  "schema_version": "aoce-live-run-1",
+  "run_id": "mv5zj3va-6632d0d0",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "mode": "LIVE",
+  "label": "RUN-PASSED",
+  "trigger": "windows-schedule",
+  "suite": "smoke",
+  "scheduler_task": "AOCE-PortalLite-Live-Smoke",
+  "github_run_url": null,
+  "environment_alias": "isolated-lab",
+  "app_build": "portallite-local-1",
+  "started_at": "2026-10-13T01:11:11.694Z",
+  "deadline": 1791855071713,
+  "command": "playwright test --project=chromium --grep=@smoke",
+  "selected_count": 3,
+  "executed_count": 3,
+  "cases": [
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-58b0190ef47804478632",
+      "title": "F01 @smoke create unique employee and search exact ID + QA",
+      "kind": "business-smoke",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv5zj3va-6632d0d0-c2bda1e30-a1-F01",
+      "case_run_id": "mv5zj3va-6632d0d0-c2bda1e30",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-01",
+        "AC-EMP-02",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Unique owned ID; exact search row and QA",
+      "cleanup": "success",
+      "test_seconds": 1.952,
+      "started_at": "2026-10-13T01:11:23.961Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv5zj3va-6632d0d0\\screenshots\\4219922fea2e2bd3c691-58b0190ef47804478632-0-0.png",
+          "sha256": "2130140dbf6fd26fd34ea4dea8bd6c83339961625b3e1fe876a48880e025b140"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-aff42dca07351c3c1fca",
+      "title": "F02 @smoke change independent owned seed department and search",
+      "kind": "business-smoke",
+      "flow": "F02",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv5zj3va-6632d0d0-c65df7bad-a1-F02",
+      "case_run_id": "mv5zj3va-6632d0d0-c65df7bad",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-03",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Independent owned QA seed; exact ID + Engineering after edit",
+      "cleanup": "success",
+      "test_seconds": 1.861,
+      "started_at": "2026-10-13T01:11:27.006Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv5zj3va-6632d0d0\\screenshots\\4219922fea2e2bd3c691-aff42dca07351c3c1fca-0-0.png",
+          "sha256": "87391089e313abda78937afde3634c39a42b73c639ffc9ec30f87eb382270b68"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-fda22b0a2107895cb2b6",
+      "title": "F03 @smoke Viewer Create disabled and attempted ID absent",
+      "kind": "business-smoke",
+      "flow": "F03",
+      "actor": "Viewer",
+      "employee_id": "E2E-AOCE-mv5zj3va-6632d0d0-cdce9d5f7-a1-F03",
+      "case_run_id": "mv5zj3va-6632d0d0-cdce9d5f7",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-04",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Fresh Viewer auth; Create disabled; no owned record",
+      "cleanup": "not-applicable",
+      "test_seconds": 0.695,
+      "started_at": "2026-10-13T01:11:28.889Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv5zj3va-6632d0d0\\screenshots\\4219922fea2e2bd3c691-fda22b0a2107895cb2b6-0-0.png",
+          "sha256": "edb6fe0cffab2db028d078d700073f08dec23752adfc714fe674e5e92f7c3b73"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "cleanup_status": "resolved",
+  "usage_status": "not-applicable",
+  "model_calls": 0,
+  "prompt_version": "aoce-prompt-v3",
+  "context_version": "aoce-context-v3",
+  "model_cost": 0,
+  "ci_billable_cost": null,
+  "cost_unit": "NOT_SPECIFIED",
+  "runner_outcome": "passed",
+  "runner_started_at": "2026-10-13T01:11:22.626Z",
+  "runner_finished_at": "2026-10-13T01:11:29.763Z",
+  "runner_seconds": 7.0899719999999995,
+  "selected": [
+    {
+      "id": "4219922fea2e2bd3c691-58b0190ef47804478632",
+      "title": "F01 @smoke create unique employee and search exact ID + QA"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-aff42dca07351c3c1fca",
+      "title": "F02 @smoke change independent owned seed department and search"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-fda22b0a2107895cb2b6",
+      "title": "F03 @smoke Viewer Create disabled and attempted ID absent"
+    }
+  ],
+  "finished_at": "2026-10-13T01:11:29.828Z",
+  "end_to_end_seconds": 18.134,
+  "operational_error": null
+}

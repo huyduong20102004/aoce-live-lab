@@ -1,0 +1,13 @@
+{
+  "score": 8,
+  "components": {
+    "contract": 2,
+    "evidence": 3,
+    "policy": 2,
+    "schema": 1
+  },
+  "gate": "ACCEPT",
+  "findings": [
+    "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present"
+  ]
+}

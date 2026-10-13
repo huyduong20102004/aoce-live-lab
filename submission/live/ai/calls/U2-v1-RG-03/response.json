@@ -1,0 +1,20 @@
+{
+  "fixture": "RG-03",
+  "mode": "report",
+  "action": "recover_matching_run_result",
+  "verdict": "inconclusive",
+  "tool_calls": ["read_run_result"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "Runner result matching run r02",
+    "AC-EMP-01: unique employee ID",
+    "AC-EMP-02: exact search row employee ID and department",
+    "Confirmed owned employee ID before cleanup"
+  ],
+  "evidence_gaps": [
+    "Available runner result belongs to r01, not r02",
+    "r02 write state and owned employee ID are unknown",
+    "No matching r02 verification or cleanup evidence"
+  ],
+  "reason": "The r01 assertions and cleanup cannot establish a pass for r02. Propose one read recovery; freeze mutations pending reconciliation and do not start another write attempt."
+}

@@ -1,0 +1,19 @@
+{
+  "fixture": "RG-02",
+  "mode": "SIMULATED",
+  "action": "READ_RECOVERY",
+  "verdict": "UNKNOWN",
+  "tool_calls": ["read_run_result"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "AC-EMP-01/02: unique owned employee ID, exact search ID, and selected department",
+    "Matching runner assertions bound to the validated source, HR Admin actor, run r02, attempt, F01 flow, revision, and allowlisted environment"
+  ],
+  "evidence_gaps": [
+    "Runner result and matching assertions are missing",
+    "Attempt, revision, and allowlisted environment are unspecified",
+    "Owned employee ID, ownership, and write state are unestablished",
+    "Required employee oracles lack evidence"
+  ],
+  "reason": "Success toast cannot prove pass. Propose one read-only result recovery; if evidence remains unavailable, stop UNKNOWN. Do not retry the flow, repeat Save, or clean up without established ownership and write state. This synthetic fixture establishes no live application pass."
+}

@@ -1,0 +1,11 @@
+{
+  "score": 10,
+  "components": {
+    "contract": 4,
+    "evidence": 3,
+    "policy": 2,
+    "schema": 1
+  },
+  "gate": "ACCEPT",
+  "findings": []
+}

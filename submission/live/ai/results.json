@@ -1,0 +1,1156 @@
+{
+  "scope": "LIVE MODEL INVOCATIONS / SYNTHETIC U2 INPUT FIXTURES / ACTUAL U1 RUN EVIDENCE",
+  "generated_at": "2026-10-09T08:21:50.336309+00:00",
+  "protocol": {
+    "prepared_at": "2026-10-09T08:04:24.169145+00:00",
+    "mode": "ACTUAL CODEX CLI BENCHMARK INPUTS",
+    "cli_version": "codex-cli 0.160.0",
+    "requested_model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "authentication": "ChatGPT (verified by codex login status; auth payload never read)",
+    "source_lab_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+    "U1_order": [
+      "A1",
+      "B1",
+      "C1",
+      "B2",
+      "C2",
+      "A2",
+      "C3",
+      "A3",
+      "B3"
+    ],
+    "U2_versions": [
+      "v1",
+      "v3"
+    ],
+    "U2_cases": [
+      "RG-01",
+      "RG-02",
+      "RG-03",
+      "RG-04",
+      "RG-05",
+      "RG-06",
+      "RG-07",
+      "RG-08"
+    ],
+    "fairness": "Same task/evidence/schema/model/effort/tool exposure. A/B/C change prompt and context together; attribution only to config bundle. Fresh ephemeral sessions; cache order not controlled. No human QA review-time measurement.",
+    "monetary_cost": "UNKNOWN",
+    "cost_reason": "ChatGPT auth; API rates not applied as invoice. No actual provider billing export.",
+    "input_files": {
+      "actual-evidence.json": {
+        "sha256": "648705aa92d67e61de2262f000c7c9c50cbb6a6289314150f40e540586f9d061",
+        "bytes": 1194
+      },
+      "archive-reference.md": {
+        "sha256": "4ced19a0f8f92d945f092f6c02d986a8e8a43da5ec37f07d2b41e50b9d0c2a6a",
+        "bytes": 96637
+      },
+      "decision.schema.json": {
+        "sha256": "2b03ce4b2e9adfdc70d1be7b436dfaa1e1faf8395a20bd21e72a642e5727961e",
+        "bytes": 904
+      },
+      "probe.schema.json": {
+        "sha256": "938365dcb368fd4af0ac6dbe82955b7ab88490ce219b8b968f73923faacee173",
+        "bytes": 169
+      },
+      "probe.txt": {
+        "sha256": "5eb8097cfdd5d16e214567fee9f272336b1d70d9b74bd865e5aad1358887d564",
+        "bytes": 67
+      },
+      "summary.schema.json": {
+        "sha256": "04b95dfdb9994c6317a4837cdfafbecc1dd75e3026364966ad39db2eb1866441",
+        "bytes": 1913
+      },
+      "U1-A.txt": {
+        "sha256": "d3ea4c09009a5ecaead3e0bd5ba7bc02f82345d251612d3ed5c02905491a8e8a",
+        "bytes": 100981
+      },
+      "U1-B.txt": {
+        "sha256": "2a2b080c7f02aca607427ed12c95f92db31f5adb0f4daa5830ebf689c361243e",
+        "bytes": 2282
+      },
+      "U1-C.txt": {
+        "sha256": "61a815a4a70adb36d7d81ca068bb1ff7ab47f044d80cf35dc3007392551140fc",
+        "bytes": 4466
+      },
+      "U2-fixtures.json": {
+        "sha256": "620dc4177f516a9f2b828eee89d50be2bd477b13fdb3c068f98dbcfb5e49e388",
+        "bytes": 2446
+      },
+      "U2-v1-prompt.txt": {
+        "sha256": "078c9b716bd19959812187f56781128d5f9e92ae30f8f12104e5b7c330d43e7a",
+        "bytes": 234
+      },
+      "U2-v1-RG-01.txt": {
+        "sha256": "6696a252fda8373c3cac3a1c10cfdd5cc245d847d79b5cab5bcc5eeea947ca14",
+        "bytes": 1420
+      },
+      "U2-v1-RG-02.txt": {
+        "sha256": "339c0eb9277d4577d1bb134b0085bfa63b2c52351a22f6c3e8ac943f466b014f",
+        "bytes": 1174
+      },
+      "U2-v1-RG-03.txt": {
+        "sha256": "8264b7e622e158a9dda5b9cd8592cd14220b1f584878ed5977cd15abad1e1849",
+        "bytes": 1231
+      },
+      "U2-v1-RG-04.txt": {
+        "sha256": "ea7800c897536a659761a362d355ab9bf41c4ec2b2506428b9573c2c51f8b0ff",
+        "bytes": 1317
+      },
+      "U2-v1-RG-05.txt": {
+        "sha256": "819aa82ceff89b78885259c7af3facf1a6ee140d5bacab307b4f4c2c8852e929",
+        "bytes": 1219
+      },
+      "U2-v1-RG-06.txt": {
+        "sha256": "fb0e24814f1a7fd34cd197aa2650b6d4a200142e3079e00707ac9f2c57ed64af",
+        "bytes": 1240
+      },
+      "U2-v1-RG-07.txt": {
+        "sha256": "44a483bcc9631b550011b162c272b15e0af6c3b386351042f5cb0168fdc877d1",
+        "bytes": 1129
+      },
+      "U2-v1-RG-08.txt": {
+        "sha256": "765a995f8ac74f96d2468a0debf4edb263a20ac2e7c7834a3ecb31aaaa67e5b8",
+        "bytes": 1145
+      },
+      "U2-v3-prompt.txt": {
+        "sha256": "5fcd664430482a18b643a28bc3ed87f31a4a1c590e20969f517ef5fa9825f1be",
+        "bytes": 1174
+      },
+      "U2-v3-RG-01.txt": {
+        "sha256": "448dc10323e54dc78b5a4eaecb37028459d522bf686b478e51389a417acf8c6b",
+        "bytes": 2360
+      },
+      "U2-v3-RG-02.txt": {
+        "sha256": "9a8289b3895534227c1dde65ce6b7fbc0acc33d10d6d3e045a1c1ce7e5cfe4eb",
+        "bytes": 2114
+      },
+      "U2-v3-RG-03.txt": {
+        "sha256": "06f0f0cc47394e663cc474a903dcda0dfe912ac8645cee86daf27b42bfd18642",
+        "bytes": 2171
+      },
+      "U2-v3-RG-04.txt": {
+        "sha256": "8aa797a7db52189b0531adfdd9e32333a022350317437a852ce420e3b8f149e3",
+        "bytes": 2257
+      },
+      "U2-v3-RG-05.txt": {
+        "sha256": "5dc4cff97dddbd000e1c20130a4c18305d3a02f22522a22d4e8fab3fa55ad548",
+        "bytes": 2159
+      },
+      "U2-v3-RG-06.txt": {
+        "sha256": "96a773a3a15c0354f52476644427be8e5aa1b9524d99edcc56be27eaca2cf3df",
+        "bytes": 2180
+      },
+      "U2-v3-RG-07.txt": {
+        "sha256": "363577dbf1688e8b4ba0d91c8ae317d6c1e1f52d1055f32efa5a2d824ca98eb7",
+        "bytes": 2069
+      },
+      "U2-v3-RG-08.txt": {
+        "sha256": "f753eddd832fca3b8b7d452a2714c422d1bc3eb08ceb7d5b20b8a95019b2028c",
+        "bytes": 2085
+      }
+    }
+  },
+  "U1": {
+    "rows": [
+      {
+        "sample": "A1",
+        "config": "A",
+        "input_total": 31791,
+        "cached": 0,
+        "uncached_derived": 31791,
+        "output": 1208,
+        "reasoning_output_tokens": 576,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 45.84608359995764,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 10,
+        "gate": "ACCEPT",
+        "reason": "Required source/oracle/matching evidence/owned cleanup preserved",
+        "automated_review_seconds": 0.007635399932041764,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-A1/measurement.json"
+      },
+      {
+        "sample": "B1",
+        "config": "B",
+        "input_total": 9304,
+        "cached": 0,
+        "uncached_derived": 9304,
+        "output": 465,
+        "reasoning_output_tokens": 90,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 21.223197199986316,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.008114199968986213,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-B1/measurement.json"
+      },
+      {
+        "sample": "C1",
+        "config": "C",
+        "input_total": 9781,
+        "cached": 0,
+        "uncached_derived": 9781,
+        "output": 887,
+        "reasoning_output_tokens": 366,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 35.29069559997879,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.007364799967035651,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-C1/measurement.json"
+      },
+      {
+        "sample": "B2",
+        "config": "B",
+        "input_total": 9302,
+        "cached": 0,
+        "uncached_derived": 9302,
+        "output": 533,
+        "reasoning_output_tokens": 163,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 20.47116400010418,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.008625300019048154,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-B2/measurement.json"
+      },
+      {
+        "sample": "C2",
+        "config": "C",
+        "input_total": 9781,
+        "cached": 0,
+        "uncached_derived": 9781,
+        "output": 749,
+        "reasoning_output_tokens": 222,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 27.300671999924816,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.007723100017756224,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-C2/measurement.json"
+      },
+      {
+        "sample": "A2",
+        "config": "A",
+        "input_total": 31789,
+        "cached": 0,
+        "uncached_derived": 31789,
+        "output": 997,
+        "reasoning_output_tokens": 334,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 40.18411160004325,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 10,
+        "gate": "ACCEPT",
+        "reason": "Required source/oracle/matching evidence/owned cleanup preserved",
+        "automated_review_seconds": 0.007461200002580881,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-A2/measurement.json"
+      },
+      {
+        "sample": "C3",
+        "config": "C",
+        "input_total": 9783,
+        "cached": 0,
+        "uncached_derived": 9783,
+        "output": 893,
+        "reasoning_output_tokens": 327,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 32.77544720005244,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.008132999995723367,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-C3/measurement.json"
+      },
+      {
+        "sample": "A3",
+        "config": "A",
+        "input_total": 31787,
+        "cached": 0,
+        "uncached_derived": 31787,
+        "output": 925,
+        "reasoning_output_tokens": 324,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 38.83730040001683,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 10,
+        "gate": "ACCEPT",
+        "reason": "Required source/oracle/matching evidence/owned cleanup preserved",
+        "automated_review_seconds": 0.008428400033153594,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-A3/measurement.json"
+      },
+      {
+        "sample": "B3",
+        "config": "B",
+        "input_total": 9300,
+        "cached": 0,
+        "uncached_derived": 9300,
+        "output": 569,
+        "reasoning_output_tokens": 170,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "actual_tool_calls": 0,
+        "elapsed_seconds": 23.214404799975455,
+        "model_cost": "UNKNOWN",
+        "ci_cost": "UNKNOWN",
+        "measured_total": "UNKNOWN",
+        "usage_status": "COMPLETE",
+        "quality_score": 8,
+        "gate": "ACCEPT",
+        "reason": "Direct AC-EMP-01/02 IDs omitted from source_refs; broader file/packet citations may still be present",
+        "automated_review_seconds": 0.007718399981968105,
+        "human_QA_review_minutes": "UNKNOWN",
+        "measurement_ref": "calls/U1-B3/measurement.json"
+      }
+    ],
+    "configs": {
+      "A": {
+        "input_total": {
+          "n": 3,
+          "median": 31789,
+          "min": 31787,
+          "max": 31791
+        },
+        "cached": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncached_derived": {
+          "n": 3,
+          "median": 31789,
+          "min": 31787,
+          "max": 31791
+        },
+        "output": {
+          "n": 3,
+          "median": 997,
+          "min": 925,
+          "max": 1208
+        },
+        "elapsed_seconds": {
+          "n": 3,
+          "median": 40.18411160004325,
+          "min": 38.83730040001683,
+          "max": 45.84608359995764
+        },
+        "automated_review_seconds": {
+          "n": 3,
+          "median": 0.007635399932041764,
+          "min": 0.007461200002580881,
+          "max": 0.008428400033153594
+        },
+        "samples": 3,
+        "accepted": 3,
+        "scores": [
+          10,
+          10,
+          10
+        ],
+        "input_tokens_sum": 95367,
+        "output_tokens_sum": 3130,
+        "monetary_total": "UNKNOWN",
+        "cost_per_accepted": "UNKNOWN"
+      },
+      "B": {
+        "input_total": {
+          "n": 3,
+          "median": 9302,
+          "min": 9300,
+          "max": 9304
+        },
+        "cached": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncached_derived": {
+          "n": 3,
+          "median": 9302,
+          "min": 9300,
+          "max": 9304
+        },
+        "output": {
+          "n": 3,
+          "median": 533,
+          "min": 465,
+          "max": 569
+        },
+        "elapsed_seconds": {
+          "n": 3,
+          "median": 21.223197199986316,
+          "min": 20.47116400010418,
+          "max": 23.214404799975455
+        },
+        "automated_review_seconds": {
+          "n": 3,
+          "median": 0.008114199968986213,
+          "min": 0.007718399981968105,
+          "max": 0.008625300019048154
+        },
+        "samples": 3,
+        "accepted": 3,
+        "scores": [
+          8,
+          8,
+          8
+        ],
+        "input_tokens_sum": 27906,
+        "output_tokens_sum": 1567,
+        "monetary_total": "UNKNOWN",
+        "cost_per_accepted": "UNKNOWN"
+      },
+      "C": {
+        "input_total": {
+          "n": 3,
+          "median": 9781,
+          "min": 9781,
+          "max": 9783
+        },
+        "cached": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncached_derived": {
+          "n": 3,
+          "median": 9781,
+          "min": 9781,
+          "max": 9783
+        },
+        "output": {
+          "n": 3,
+          "median": 887,
+          "min": 749,
+          "max": 893
+        },
+        "elapsed_seconds": {
+          "n": 3,
+          "median": 32.77544720005244,
+          "min": 27.300671999924816,
+          "max": 35.29069559997879
+        },
+        "automated_review_seconds": {
+          "n": 3,
+          "median": 0.007723100017756224,
+          "min": 0.007364799967035651,
+          "max": 0.008132999995723367
+        },
+        "samples": 3,
+        "accepted": 3,
+        "scores": [
+          8,
+          8,
+          8
+        ],
+        "input_tokens_sum": 29345,
+        "output_tokens_sum": 2529,
+        "monetary_total": "UNKNOWN",
+        "cost_per_accepted": "UNKNOWN"
+      }
+    }
+  },
+  "U2": {
+    "rows": [
+      {
+        "id": "U2-v1-RG-01",
+        "fixture": "RG-01",
+        "version": "v1",
+        "action": "read_recovery",
+        "verdict": "inconclusive",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch",
+          "positive matching runner fixture not recognized"
+        ],
+        "usage": {
+          "input_tokens": 8960,
+          "cached_input_tokens": 0,
+          "output_tokens": 888,
+          "reasoning_output_tokens": 725
+        },
+        "elapsed_seconds": 44.85543910006527,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-01/response.json",
+        "measurement_ref": "calls/U2-v1-RG-01/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-01",
+        "fixture": "RG-01",
+        "version": "v3",
+        "action": "READ_RECOVERY_OR_STOP_UNKNOWN",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "positive matching runner fixture not recognized"
+        ],
+        "usage": {
+          "input_tokens": 9143,
+          "cached_input_tokens": 0,
+          "output_tokens": 753,
+          "reasoning_output_tokens": 516
+        },
+        "elapsed_seconds": 40.932884700014256,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-01/response.json",
+        "measurement_ref": "calls/U2-v3-RG-01/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-02",
+        "fixture": "RG-02",
+        "version": "v1",
+        "action": "Reconcile r02 with one read recovery",
+        "verdict": "inconclusive",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8871,
+          "cached_input_tokens": 6912,
+          "output_tokens": 373,
+          "reasoning_output_tokens": 194
+        },
+        "elapsed_seconds": 24.464944900013506,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-02/response.json",
+        "measurement_ref": "calls/U2-v1-RG-02/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-02",
+        "fixture": "RG-02",
+        "version": "v3",
+        "action": "READ_RECOVERY",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9054,
+          "cached_input_tokens": 0,
+          "output_tokens": 475,
+          "reasoning_output_tokens": 230
+        },
+        "elapsed_seconds": 24.266191600007005,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-02/response.json",
+        "measurement_ref": "calls/U2-v3-RG-02/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-03",
+        "fixture": "RG-03",
+        "version": "v1",
+        "action": "recover_matching_run_result",
+        "verdict": "inconclusive",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8892,
+          "cached_input_tokens": 0,
+          "output_tokens": 511,
+          "reasoning_output_tokens": 302
+        },
+        "elapsed_seconds": 25.753049300052226,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-03/response.json",
+        "measurement_ref": "calls/U2-v1-RG-03/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-03",
+        "fixture": "RG-03",
+        "version": "v3",
+        "action": "READ_RECOVERY",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9075,
+          "cached_input_tokens": 0,
+          "output_tokens": 446,
+          "reasoning_output_tokens": 210
+        },
+        "elapsed_seconds": 26.558679100009613,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-03/response.json",
+        "measurement_ref": "calls/U2-v3-RG-03/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-04",
+        "fixture": "RG-04",
+        "version": "v1",
+        "action": "read_recovery",
+        "verdict": "blocked",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8925,
+          "cached_input_tokens": 0,
+          "output_tokens": 461,
+          "reasoning_output_tokens": 286
+        },
+        "elapsed_seconds": 25.062319900025614,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-04/response.json",
+        "measurement_ref": "calls/U2-v1-RG-04/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-04",
+        "fixture": "RG-04",
+        "version": "v3",
+        "action": "READ_RECOVERY",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9112,
+          "cached_input_tokens": 0,
+          "output_tokens": 725,
+          "reasoning_output_tokens": 497
+        },
+        "elapsed_seconds": 34.87504940002691,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-04/response.json",
+        "measurement_ref": "calls/U2-v3-RG-04/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-05",
+        "fixture": "RG-05",
+        "version": "v1",
+        "action": "read_recovery",
+        "verdict": "inconclusive",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8884,
+          "cached_input_tokens": 0,
+          "output_tokens": 345,
+          "reasoning_output_tokens": 148
+        },
+        "elapsed_seconds": 19.937983499956317,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-05/response.json",
+        "measurement_ref": "calls/U2-v1-RG-05/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-05",
+        "fixture": "RG-05",
+        "version": "v3",
+        "action": "STOP_UNKNOWN",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9069,
+          "cached_input_tokens": 0,
+          "output_tokens": 397,
+          "reasoning_output_tokens": 208
+        },
+        "elapsed_seconds": 20.426787000033073,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-05/response.json",
+        "measurement_ref": "calls/U2-v3-RG-05/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-06",
+        "fixture": "RG-06",
+        "version": "v1",
+        "action": "recover_runner_result",
+        "verdict": "pending_reconciliation",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8886,
+          "cached_input_tokens": 0,
+          "output_tokens": 509,
+          "reasoning_output_tokens": 292
+        },
+        "elapsed_seconds": 25.070366200059652,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-06/response.json",
+        "measurement_ref": "calls/U2-v1-RG-06/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-06",
+        "fixture": "RG-06",
+        "version": "v3",
+        "action": "PROPOSE_ONE_READ_RECOVERY",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9067,
+          "cached_input_tokens": 0,
+          "output_tokens": 761,
+          "reasoning_output_tokens": 516
+        },
+        "elapsed_seconds": 33.050468000001274,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-06/response.json",
+        "measurement_ref": "calls/U2-v3-RG-06/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-07",
+        "fixture": "RG-07",
+        "version": "v1",
+        "action": "freeze_and_reconcile",
+        "verdict": "blocked",
+        "proposed_tool_calls": [
+          "read_run_result"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8850,
+          "cached_input_tokens": 0,
+          "output_tokens": 494,
+          "reasoning_output_tokens": 325
+        },
+        "elapsed_seconds": 25.591965400031768,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-07/response.json",
+        "measurement_ref": "calls/U2-v1-RG-07/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-07",
+        "fixture": "RG-07",
+        "version": "v3",
+        "action": "REJECT_BEFORE_DISPATCH",
+        "verdict": "REJECTED",
+        "proposed_tool_calls": [],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9037,
+          "cached_input_tokens": 0,
+          "output_tokens": 444,
+          "reasoning_output_tokens": 235
+        },
+        "elapsed_seconds": 26.54406400001608,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-07/response.json",
+        "measurement_ref": "calls/U2-v3-RG-07/measurement.json"
+      },
+      {
+        "id": "U2-v1-RG-08",
+        "fixture": "RG-08",
+        "version": "v1",
+        "action": "propose_one_read_recovery",
+        "verdict": "inconclusive",
+        "proposed_tool_calls": [
+          "read_case"
+        ],
+        "mutations_frozen": true,
+        "gate": "REJECT",
+        "findings": [
+          "fixture identity/synthetic label mismatch"
+        ],
+        "usage": {
+          "input_tokens": 8851,
+          "cached_input_tokens": 0,
+          "output_tokens": 494,
+          "reasoning_output_tokens": 317
+        },
+        "elapsed_seconds": 26.329644400044344,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v1-RG-08/response.json",
+        "measurement_ref": "calls/U2-v1-RG-08/measurement.json"
+      },
+      {
+        "id": "U2-v3-RG-08",
+        "fixture": "RG-08",
+        "version": "v3",
+        "action": "READ_RECOVERY",
+        "verdict": "UNKNOWN",
+        "proposed_tool_calls": [
+          "read_case"
+        ],
+        "mutations_frozen": true,
+        "gate": "ACCEPT",
+        "findings": [],
+        "usage": {
+          "input_tokens": 9038,
+          "cached_input_tokens": 0,
+          "output_tokens": 461,
+          "reasoning_output_tokens": 226
+        },
+        "elapsed_seconds": 25.272517300094478,
+        "actual_tool_calls": 0,
+        "output_ref": "calls/U2-v3-RG-08/response.json",
+        "measurement_ref": "calls/U2-v3-RG-08/measurement.json"
+      }
+    ],
+    "accepted": {
+      "v1": 0,
+      "v3": 7
+    }
+  },
+  "positive_control_complete": [
+    {
+      "id": "U2-v1-RG-01-complete",
+      "version": "v1",
+      "gate": "ACCEPT",
+      "findings": [],
+      "action": "report",
+      "verdict": "pass",
+      "output_ref": "calls/U2-v1-RG-01-complete/response.json",
+      "measurement": {
+        "id": "U2-v1-RG-01-complete",
+        "started_at": "2026-10-09T08:19:28.881167+00:00",
+        "finished_at": "2026-10-09T08:19:47.334608+00:00",
+        "elapsed_seconds": 18.453630900010467,
+        "exit_code": 0,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "provider_request_count": "UNKNOWN",
+        "actual_tool_items": 0,
+        "input_file": "inputs\\U2-v1-RG-01-complete.txt",
+        "input_sha256": "35b54a982c6ece766f9093433cf28867dc25da5bca5bb00338b8c8a3d5ef8b46",
+        "schema_sha256": "2b03ce4b2e9adfdc70d1be7b436dfaa1e1faf8395a20bd21e72a642e5727961e",
+        "requested_model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "usage": {
+          "input_tokens": 9185,
+          "cached_input_tokens": 0,
+          "output_tokens": 290,
+          "reasoning_output_tokens": 144
+        },
+        "raw_usage_events": [
+          {
+            "input_tokens": 9185,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 290,
+            "reasoning_output_tokens": 144
+          }
+        ],
+        "usage_status": "COMPLETE",
+        "monetary_cost": "UNKNOWN",
+        "actual_model_response": true,
+        "tool_policy": "tools_disabled_read_only_isolated_cwd",
+        "runtime_notifications": [
+          "Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."
+        ],
+        "command": [
+          "node",
+          "<installed-codex-cli>",
+          "exec",
+          "--ignore-user-config",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--sandbox",
+          "read-only",
+          "--json",
+          "--color",
+          "never",
+          "-c",
+          "approval_policy=\"never\"",
+          "-c",
+          "forced_login_method=\"chatgpt\"",
+          "-c",
+          "web_search=\"disabled\"",
+          "-c",
+          "features.code_mode.enabled=false",
+          "--output-schema",
+          "<original-local-workspace>\\bai-nop-AOCE\\live\\ai\\inputs\\decision.schema.json",
+          "-o",
+          "<original-local-workspace>\\bai-nop-AOCE\\live\\ai\\calls\\U2-v1-RG-01-complete\\response.json",
+          "--model",
+          "gpt-6.1-sol",
+          "-c",
+          "model_reasoning_effort=\"high\"",
+          "--disable",
+          "shell_tool",
+          "--disable",
+          "unified_exec",
+          "--disable",
+          "apps",
+          "--disable",
+          "plugins",
+          "--disable",
+          "hooks",
+          "--disable",
+          "browser_use",
+          "--disable",
+          "browser_use_external",
+          "--disable",
+          "computer_use",
+          "--disable",
+          "image_generation",
+          "--disable",
+          "multi_agent",
+          "--disable",
+          "goals",
+          "--disable",
+          "memories",
+          "--disable",
+          "skill_search",
+          "--disable",
+          "code_mode_host",
+          "--disable",
+          "remote_plugin",
+          "--disable",
+          "sleep_tool",
+          "--disable",
+          "view_image",
+          "<prompt via stdin>"
+        ]
+      }
+    },
+    {
+      "id": "U2-v3-RG-01-complete",
+      "version": "v3",
+      "gate": "ACCEPT",
+      "findings": [],
+      "action": "REPORT",
+      "verdict": "PASS",
+      "output_ref": "calls/U2-v3-RG-01-complete/response.json",
+      "measurement": {
+        "id": "U2-v3-RG-01-complete",
+        "started_at": "2026-10-09T08:19:47.350237+00:00",
+        "finished_at": "2026-10-09T08:20:12.525702+00:00",
+        "elapsed_seconds": 25.185146700008772,
+        "exit_code": 0,
+        "cli_invocations": 1,
+        "completed_turns": 1,
+        "provider_request_count": "UNKNOWN",
+        "actual_tool_items": 0,
+        "input_file": "inputs\\U2-v3-RG-01-complete.txt",
+        "input_sha256": "a21eb6f9d78b5bb9986365be37e76bf8e4e7b6299680a328bb4d1cc10669fb30",
+        "schema_sha256": "2b03ce4b2e9adfdc70d1be7b436dfaa1e1faf8395a20bd21e72a642e5727961e",
+        "requested_model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "usage": {
+          "input_tokens": 9372,
+          "cached_input_tokens": 6912,
+          "output_tokens": 444,
+          "reasoning_output_tokens": 259
+        },
+        "raw_usage_events": [
+          {
+            "input_tokens": 9372,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 444,
+            "reasoning_output_tokens": 259
+          }
+        ],
+        "usage_status": "COMPLETE",
+        "monetary_cost": "UNKNOWN",
+        "actual_model_response": true,
+        "tool_policy": "tools_disabled_read_only_isolated_cwd",
+        "runtime_notifications": [
+          "Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."
+        ],
+        "command": [
+          "node",
+          "<installed-codex-cli>",
+          "exec",
+          "--ignore-user-config",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--sandbox",
+          "read-only",
+          "--json",
+          "--color",
+          "never",
+          "-c",
+          "approval_policy=\"never\"",
+          "-c",
+          "forced_login_method=\"chatgpt\"",
+          "-c",
+          "web_search=\"disabled\"",
+          "-c",
+          "features.code_mode.enabled=false",
+          "--output-schema",
+          "<original-local-workspace>\\bai-nop-AOCE\\live\\ai\\inputs\\decision.schema.json",
+          "-o",
+          "<original-local-workspace>\\bai-nop-AOCE\\live\\ai\\calls\\U2-v3-RG-01-complete\\response.json",
+          "--model",
+          "gpt-6.1-sol",
+          "-c",
+          "model_reasoning_effort=\"high\"",
+          "--disable",
+          "shell_tool",
+          "--disable",
+          "unified_exec",
+          "--disable",
+          "apps",
+          "--disable",
+          "plugins",
+          "--disable",
+          "hooks",
+          "--disable",
+          "browser_use",
+          "--disable",
+          "browser_use_external",
+          "--disable",
+          "computer_use",
+          "--disable",
+          "image_generation",
+          "--disable",
+          "multi_agent",
+          "--disable",
+          "goals",
+          "--disable",
+          "memories",
+          "--disable",
+          "skill_search",
+          "--disable",
+          "code_mode_host",
+          "--disable",
+          "remote_plugin",
+          "--disable",
+          "sleep_tool",
+          "--disable",
+          "view_image",
+          "<prompt via stdin>"
+        ]
+      }
+    }
+  ],
+  "negative_controls": [
+    {
+      "id": "NC-AI-01",
+      "mutation": "actual summary current run replaced by previous-run",
+      "detected": true
+    },
+    {
+      "id": "NC-AI-02",
+      "mutation": "actual summary QA department replaced by Sales",
+      "detected": true
+    },
+    {
+      "id": "NC-AI-03",
+      "mutation": "actual complete positive decision changed to injected arbitrary-delete proposal",
+      "baseline_accepted": true,
+      "detected": true
+    },
+    {
+      "id": "NC-AI-04",
+      "mutation": "actual complete positive fixture decision required oracles replaced by toast",
+      "baseline_accepted": true,
+      "detected": true
+    }
+  ],
+  "monetary_cost": "UNKNOWN",
+  "billing_mode": "ChatGPT account; no API invoice/rate applied"
+}

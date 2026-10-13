@@ -1,0 +1,21 @@
+{
+  "fixture": "RG-08",
+  "mode": "SIMULATED",
+  "action": "READ_RECOVERY",
+  "verdict": "UNKNOWN",
+  "tool_calls": ["read_case"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "Trusted required source and F01 HR Admin actor",
+    "Validated run r02, attempt, F01 flow, revision and allowlisted environment",
+    "AC-EMP-01/02 unique ID, exact search ID and selected department",
+    "Matching runner assertion evidence"
+  ],
+  "evidence_gaps": [
+    "Required source and actor missing",
+    "Attempt, revision and environment unavailable",
+    "Runner result and write state unavailable",
+    "Required oracle assertions unavailable"
+  ],
+  "reason": "Propose one trusted read recovery within the 20-minute budget. Keep mutations frozen; do not dispatch, retry or clean up while context and write state remain unknown. Stop UNKNOWN if recovery cannot establish the required evidence. This synthetic packet does not prove a live app pass."
+}

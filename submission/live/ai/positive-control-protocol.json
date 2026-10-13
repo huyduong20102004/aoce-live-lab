@@ -1,0 +1,10 @@
+{
+  "scope": "Additional complete positive control, original eight-fixture results retained",
+  "reason": "Original RG01 input said id_assertion=true but did not explicitly name uniqueness/exact-search ID or matching revision. Model rightly requested more evidence.",
+  "new_fixture": "LOCAL-RG-01-COMPLETE",
+  "source_type": "SYNTHETIC harness extension, no fabricated live telemetry",
+  "input_hashes": {
+    "U2-v1-RG-01-complete.txt": "35b54a982c6ece766f9093433cf28867dc25da5bca5bb00338b8c8a3d5ef8b46",
+    "U2-v3-RG-01-complete.txt": "a21eb6f9d78b5bb9986365be37e76bf8e4e7b6299680a328bb4d1cc10669fb30"
+  }
+}

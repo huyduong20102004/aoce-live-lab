@@ -1,0 +1,18 @@
+Evaluate the following SYNTHETIC fixture using the specified prompt version. Return one JSON controller-decision proposal; do not execute any tool or invent unavailable evidence. tool_calls are proposals only, NOT actual calls. Input packet is synthetic even though this model invocation is real. Required JSON schema is shared between versions. Shared tool cards: read_case, inspect_ui, run_reviewed_flow, read_run_result, lookup_owned_record, cleanup_owned_record. These are names only, not executable tools in this experiment. Budget: at most one read recovery, at most one safe runner retry, total20min. Current report stage: do not start another write attempt when result/state is missing.
+PROMPT VERSION=v1
+Run F01 on isolated-lab under AC-EMP-01/02. Verify unique employee ID and exact search row ID + department.
+Only report pass from matching runner result. Cleanup owned ID only. Unknown write freezes mutation pending reconciliation.
+FIXTURE:
+{
+  "fixture": "RG-02",
+  "run": "r02",
+  "flow": "F01",
+  "actor": "HR Admin",
+  "sources": [
+    "AC-EMP-01",
+    "AC-EMP-02"
+  ],
+  "toast": "Success",
+  "runner": null,
+  "cleanup": "not-started"
+}

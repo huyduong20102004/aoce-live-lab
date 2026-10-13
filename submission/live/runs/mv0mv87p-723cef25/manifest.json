@@ -1,0 +1,382 @@
+{
+  "schema_version": "aoce-live-run-1",
+  "run_id": "mv0mv87p-723cef25",
+  "code_revision": "b4f9af08af98236f698b11b9471138fb7d0b47bc",
+  "mode": "LIVE",
+  "label": "RUN-PASSED",
+  "trigger": "manual-local",
+  "suite": "all",
+  "scheduler_task": null,
+  "github_run_url": null,
+  "environment_alias": "isolated-lab",
+  "app_build": "portallite-local-1",
+  "started_at": "2026-10-09T07:17:51.106Z",
+  "deadline": 1791531471106,
+  "command": "playwright test --project=chromium",
+  "selected_count": 11,
+  "executed_count": 11,
+  "cases": [
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-fd3abe2e4461ce1ac168",
+      "title": "F01 @control INC-61 ambiguous Save rejected then scoped overlay recovery",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-cf6fcd6d8-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-cf6fcd6d8",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-01",
+        "AC-EMP-02",
+        "LAB-AOCE-05",
+        "LOCAL-INC-61"
+      ],
+      "oracle": "Two Save targets reject naive locator; scoped dialog preserves ID/QA",
+      "cleanup": "success",
+      "test_seconds": 2.309,
+      "started_at": "2026-10-09T07:17:54.108Z",
+      "artifacts": [
+        {
+          "name": "recovery-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\b018fb422dd9cd1fd1e5-fd3abe2e4461ce1ac168-0-0.png",
+          "sha256": "95f0d25657c55a194f34df80dad7f16b81f1feb45e5e512e0f741e6f9c47fc83"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-a202a313e9d7914ed543",
+      "title": "F01 @control INC-62 delayed acknowledgement reconciles one committed write",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c1bfd881a-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-c1bfd881a",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-01",
+        "AC-EMP-02",
+        "LAB-AOCE-05",
+        "LOCAL-INC-62"
+      ],
+      "oracle": "UI timeout then owned lookup; no duplicate create; exact ID/QA search",
+      "cleanup": "success",
+      "test_seconds": 1.681,
+      "started_at": "2026-10-09T07:17:56.547Z",
+      "artifacts": [
+        {
+          "name": "reconciled-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\b018fb422dd9cd1fd1e5-a202a313e9d7914ed543-0-0.png",
+          "sha256": "fcd823ccd709b0c9995e5aa11855f103dee81b81d3e6197ca7ec76462009dcb4"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-ef5b573b6643ce78eb57",
+      "title": "F02 @control INC-63 exact search finds record beyond 20 visible iframe rows",
+      "kind": "lab-control",
+      "flow": "F02",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c066d0d92-a1-F02",
+      "case_run_id": "mv0mv87p-723cef25-c066d0d92",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-03",
+        "LAB-AOCE-05",
+        "LOCAL-INC-63"
+      ],
+      "oracle": "Target absent in first 20 visible rows; exact iframe search then Engineering",
+      "cleanup": "success",
+      "test_seconds": 1.686,
+      "started_at": "2026-10-09T07:17:58.253Z",
+      "artifacts": [
+        {
+          "name": "iframe-search-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\b018fb422dd9cd1fd1e5-ef5b573b6643ce78eb57-0-0.png",
+          "sha256": "3d5e1b1b9e43d4d7ee87980d350ac668f4759db2e11dc5e2b34d8143a227e5b5"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-14ca0b472f26ec839128",
+      "title": "F01 @control NC wrong department must fail unchanged QA assertion",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-ce67f319d-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-ce67f319d",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-02",
+        "LOCAL-NC-DEPARTMENT"
+      ],
+      "oracle": "Sales row must be rejected by unchanged QA assertion",
+      "cleanup": "success",
+      "test_seconds": 1.86,
+      "started_at": "2026-10-09T07:17:59.963Z",
+      "artifacts": [
+        {
+          "name": "negative-control-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\b018fb422dd9cd1fd1e5-14ca0b472f26ec839128-0-0.png",
+          "sha256": "18365947bca641bd7a7f2b816db0f78b42d5e41cb6c686e611c202dbf5a0a229"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-9ba15ba41e0b92e23e99",
+      "title": "F01 @control NC wrong employee ID cannot satisfy exact row assertion",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c7d57f6a3-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-c7d57f6a3",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-02",
+        "LOCAL-NC-ID"
+      ],
+      "oracle": "Correct department on a different ID does not satisfy target assertion",
+      "cleanup": "success",
+      "test_seconds": 1.534,
+      "started_at": "2026-10-09T07:18:01.845Z",
+      "artifacts": [],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-9adabec605bcb9a90985",
+      "title": "F03 @control backend Viewer write denied by explicit role gate",
+      "kind": "lab-control",
+      "flow": "F03",
+      "actor": "Viewer",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-cb5442272-a1-F03",
+      "case_run_id": "mv0mv87p-723cef25-cb5442272",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-04",
+        "LOCAL-AUTH-01"
+      ],
+      "oracle": "Additional local backend contract: Viewer create returns403 role error and no record",
+      "cleanup": "not-applicable",
+      "test_seconds": 0.553,
+      "started_at": "2026-10-09T07:18:03.401Z",
+      "artifacts": [],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-0bfe8680302d3a6110b6",
+      "title": "F01 @control collision and cleanup outside exact ownership are rejected",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-cadd686b8-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-cadd686b8",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-05",
+        "LOCAL-OWNERSHIP-01"
+      ],
+      "oracle": "Atomic duplicate reservation409; unowned demo cleanup403; demo remains",
+      "cleanup": "success",
+      "test_seconds": 0.302,
+      "started_at": "2026-10-09T07:18:03.973Z",
+      "artifacts": [],
+      "errors": []
+    },
+    {
+      "logical_case_id": "b018fb422dd9cd1fd1e5-e171695e9ae33d242692",
+      "title": "F01 @control INC-64 controlled missing executable is environment blocked",
+      "kind": "lab-control",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c036d048c-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-c036d048c",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LOCAL-INC-64",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Browser launch failure before app actions is environment issue, not app flaky",
+      "cleanup": "not-applicable",
+      "test_seconds": 0.326,
+      "started_at": "2026-10-09T07:18:04.298Z",
+      "artifacts": [],
+      "errors": []
+    },
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-58b0190ef47804478632",
+      "title": "F01 @smoke create unique employee and search exact ID + QA",
+      "kind": "business-smoke",
+      "flow": "F01",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c2bda1e30-a1-F01",
+      "case_run_id": "mv0mv87p-723cef25-c2bda1e30",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "AC-EMP-01",
+        "AC-EMP-02",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Unique owned ID; exact search row and QA",
+      "cleanup": "success",
+      "test_seconds": 1.119,
+      "started_at": "2026-10-09T07:18:04.662Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\4219922fea2e2bd3c691-58b0190ef47804478632-0-0.png",
+          "sha256": "f60410cb795946044ffc0f560eaad898f3d9048b7173a9c3f697fe0de1e95edd"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-aff42dca07351c3c1fca",
+      "title": "F02 @smoke change independent owned seed department and search",
+      "kind": "business-smoke",
+      "flow": "F02",
+      "actor": "HR Admin",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-c65df7bad-a1-F02",
+      "case_run_id": "mv0mv87p-723cef25-c65df7bad",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-03",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Independent owned QA seed; exact ID + Engineering after edit",
+      "cleanup": "success",
+      "test_seconds": 3.053,
+      "started_at": "2026-10-09T07:18:05.806Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\4219922fea2e2bd3c691-aff42dca07351c3c1fca-0-0.png",
+          "sha256": "5565fe05226e38fc7ee8a440a46f7b23049afe0a3dc7b6503ef6653b36515ce7"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "logical_case_id": "4219922fea2e2bd3c691-fda22b0a2107895cb2b6",
+      "title": "F03 @smoke Viewer Create disabled and attempted ID absent",
+      "kind": "business-smoke",
+      "flow": "F03",
+      "actor": "Viewer",
+      "employee_id": "E2E-AOCE-mv0mv87p-723cef25-cdce9d5f7-a1-F03",
+      "case_run_id": "mv0mv87p-723cef25-cdce9d5f7",
+      "attempt_id": "a1",
+      "attempts": 1,
+      "status": "passed",
+      "expected_status": "passed",
+      "source_refs": [
+        "LAB-AOCE-04",
+        "LAB-AOCE-05"
+      ],
+      "oracle": "Fresh Viewer auth; Create disabled; no owned record",
+      "cleanup": "not-applicable",
+      "test_seconds": 0.767,
+      "started_at": "2026-10-09T07:18:08.898Z",
+      "artifacts": [
+        {
+          "name": "assertion-ui",
+          "path": ".lab\\runs\\mv0mv87p-723cef25\\screenshots\\4219922fea2e2bd3c691-fda22b0a2107895cb2b6-0-0.png",
+          "sha256": "c615094076b980197c866937843f8208ed9328bd52e00c00e611f815d6b47144"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "cleanup_status": "resolved",
+  "usage_status": "not-applicable",
+  "model_calls": 0,
+  "prompt_version": "aoce-prompt-v3",
+  "context_version": "aoce-context-v3",
+  "model_cost": 0,
+  "ci_billable_cost": null,
+  "cost_unit": "NOT_SPECIFIED",
+  "runner_outcome": "passed",
+  "runner_started_at": "2026-10-09T07:17:53.217Z",
+  "runner_finished_at": "2026-10-09T07:18:09.926Z",
+  "runner_seconds": 16.616523,
+  "selected": [
+    {
+      "id": "b018fb422dd9cd1fd1e5-fd3abe2e4461ce1ac168",
+      "title": "F01 @control INC-61 ambiguous Save rejected then scoped overlay recovery"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-a202a313e9d7914ed543",
+      "title": "F01 @control INC-62 delayed acknowledgement reconciles one committed write"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-ef5b573b6643ce78eb57",
+      "title": "F02 @control INC-63 exact search finds record beyond 20 visible iframe rows"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-14ca0b472f26ec839128",
+      "title": "F01 @control NC wrong department must fail unchanged QA assertion"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-9ba15ba41e0b92e23e99",
+      "title": "F01 @control NC wrong employee ID cannot satisfy exact row assertion"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-9adabec605bcb9a90985",
+      "title": "F03 @control backend Viewer write denied by explicit role gate"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-0bfe8680302d3a6110b6",
+      "title": "F01 @control collision and cleanup outside exact ownership are rejected"
+    },
+    {
+      "id": "b018fb422dd9cd1fd1e5-e171695e9ae33d242692",
+      "title": "F01 @control INC-64 controlled missing executable is environment blocked"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-58b0190ef47804478632",
+      "title": "F01 @smoke create unique employee and search exact ID + QA"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-aff42dca07351c3c1fca",
+      "title": "F02 @smoke change independent owned seed department and search"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-fda22b0a2107895cb2b6",
+      "title": "F03 @smoke Viewer Create disabled and attempted ID absent"
+    }
+  ],
+  "finished_at": "2026-10-09T07:18:10.145Z",
+  "end_to_end_seconds": 19.039,
+  "operational_error": null
+}

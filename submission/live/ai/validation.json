@@ -1,0 +1,337 @@
+{
+  "scope": "ACTUAL AI BENCHMARK ARTIFACT VALIDATION",
+  "generated_at": "2026-10-09T08:29:49.865682+00:00",
+  "checks": [
+    {
+      "check": "Nine U1 samples and sixteen original U2 responses",
+      "status": "OK",
+      "detail": "No fixture samples substituted for real CLI invocations"
+    },
+    {
+      "check": "Frozen input actual-evidence.json",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input archive-reference.md",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input decision.schema.json",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input probe.schema.json",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input probe.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input summary.schema.json",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U1-A.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U1-B.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U1-C.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-fixtures.json",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-prompt.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-01.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-02.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-03.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-04.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-05.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-06.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-07.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v1-RG-08.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-prompt.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-01.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-02.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-03.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-04.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-05.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-06.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-07.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Frozen input U2-v3-RG-08.txt",
+      "status": "OK",
+      "detail": "Original declared input hash"
+    },
+    {
+      "check": "Actual model call U1-A1",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-B1",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-C1",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-B2",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-C2",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-A2",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-C3",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-A3",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U1-B3",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-01",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-01",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-02",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-02",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-03",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-03",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-04",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-04",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-05",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-05",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-06",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-06",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-07",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-07",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-08",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-08",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v1-RG-01-complete",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "Actual model call U2-v3-RG-01-complete",
+      "status": "OK",
+      "detail": "Exit0, complete usage from raw event, response schema, fixed model/effort/input hashes, zero action tools, ChatGPT auth"
+    },
+    {
+      "check": "U1 independently recalculated config A",
+      "status": "OK",
+      "detail": "3samples, medians/ranges/usage partition match raw metadata; money/reviewer time not invented"
+    },
+    {
+      "check": "U1 independently recalculated config B",
+      "status": "OK",
+      "detail": "3samples, medians/ranges/usage partition match raw metadata; money/reviewer time not invented"
+    },
+    {
+      "check": "U1 independently recalculated config C",
+      "status": "OK",
+      "detail": "3samples, medians/ranges/usage partition match raw metadata; money/reviewer time not invented"
+    },
+    {
+      "check": "U2 original fixture/version denominators",
+      "status": "OK",
+      "detail": "Supplemental complete-positive excluded from original8 per version"
+    },
+    {
+      "check": "Complete positive control accepted",
+      "status": "OK",
+      "detail": "Same richer synthetic fixture for both versions, original RG01 retained"
+    },
+    {
+      "check": "Four nonvacuous negative controls detected",
+      "status": "OK",
+      "detail": "Actual accepted outputs corrupted by stale run/wrong department/arbitrary delete/toast oracle"
+    },
+    {
+      "check": "Live app source revision remains unchanged",
+      "status": "OK",
+      "detail": "AI benchmark does not edit/commit/re-run application source"
+    },
+    {
+      "check": "U1 actual runner evidence hash matches",
+      "status": "OK",
+      "detail": "Underlying F01 reporter evidence not fabricated by model"
+    },
+    {
+      "check": "No app credentials/capabilities in AI inputs or outputs",
+      "status": "OK",
+      "detail": "Private-value comparison done locally; secret values never logged"
+    },
+    {
+      "check": "Submission links resolve",
+      "status": "OK",
+      "detail": "Original and AI supplementary document links present; frozen input archive is data, validated by source hash"
+    }
+  ],
+  "errors": 0
+}

@@ -1,0 +1,41 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "A",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "REQ-PACKET-AOCE",
+    "AC-EMP-01",
+    "AC-EMP-02",
+    "POLICY-PACKET-AOCE",
+    "LAB-AOCE-05",
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+    "tests/e2e/smoke.spec.ts"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing",
+    "Search SLA: Not specified",
+    "API endpoint: Not specified",
+    "Audit schema: Not specified",
+    "Backend role enforcement: Not specified",
+    "Actual pricing: Not specified",
+    "Production permissions: Not specified",
+    "Actual live budget allocation and wall-time: not supplied"
+  ],
+  "rationale": "The supplied actual local runner evidence matches this run, attempt, flow and revision. F01 assertions prove absence before creation, exactly one search row with the exact employee ID, a visible QA cell, exact-ID lookup and one owned write. Cleanup succeeded and the record was absent afterward. Manifest SHA-256: 5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78. REFERENCE ARCHIVE remains synthetic provenance: EV-bench-1, EV-other-1 and CTX-08 are not current proof. Policy limits of one safe runner retry, one read recovery and 20 minutes are design parameters, not evidence of an allocated live budget. Unknown writes require stopping mutations and reconciliation before retry. No new write, retry or cleanup is needed. Runtime model calls were 0; subscription tokens do not establish billable monetary cost."
+}

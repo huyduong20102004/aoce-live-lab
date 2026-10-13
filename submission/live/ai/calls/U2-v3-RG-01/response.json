@@ -1,0 +1,20 @@
+{
+  "fixture": "RG-01",
+  "mode": "SIMULATED",
+  "action": "READ_RECOVERY_OR_STOP_UNKNOWN",
+  "verdict": "UNKNOWN",
+  "tool_calls": ["read_run_result"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "Unique employee ID E2E-AOCE-r02-a1-F01",
+    "Exact search ID E2E-AOCE-r02-a1-F01",
+    "Selected department QA",
+    "Runner assertions matching r02/a1/F01 and the trusted revision"
+  ],
+  "evidence_gaps": [
+    "Trusted revision and matching runner revision are missing.",
+    "Environment allowlist confirmation is missing.",
+    "Explicit uniqueness and exact-search assertions are missing."
+  ],
+  "reason": "Matching run/attempt/flow, ID and department assertions are present, but evidence is insufficient for PASS. Propose one read recovery only; stop UNKNOWN if gaps remain. Do not retry a write or perform additional cleanup. Synthetic evidence cannot establish a live app pass."
+}

@@ -1,0 +1,129 @@
+# DRY-RUN DESIGN DRAFT. Keep in submission folder; not deployed.
+# All lab scripts/contracts in U5_ci-design.md must exist before integration.
+# Action majors follow official Playwright CI example checked 2026-10-07.
+name: AOCE reviewed lab lanes
+
+"on":
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 18 * * *' # UTC -> 01:17 Vietnam next calendar day.
+
+permissions:
+  contents: read
+
+jobs:
+  pr-verification:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: 'true'
+      LAB_LANE: pr
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Static checks
+        run: npm run typecheck
+      - name: Synthetic context regression only
+        run: npm run context:regression
+      - name: Discover nonempty reviewed smoke selection without login
+        run: npm run lab:discover -- --project=chromium --grep=@smoke --expected-flows=F01,F02,F03
+      - name: Upload PR static evidence only
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoce-pr-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-export/pr/
+          if-no-files-found: error
+          retention-days: 7
+
+  live-smoke:
+    # Manual requires explicit lab authorization; schedule additionally requires
+    # a recorded successful manual run of this exact reviewed code revision.
+    if: >-
+      ${{ github.event_name != 'pull_request' &&
+          github.ref_name == github.event.repository.default_branch &&
+          vars.AOCE_MANUAL_ENABLED == 'true' &&
+          (github.event_name == 'workflow_dispatch' ||
+           (github.event_name == 'schedule' &&
+            vars.AOCE_SCHEDULE_ENABLED == 'true' &&
+            vars.AOCE_MANUAL_VALIDATED_REVISION == github.sha)) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: isolated-lab
+    concurrency:
+      group: aoce-isolated-lab-live
+      cancel-in-progress: false
+    env:
+      CI: 'true'
+      LAB_LANE: live
+      LAB_ENVIRONMENT: isolated-lab
+      LAB_BASE_URL: ${{ vars.LAB_BASE_URL }}
+      LAB_URL_ALLOWLIST: ${{ vars.LAB_URL_ALLOWLIST }}
+      LAB_USERNAME: ${{ secrets.LAB_USERNAME }}
+      LAB_PASSWORD: ${{ secrets.LAB_PASSWORD }}
+      LAB_VIEWER_USERNAME: ${{ secrets.LAB_VIEWER_USERNAME }}
+      LAB_VIEWER_PASSWORD: ${{ secrets.LAB_VIEWER_PASSWORD }}
+      LAB_LEDGER_STORE_REF: ${{ vars.LAB_LEDGER_STORE_REF }}
+      LAB_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+      LAB_CODE_REVISION: ${{ github.sha }}
+      LAB_TRIGGER: ${{ github.event_name }}
+      LAB_EXPECTED_CRON: '17 18 * * *'
+      LAB_BUDGET_SECONDS: '1200'
+      LAB_TEST_BUDGET_SECONDS: '720'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Initialize nonsecret run manifest and deadline
+        id: bootstrap
+        run: node scripts/lab-manifest-init.mjs
+      - name: Install locked dependencies
+        id: install
+        run: npm ci
+      - name: Validate environment, roles, namespace and durable ledger
+        id: preflight
+        run: npm run lab:preflight
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Discover exact reviewed smoke flow set
+        id: discovery
+        run: npm run lab:discover -- --project=chromium --grep=@smoke --expected-flows=F01,F02,F03
+      - name: Run reviewed smoke within remaining budget
+        id: tests
+        run: npm run lab:execute -- --project=chromium --grep=@smoke
+      - name: Reconcile this run's exact owned ledger
+        if: ${{ always() && steps.preflight.outcome == 'success' }}
+        run: npm run lab:reconcile
+      - name: Finalize manifest even when setup fails
+        if: ${{ always() && steps.bootstrap.outcome == 'success' }}
+        env:
+          SETUP_OUTCOME: ${{ steps.preflight.outcome }}
+          DISCOVERY_OUTCOME: ${{ steps.discovery.outcome }}
+          EXECUTION_OUTCOME: ${{ steps.tests.outcome }}
+        run: node scripts/lab-manifest-finalize.mjs
+      - name: Check evidence linkage and unresolved cleanup
+        if: ${{ always() && steps.bootstrap.outcome == 'success' }}
+        run: node scripts/lab-evidence-check.mjs
+      - name: Export approved evidence with sensitivity policy
+        if: ${{ always() && steps.bootstrap.outcome == 'success' }}
+        run: node scripts/lab-export-evidence.mjs
+      - name: Upload reviewed evidence on failure as well as success
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoce-live-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-export/live/
+          if-no-files-found: error
+          retention-days: 7

@@ -1,0 +1,154 @@
+{
+  "scope": "ACTUAL LOCAL EVIDENCE VALIDATION",
+  "generated_at": "2026-10-09T08:29:50.641416+00:00",
+  "timezone": "UTC+7",
+  "revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "checks": [
+    {
+      "check": "Actual source revision and clean Git tree",
+      "status": "OK",
+      "detail": "68ae69680f53e68e541813c0f044c5d22067389a"
+    },
+    {
+      "check": "No credentials/raw auth/state/artifacts tracked",
+      "status": "OK",
+      "detail": "Only reviewed source paths tracked"
+    },
+    {
+      "check": "Original source packets unchanged",
+      "status": "OK",
+      "detail": "Handout/content hashes match original snapshot"
+    },
+    {
+      "check": "Actual TypeScript check",
+      "status": "OK",
+      "detail": "Compiler command and current revision captured"
+    },
+    {
+      "check": "Actual controller regression",
+      "status": "OK",
+      "detail": "15 deterministic tests incl RG01–08, negative controls and auth redaction; not model calls"
+    },
+    {
+      "check": "Runtime missing-secret/no-tests/forged-trigger gates",
+      "status": "OK",
+      "detail": "Actual child script exits; no app writes"
+    },
+    {
+      "check": "Run evidence integrity mv0msou8-a3f5c23f",
+      "status": "OK",
+      "detail": "revision=f9a0f8721ec9e11667050b1192abe686da7810ae; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0mv3dh-4849517b",
+      "status": "OK",
+      "detail": "revision=b4f9af08af98236f698b11b9471138fb7d0b47bc; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0mv87p-723cef25",
+      "status": "OK",
+      "detail": "revision=b4f9af08af98236f698b11b9471138fb7d0b47bc; cases=11; owned IDs=33; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0mxt3m-5c736751",
+      "status": "OK",
+      "detail": "revision=b4f9af08af98236f698b11b9471138fb7d0b47bc; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0mzz1g-18362a62",
+      "status": "OK",
+      "detail": "revision=8da3165ce08ebc090dbd13679214fcbf5c7edfe9; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n03oi-a9547ca3",
+      "status": "OK",
+      "detail": "revision=8da3165ce08ebc090dbd13679214fcbf5c7edfe9; cases=11; owned IDs=33; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n31fl-c686a80c",
+      "status": "OK",
+      "detail": "revision=d250e708264345ad2c6b700e9c66d19232c012c3; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n361t-b648196b",
+      "status": "OK",
+      "detail": "revision=d250e708264345ad2c6b700e9c66d19232c012c3; cases=11; owned IDs=33; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n59ry-c4fc10dc",
+      "status": "OK",
+      "detail": "revision=d250e708264345ad2c6b700e9c66d19232c012c3; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n72e1-3c08d864",
+      "status": "OK",
+      "detail": "revision=39902a624538d91b9ce0c6bbbb92260481b2abe2; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n77qg-c63b0265",
+      "status": "OK",
+      "detail": "revision=39902a624538d91b9ce0c6bbbb92260481b2abe2; cases=11; owned IDs=33; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0n9aob-6bcdfc74",
+      "status": "OK",
+      "detail": "revision=39902a624538d91b9ce0c6bbbb92260481b2abe2; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0nfj0v-fcf1b44e",
+      "status": "OK",
+      "detail": "revision=68ae69680f53e68e541813c0f044c5d22067389a; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0nfnvq-faeb5798",
+      "status": "OK",
+      "detail": "revision=68ae69680f53e68e541813c0f044c5d22067389a; cases=11; owned IDs=33; screenshot hashes checked"
+    },
+    {
+      "check": "Run evidence integrity mv0nhq5q-5bc239db",
+      "status": "OK",
+      "detail": "revision=68ae69680f53e68e541813c0f044c5d22067389a; cases=3; owned IDs=3; screenshot hashes checked"
+    },
+    {
+      "check": "Current revision has manual three-flow smoke",
+      "status": "OK",
+      "detail": "Actual runner assertions, no discovery-only substitution"
+    },
+    {
+      "check": "Current revision full robustness suite",
+      "status": "OK",
+      "detail": "3 business cases +8 controls; negative-control passes are detection results"
+    },
+    {
+      "check": "Historical failures retained",
+      "status": "OK",
+      "detail": "mv0mm4yl-1e3694b0, mv0mmqly-2d3e1e4a, mv0mnbio-7d9ddcf5, mv0mnwwh-acbc4787, mv0mpki6-2c57eadc; not overwritten as pass"
+    },
+    {
+      "check": "Actual OS scheduled launch, separate from manual",
+      "status": "OK",
+      "detail": "Requires manifest task marker plus observed Task Scheduler result0; no GitHub scheduled claim"
+    },
+    {
+      "check": "Export does not contain actual private secrets",
+      "status": "OK",
+      "detail": "Local secret comparison performed without logging secret values"
+    },
+    {
+      "check": "No remaining E2E owned employees",
+      "status": "OK",
+      "detail": "State inspected locally; values/credentials not exported"
+    },
+    {
+      "check": "Unowned demo employee preserved",
+      "status": "OK",
+      "detail": "Cross-owner cleanup negative control protected demo"
+    },
+    {
+      "check": "Submission and lab Markdown links resolve",
+      "status": "OK",
+      "detail": "Dry-run and live-local references present"
+    }
+  ],
+  "errors": 0
+}

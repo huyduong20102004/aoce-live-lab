@@ -1,0 +1,21 @@
+{
+  "fixture": "RG-03",
+  "mode": "SIMULATED",
+  "action": "READ_RECOVERY",
+  "verdict": "UNKNOWN",
+  "tool_calls": ["read_run_result"],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "AC-EMP-01/02 unique owned ID",
+    "Exact search ID",
+    "Selected department",
+    "Matching runner assertions for the current run, attempt, flow and revision"
+  ],
+  "evidence_gaps": [
+    "Runner evidence belongs to r01, not current run r02",
+    "Current attempt, revision and allowlisted environment are missing",
+    "Exact owned ID and expected selected department are missing",
+    "Current result and write state are missing"
+  ],
+  "reason": "Propose one read recovery for r02. The r01 assertions and cleanup cannot prove r02 passed or establish its write state. Keep mutations frozen; do not retry, save or clean up. If recovery cannot establish matching evidence, stop UNKNOWN. The fixture remains simulated."
+}

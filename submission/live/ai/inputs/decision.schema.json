@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "fixture": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "verdict": {
+      "type": "string"
+    },
+    "tool_calls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mutations_frozen": {
+      "type": "boolean"
+    },
+    "required_oracles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "fixture",
+    "mode",
+    "action",
+    "verdict",
+    "tool_calls",
+    "mutations_frozen",
+    "required_oracles",
+    "evidence_gaps",
+    "reason"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,7 @@
+{
+  "gate": "REJECT",
+  "findings": [
+    "fixture identity/synthetic label mismatch",
+    "positive matching runner fixture not recognized"
+  ]
+}
