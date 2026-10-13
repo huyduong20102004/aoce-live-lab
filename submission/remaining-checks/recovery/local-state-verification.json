@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-13T03:27:36.624436+00:00",
+  "scope": "REDACTED ACTUAL PERSISTENT SERVER STATE CHECK",
+  "run_id": "cancel-mv63z50h-ec1f9a",
+  "lease_released": true,
+  "owned_records_remaining": 0,
+  "owned_write_count": 1,
+  "unowned_demo_present": true
+}
