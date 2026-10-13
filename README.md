@@ -4,6 +4,8 @@
 
 **Bài nộp:** [Mục lục 7 lab và evidence](submission/README.md). Repo Public này gồm source app/tests, 17 deliverables và bằng chứng đã lọc. [Hướng dẫn CI](docs/GITHUB-CI.md). Badge phản ánh workflow status; PR static checks không thay live browser assertions.
 
+**Hosted CI đã thực thi:** [PR checks](https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38337908837) và [manual Chromium smoke3/3](https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38338108312). [Permanent sanitized CI evidence](submission/hosted-ci/README.md). Scheduled daily run được gated theo manual-validated SHA; không gọi manual event là schedule proof.
+
 Webapp và test project do Codex tạo để thực thi AC-EMP-01/02 và LAB-AOCE-03/04/05 trên máy này. App chạy tại **http://127.0.0.1:4173**. Source, data và quyền của lab tách với các packets giả lập; xem [local contract](docs/LOCAL-LAB-CONTRACT.md).
 
 ## Khởi động

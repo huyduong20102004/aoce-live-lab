@@ -1,0 +1,27 @@
+{
+  "scope": "ACTUAL PR STATIC/FIXTURE/DISCOVERY, NOT LIVE APP PASS",
+  "code_revision": "534c04814066d1a998e308d56fda3189f70c9f90",
+  "github_head_sha": "534c04814066d1a998e308d56fda3189f70c9f90",
+  "github_run_url": "https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38337908837",
+  "started_checks": 3,
+  "checks": [
+    {
+      "check": "typecheck",
+      "exit_code": 0,
+      "seconds": 0.462,
+      "status": "PASSED"
+    },
+    {
+      "check": "context-regression",
+      "exit_code": 0,
+      "seconds": 0.615,
+      "status": "PASSED"
+    },
+    {
+      "check": "smoke-discovery",
+      "exit_code": 0,
+      "seconds": 0.672,
+      "status": "PASSED"
+    }
+  ]
+}

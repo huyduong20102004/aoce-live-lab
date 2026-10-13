@@ -6,6 +6,7 @@ Repo gồm source webapp/test project và **17 deliverables cho 7 lab**. Đây l
 - [Actual webapp/controller/recovery evidence](live/README.md)
 - [Actual Codex CLI U1/U2 benchmark](live/ai/README.md)
 - [GitHub Actions](https://github.com/huyduong20102004/aoce-live-lab/actions)
+- [Actual hosted PR/manual CI evidence](hosted-ci/README.md)
 - [Source app/CI instructions](../README.md)
 - [Handout source](../L3_AIQE_AOCE_exercises_vi.md)
 - [Course content source](../L3_AIQE_AOCE_course_content_vi.md)

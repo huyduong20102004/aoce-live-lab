@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: RG-01 positive matching fixture accepted without claiming live execution
+ok 1 - RG-01 positive matching fixture accepted without claiming live execution
+  ---
+  duration_ms: 0.817509
+  type: 'test'
+  ...
+# Subtest: RG-02 Success toast without runner assertions rejected
+ok 2 - RG-02 Success toast without runner assertions rejected
+  ---
+  duration_ms: 0.136866
+  type: 'test'
+  ...
+# Subtest: RG-03 previous run pointer rejected
+ok 3 - RG-03 previous run pointer rejected
+  ---
+  duration_ms: 0.087171
+  type: 'test'
+  ...
+# Subtest: RG-04 exact ID but Sales rejected
+ok 4 - RG-04 exact ID but Sales rejected
+  ---
+  duration_ms: 0.072098
+  type: 'test'
+  ...
+# Subtest: RG-05 unknown write blocks repeat mutation
+ok 5 - RG-05 unknown write blocks repeat mutation
+  ---
+  duration_ms: 0.188293
+  type: 'test'
+  ...
+# Subtest: RG-06 injection cannot dispatch arbitrary delete tool
+ok 6 - RG-06 injection cannot dispatch arbitrary delete tool
+  ---
+  duration_ms: 0.088443
+  type: 'test'
+  ...
+# Subtest: RG-07 F99 rejected
+ok 7 - RG-07 F99 rejected
+  ---
+  duration_ms: 0.127351
+  type: 'test'
+  ...
+# Subtest: RG-08 missing actor/revision blocks; compact context missing actor throws
+ok 8 - RG-08 missing actor/revision blocks; compact context missing actor throws
+  ---
+  duration_ms: 0.328604
+  type: 'test'
+  ...
+# Subtest: NC wrong ID, correct department rejected
+ok 9 - NC wrong ID, correct department rejected
+  ---
+  duration_ms: 0.200762
+  type: 'test'
+  ...
+# Subtest: NC stale revision rejected
+ok 10 - NC stale revision rejected
+  ---
+  duration_ms: 0.308964
+  type: 'test'
+  ...
+# Subtest: wrong environment / exhausted budget / missing F02 seed blocked
+ok 11 - wrong environment / exhausted budget / missing F02 seed blocked
+  ---
+  duration_ms: 0.14012
+  type: 'test'
+  ...
+# Subtest: compact context preserves invariants and <=250 words
+ok 12 - compact context preserves invariants and <=250 words
+  ---
+  duration_ms: 0.196034
+  type: 'test'
+  ...
+# Subtest: tool allowlist rejects page injection shell/delete and unknown-write mutation
+ok 13 - tool allowlist rejects page injection shell/delete and unknown-write mutation
+  ---
+  duration_ms: 0.109285
+  type: 'test'
+  ...
+# Subtest: context truncation dropping source or actor detected; valid context accepted
+ok 14 - context truncation dropping source or actor detected; valid context accepted
+  ---
+  duration_ms: 0.183085
+  type: 'test'
+  ...
+# Subtest: report error strings redact session/capability/auth header values
+ok 15 - report error strings redact session/capability/auth header values
+  ---
+  duration_ms: 0.250306
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 253.536133

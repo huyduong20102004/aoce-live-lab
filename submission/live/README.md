@@ -1,5 +1,7 @@
 # AOCE — bài nộp bổ sung LIVE-LOCAL
 
+**Hosted CI update2026-10-13:** [GitHub PR/manual Actions đã chạy thành công](../hosted-ci/README.md). Các mục "GitHub chưa chạy" trong snapshot ngày2026-10-09 bên dưới là trạng thái lịch sử, không thay actual hosted evidence mới. Daily GitHub schedule slot vẫn cần event=schedule thực tế.
+
 **AI update2026-10-09:** U1/U2 đã có actual Codex CLI benchmark/fixture outputs. Xem [AI cohort riêng](ai/README.md). Các dòng "provider benchmark/model outputs chưa có" bên dưới là giới hạn tại thời điểm hoàn tất webapp trước experiment; được cập nhật bằng cohort CLI, còn monetary billing/backend model snapshot và hosted CI chưa có.
 
 Ngày 2026-10-09 (UTC+7). Webapp **http://127.0.0.1:4173**, source [aoce-live-lab](../../README.md). Môi trường này do Codex xây theo yêu cầu người dùng; backend/browser/tests thực sự chạy tại máy, dữ liệu nhân viên là dữ liệu lab. Không phải production PortalLite hoặc trainer-certified app. Dry-run packets ngày2026-10-07 giữ nguyên, không nhập vào cohort live.

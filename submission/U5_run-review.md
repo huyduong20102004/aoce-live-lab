@@ -16,6 +16,10 @@ Review log: REJECT RUN-B exit0⇒100% (source count=0); ACCEPT RUN-A cần unres
 
 Validation actual chỉ local document arithmetic/links; các packets không chạy lại được vì không runtime được cấp. Owner và next action là đề xuất, không assignment.
 
+## Actual GitHub Actions extension — 2026-10-13
+
+[Hosted CI evidence](hosted-ci/README.md): PR #1 checks SUCCESS ở run38337908837; manual Linux/Chromium smoke SUCCESS ở run38338108312/maince8d017, selected3/executed3/pass3, owned cleanup resolved và evidence COMPLETE. Các run URLs/metadata/artifacts có thật, không dùng CI-RUN-A/B/C packets như hosted results. Daily01:17 được gated bằng matching manual SHA; actual schedule event còn cần quan sát khi slot tới hạn.
+
 ## Bổ sung live-local ngày 2026-10-09
 
 Đã dựng môi trường mới theo [PORTALLITE-LOCAL-01](../docs/LOCAL-LAB-CONTRACT.md), không phải chạy CI-RUN-A/B/C. Repo source riêng `aoce-live-lab`; code revision cuối `68ae69680f53e68e541813c0f044c5d22067389a`.
