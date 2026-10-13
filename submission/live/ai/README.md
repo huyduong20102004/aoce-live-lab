@@ -1,7 +1,5 @@
 # U1/U2 — benchmark bằng Codex CLI thật
 
-**CI update2026-10-13:** [Hosted PR/manual CI đã có actual evidence](../../hosted-ci/README.md); benchmark/model dataset dưới đây giữ nguyên snapshot2026-10-09. Không rerun model trong CI hoặc đổi token records để làm kết quả thuận lợi hơn.
-
 Ngày2026-10-09 (UTC+7). **Đã thực thi model calls**, không dùng các rows giả lập như calls thực tế. CLI0.160.0, requested model `gpt-6.1-sol`, reasoning `high` giữ theo cấu hình đang dùng trên máy; ChatGPT authentication, không sử dụng API key billing. Backend model snapshot không có metadata riêng nên version bên dưới là requested alias, không tự điền revision backend.
 
 Artifacts: [U1 benchmark](U1_actual-benchmark.md), [usage ledger CSV](U1_actual-ledger.csv), [U2 before/after](U2_actual-regression.md), [protocol](protocol.json), [raw results](results.json), [validation](validation.md), [QA review decisions](review-decisions.md).

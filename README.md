@@ -36,3 +36,9 @@ Private raw evidence/state/grants: .lab ignored. Layout local ban đầu export 
 Watchdog: `npm run lab:watchdog` reconcile expired-owned runs, giữ nonzero khi unknown/unresolved. Không delete mọi nhân viên. Task Scheduler setup/status scripts sẽ ghi proof riêng khi khả dụng; daily smoke01:17 Việt Nam dùng giờ UTC+7, chỉ bật sau manual success. Forced cancellation vẫn có thể bỏ in-job cleanup; watchdog là cơ chế ngoài job khi server/credentials còn sẵn.
 
 Nguồn kỹ thuật đối chiếu2026-10-09: [Playwright reporters](https://playwright.dev/docs/test-reporters), [Playwright CI](https://playwright.dev/docs/ci-intro), [Playwright local server](https://playwright.dev/docs/test-webserver). UI/controller/API endpoints/fault semantics là contract local mới, không source product được trainer chứng nhận.
+
+## Bài nộp và bằng chứng
+
+- [Bài giải 7 lab theo folder](submission/labs/README.md).
+- [Bằng chứng live mới nhất](submission/live/recovery/README.md).
+- [Mục lục đầy đủ](submission/README.md).

@@ -9,3 +9,5 @@ playwright/.auth/
 dist/
 *.log
 evidence-export/
+__pycache__/
+*.py[cod]

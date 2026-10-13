@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 11786821223,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc4NjgyMTIyMw==",
+      "name": "live-38340873990-1",
+      "size_in_bytes": 188919,
+      "url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/artifacts/11786821223",
+      "archive_download_url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/artifacts/11786821223/zip",
+      "expired": false,
+      "digest": "sha256:0e3d500af7435727fbd465e43caa4b75bf4e1c8b2cd13ef173144b6c0f5853df",
+      "created_at": "2026-10-13T03:16:32Z",
+      "updated_at": "2026-10-13T03:16:32Z",
+      "expires_at": "2026-10-20T03:16:32Z",
+      "workflow_run": {
+        "id": 38340873990,
+        "repository_id": 1416344976,
+        "head_repository_id": 1416344976,
+        "head_branch": "main",
+        "head_sha": "c27f9b8eff44a4875f2922831890dc8d8abf1851"
+      }
+    }
+  ]
+}

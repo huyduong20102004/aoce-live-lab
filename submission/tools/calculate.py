@@ -91,7 +91,7 @@ def compute():
 
 def main():
     ledger, configs, cohort, metrics = compute()
-    with (ROOT/'U1_cost-ledger.csv').open('w', encoding='utf-8', newline='') as f:
+    with (ROOT/'labs/U1/U1_cost-ledger.csv').open('w', encoding='utf-8', newline='') as f:
         writer=csv.DictWriter(f, fieldnames=list(ledger[0]))
         writer.writeheader()
         for row in ledger:

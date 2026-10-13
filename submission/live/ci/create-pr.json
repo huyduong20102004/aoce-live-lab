@@ -1,0 +1,6 @@
+{
+  "title": "Publish seven-unit AOCE submission and curated execution evidence",
+  "head": "feat/submission-ci",
+  "base": "main",
+  "body": "This change adds the complete U1–U7 submission alongside the isolated PortalLite source. It includes 17 required deliverables, synthetic source packets, sanitized local run/assertion/cleanup screenshots and actual Codex CLI benchmark outputs.\n\nRaw credentials, auth state, grants, traces, CLI event streams and stderr are excluded. Local validation: TypeScript succeeds; controller regression 15/15; smoke discovery selects exactly F01/F02/F03; publication/history scan reports no known secrets.\n\nGitHub Actions PR lane runs locked install, typecheck, fixture regression and discovery with exported static evidence. A manual hosted browser smoke will follow on main before enabling the daily schedule. Actual model monetary cost remains UNKNOWN; synthetic fixtures are not presented as live app passes."
+}

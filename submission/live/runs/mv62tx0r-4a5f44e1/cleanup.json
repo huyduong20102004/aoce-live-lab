@@ -1,0 +1,33 @@
+{
+  "mode": "LIVE",
+  "run_id": "mv62tx0r-4a5f44e1",
+  "records": [
+    {
+      "employee_id": "E2E-AOCE-mv62tx0r-4a5f44e1-c2bda1e30-a1-F01",
+      "owner": "mv62tx0r-4a5f44e1",
+      "write_state": "CREATED",
+      "writes": 1,
+      "cleanup": "success",
+      "record_absent_after": true
+    },
+    {
+      "employee_id": "E2E-AOCE-mv62tx0r-4a5f44e1-c65df7bad-a1-F02",
+      "owner": "mv62tx0r-4a5f44e1",
+      "write_state": "CREATED",
+      "writes": 1,
+      "cleanup": "success",
+      "record_absent_after": true
+    },
+    {
+      "employee_id": "E2E-AOCE-mv62tx0r-4a5f44e1-cdce9d5f7-a1-F03",
+      "owner": "mv62tx0r-4a5f44e1",
+      "write_state": "NOT_WRITTEN",
+      "writes": 0,
+      "cleanup": "not-applicable",
+      "record_absent_after": true
+    }
+  ],
+  "unresolved_count": 0,
+  "cleanup_status": "resolved",
+  "time": "2026-10-13T02:43:40.708Z"
+}

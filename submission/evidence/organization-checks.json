@@ -1,0 +1,14 @@
+{
+  "scope": "LOCAL FOLDER MIGRATION VERIFICATION",
+  "checked_at": "2026-10-13T04:11:22.044933+00:00",
+  "moved_files": 29,
+  "deliverables": 17,
+  "original_sources_unchanged": true,
+  "moved_non_markdown_bytes_unchanged": true,
+  "missing_links": [],
+  "runtime_repo_clean": true,
+  "runtime_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+  "artifact_checks": 40,
+  "AI_checks": 66,
+  "recovery_evidence_checks": 24
+}

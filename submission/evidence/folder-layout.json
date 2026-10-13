@@ -1,0 +1,186 @@
+{
+  "scope": "LOCAL FOLDER ORGANIZATION; NO RUNTIME REPO MUTATION",
+  "organized_at": "2026-10-13T04:06:44.010067+00:00",
+  "runtime_revision_unchanged": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+  "moved_files": [
+    {
+      "from": "bai-nop-AOCE/U1_benchmark.md",
+      "to": "bai-nop-AOCE/labs/U1/U1_benchmark.md",
+      "sha256_before": "84f3c421c4c843eea2834a31bc0d03934563f5c1aa8026fc2a2b588ac95890ae",
+      "sha256_after": "f530a5389a8db1ad4c29c69609f316888f6774fd90f09ee12ae3aadc59020e8c"
+    },
+    {
+      "from": "bai-nop-AOCE/U1_cost-ledger.csv",
+      "to": "bai-nop-AOCE/labs/U1/U1_cost-ledger.csv",
+      "sha256_before": "9aeac0389537b3b2e0a4c0233e8d636762359c2c1fedb142cec7847fe1092ba9",
+      "sha256_after": "9aeac0389537b3b2e0a4c0233e8d636762359c2c1fedb142cec7847fe1092ba9"
+    },
+    {
+      "from": "bai-nop-AOCE/U2_context-and-prompt.md",
+      "to": "bai-nop-AOCE/labs/U2/U2_context-and-prompt.md",
+      "sha256_before": "817f5c34c16bbd5531c898e71b3b2707c9c4110c62b4053f551772263a38c7f6",
+      "sha256_after": "a38bef6b108758d4778cab3b744e5a8d08c93906a7a2c5e9e53ac0db984b2820"
+    },
+    {
+      "from": "bai-nop-AOCE/U2_regression-matrix.md",
+      "to": "bai-nop-AOCE/labs/U2/U2_regression-matrix.md",
+      "sha256_before": "e58b4b5ebf1bfe749271e388a66771c3b500267a857553c85ee7041554af11af",
+      "sha256_after": "68a4e7d27546a2e7ab55e371296cae7fdba006b9074b7570c90819ba395e1565"
+    },
+    {
+      "from": "bai-nop-AOCE/U3_data-and-evidence.md",
+      "to": "bai-nop-AOCE/labs/U3/U3_data-and-evidence.md",
+      "sha256_before": "c38bd488f21b1b342a6956f4ab2f8c80f054e5675402b37da2d802e66d84e6aa",
+      "sha256_after": "b043634bf5cf9c1c3c4eabbcbb30a5e2f3c1529e6868c8b18a7440bd375712ee"
+    },
+    {
+      "from": "bai-nop-AOCE/U3_multi-flow-design.md",
+      "to": "bai-nop-AOCE/labs/U3/U3_multi-flow-design.md",
+      "sha256_before": "07372cd245056cd95d448d19fda39d5526e151d7931c851b9437bdd74f51838b",
+      "sha256_after": "7234f39bed4ee48a3d42b25298a10e7a4dd4a12edc8ccae22b157388f98bf8e2"
+    },
+    {
+      "from": "bai-nop-AOCE/U4_change-review.md",
+      "to": "bai-nop-AOCE/labs/U4/U4_change-review.md",
+      "sha256_before": "3a5885d932499a12f9e87a6094b36bef0708de109c7a57ecf7a1fb58b6f49aef",
+      "sha256_after": "ebcd607d28df7e9384c6a2f0e0a7aa16750c879f184069e53d7ec087a042e471"
+    },
+    {
+      "from": "bai-nop-AOCE/U4_PR.md",
+      "to": "bai-nop-AOCE/labs/U4/U4_PR.md",
+      "sha256_before": "6ae3821358d29565ade04177b17c297130223a57c23b65e3c387770416b6737e",
+      "sha256_after": "09c927bb1c4fcca31f639e09cff6515fe64384e9b16e5ca646d010ea0f00d8d3"
+    },
+    {
+      "from": "bai-nop-AOCE/U5_ci-design.md",
+      "to": "bai-nop-AOCE/labs/U5/U5_ci-design.md",
+      "sha256_before": "832c922e284ce0f862f01db004f3909ddb08e56d1cabe0a8c3f4260beb4ad6ef",
+      "sha256_after": "e56d55399c099c3443813d1a23cf15b481df548ecfd4856c50880b235a792338"
+    },
+    {
+      "from": "bai-nop-AOCE/U5_playwright-config.ts",
+      "to": "bai-nop-AOCE/labs/U5/U5_playwright-config.ts",
+      "sha256_before": "b2ae507ffadf138c7443768519234ffc12198fe45121ae44d4254aa60a720f07",
+      "sha256_after": "b2ae507ffadf138c7443768519234ffc12198fe45121ae44d4254aa60a720f07"
+    },
+    {
+      "from": "bai-nop-AOCE/U5_run-review.md",
+      "to": "bai-nop-AOCE/labs/U5/U5_run-review.md",
+      "sha256_before": "407e31321e03bb69507817f7747beb8e22c247e766147f01cca421b02d2c5d67",
+      "sha256_after": "903ebada91c5c3301dbe98804a4ccd95dc395e124fa19669fddcefcbb22ba1d8"
+    },
+    {
+      "from": "bai-nop-AOCE/U5_workflow.yml",
+      "to": "bai-nop-AOCE/labs/U5/U5_workflow.yml",
+      "sha256_before": "5febaf2ffe3c3ec49727c3ca4cb8e7ae846cc268a471c6db316623d38d202a37",
+      "sha256_after": "5febaf2ffe3c3ec49727c3ca4cb8e7ae846cc268a471c6db316623d38d202a37"
+    },
+    {
+      "from": "bai-nop-AOCE/U6_incident-triage.md",
+      "to": "bai-nop-AOCE/labs/U6/U6_incident-triage.md",
+      "sha256_before": "f7268f356e0a853d7197a7f74950819cb388d944fd2ca4cc0eb7fd4af6a57cdc",
+      "sha256_after": "aad2a9f4be64c9f3a178d42f84d9b1979ac5cba6fc33611044125fe2783c5e6d"
+    },
+    {
+      "from": "bai-nop-AOCE/U6_recovery-and-validation.md",
+      "to": "bai-nop-AOCE/labs/U6/U6_recovery-and-validation.md",
+      "sha256_before": "5b1e2ffa4389342feb609e6d419579b144e3e31b8a31a846bcd494f9606c6ef6",
+      "sha256_after": "9aad3999246fc7b3e0e86caaf25d155c0325c3f5f4d5ceffd96e8de5572edd79"
+    },
+    {
+      "from": "bai-nop-AOCE/U7_metrics-and-claims.md",
+      "to": "bai-nop-AOCE/labs/U7/U7_metrics-and-claims.md",
+      "sha256_before": "00eb683ac81375e14f30f59c2b448ff37c80dfd1d550ca9bc12c4b5f0306338f",
+      "sha256_after": "c40ea019c9976ff059a262783f3faaac76015730e9c778463fafea4710671acb"
+    },
+    {
+      "from": "bai-nop-AOCE/U7_risk-register.md",
+      "to": "bai-nop-AOCE/labs/U7/U7_risk-register.md",
+      "sha256_before": "5c2667c183bad75643e12b87009093a4a70e197839a76078e02cef15124c1e27",
+      "sha256_after": "653dab178d0b0e464c95b4cb55029ed7da6e913c13ea7cedcf76f5217b04f359"
+    },
+    {
+      "from": "bai-nop-AOCE/U7_sprint-review.md",
+      "to": "bai-nop-AOCE/labs/U7/U7_sprint-review.md",
+      "sha256_before": "b37470308602355c5fdf7d24c01c42e8c8a2aed0c4775ee56bf57f706ab92885",
+      "sha256_after": "6e84a1ea8e477a3c7222a0376aa8472312b9987f23b53a9fef570c9aa6ea8b7b"
+    },
+    {
+      "from": "bai-nop-AOCE/live/controller-regression.txt",
+      "to": "bai-nop-AOCE/live/local-checks/controller-regression.txt",
+      "sha256_before": "d9aa488ca71d4fa03fa3d9d2f92b52773fa030e68be36f7215e0059626562142",
+      "sha256_after": "d9aa488ca71d4fa03fa3d9d2f92b52773fa030e68be36f7215e0059626562142"
+    },
+    {
+      "from": "bai-nop-AOCE/live/git-evidence.json",
+      "to": "bai-nop-AOCE/live/local-checks/git-evidence.json",
+      "sha256_before": "e286d56a3d50ff9f85f69ccae094c739d303b2307773013b8e0095fce1d1bd6d",
+      "sha256_after": "e286d56a3d50ff9f85f69ccae094c739d303b2307773013b8e0095fce1d1bd6d"
+    },
+    {
+      "from": "bai-nop-AOCE/live/LIVE_completion-and-review.md",
+      "to": "bai-nop-AOCE/live/local-checks/LIVE_completion-and-review.md",
+      "sha256_before": "14003e3c9192353f488c8e5c8fadd050de821d2f35d2d06a37d80f791e26f88d",
+      "sha256_after": "80f48bb10fd3130be6d2ee056440ab1997bcd8d5b4074f3e4e60258ded84e454"
+    },
+    {
+      "from": "bai-nop-AOCE/live/schedule-evidence.md",
+      "to": "bai-nop-AOCE/live/windows-history/schedule-evidence.md",
+      "sha256_before": "1985865dd0caca299bdf2045c33259d1af9b98a635da22fa0514001817f4daf2",
+      "sha256_after": "eeeb8ab8c38456e067e61c4af4384ad88de1dce838d51f95e1784916f8c22322"
+    },
+    {
+      "from": "bai-nop-AOCE/live/scheduler-invocations.jsonl",
+      "to": "bai-nop-AOCE/live/windows-history/scheduler-invocations.jsonl",
+      "sha256_before": "ddbd429c765db0a7d608e399baee9b8054babad150a1dc1f87d34c717b05caea",
+      "sha256_after": "ddbd429c765db0a7d608e399baee9b8054babad150a1dc1f87d34c717b05caea"
+    },
+    {
+      "from": "bai-nop-AOCE/live/typecheck.txt",
+      "to": "bai-nop-AOCE/live/local-checks/typecheck.txt",
+      "sha256_before": "31cef5e63421ce115cfab2296988a5eb7ab6ce215e6958954aa13652cacd1320",
+      "sha256_after": "31cef5e63421ce115cfab2296988a5eb7ab6ce215e6958954aa13652cacd1320"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule-status.json",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule-status.json",
+      "sha256_before": "fa47fca394df89e73ad4222245541b7026c967d1c69432dad774544cff547ca0",
+      "sha256_after": "fa47fca394df89e73ad4222245541b7026c967d1c69432dad774544cff547ca0"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule-verification-b4f9af0.json",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule-verification-b4f9af0.json",
+      "sha256_before": "fbb514c5031f1d6f9a9702134be34febce42caa260ad4a4eb48a103702d4f311",
+      "sha256_after": "fbb514c5031f1d6f9a9702134be34febce42caa260ad4a4eb48a103702d4f311"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule-verification-d250e70.json",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule-verification-d250e70.json",
+      "sha256_before": "2579a1d7587fcda1c583e0fc548bf4ca19758d9b0a3839f66b3ee140c946b2b2",
+      "sha256_after": "2579a1d7587fcda1c583e0fc548bf4ca19758d9b0a3839f66b3ee140c946b2b2"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule-verification-final.json",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule-verification-final.json",
+      "sha256_before": "27bc83eea2ad4a1f3b31d068f3d4a8ebc143107a02ddb46046f0c5627188be05",
+      "sha256_after": "27bc83eea2ad4a1f3b31d068f3d4a8ebc143107a02ddb46046f0c5627188be05"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule-verified-once.xml",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule-verified-once.xml",
+      "sha256_before": "2591176e26f5a75ed467f1b5f3ac828defdcdf73f28d9d83cb509e06fc584a35",
+      "sha256_after": "2591176e26f5a75ed467f1b5f3ac828defdcdf73f28d9d83cb509e06fc584a35"
+    },
+    {
+      "from": "bai-nop-AOCE/live/windows-schedule.xml",
+      "to": "bai-nop-AOCE/live/windows-history/windows-schedule.xml",
+      "sha256_before": "c4a1ab45ae6a1b7f04c4bd4bcf0d616354cd81402d832ed2664c28ced9e0f3ed",
+      "sha256_after": "c4a1ab45ae6a1b7f04c4bd4bcf0d616354cd81402d832ed2664c28ced9e0f3ed"
+    }
+  ],
+  "markdown_links_updated": 75,
+  "original_source_hashes": {
+    "L3_AIQE_AOCE_course_content_vi.md": "fe0e922ca4adc832b1cc2f15f55d33a23f53d98bb5fe8e6876b854cf89dac497",
+    "L3_AIQE_AOCE_exercises_vi.md": "b6f6023b3a19ccdab9c7a344c9c4e4d1822331df74b19ae4e8ffba1aa9ed02f5"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "scope": "ACTUAL AI BENCHMARK ARTIFACT VALIDATION",
-  "generated_at": "2026-10-09T08:29:49.865682+00:00",
+  "generated_at": "2026-10-13T04:10:39.175048+00:00",
   "checks": [
     {
       "check": "Nine U1 samples and sixteen original U2 responses",
@@ -313,9 +313,9 @@
       "detail": "Actual accepted outputs corrupted by stale run/wrong department/arbitrary delete/toast oracle"
     },
     {
-      "check": "Live app source revision remains unchanged",
+      "check": "Benchmark source revision matches historical runner evidence and Git history",
       "status": "OK",
-      "detail": "AI benchmark does not edit/commit/re-run application source"
+      "detail": "Frozen benchmark revision=68ae69680f53e68e541813c0f044c5d22067389a; current clean HEAD=c27f9b8eff44a4875f2922831890dc8d8abf1851; later app/CI commits are separate from the benchmark cohort"
     },
     {
       "check": "U1 actual runner evidence hash matches",
