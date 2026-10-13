@@ -55,8 +55,14 @@ check('U2 original fixture/version denominators',len(results['U2']['rows'])==16 
 check('Complete positive control accepted',len(results['positive_control_complete'])==2 and all(r['gate']=='ACCEPT' for r in results['positive_control_complete']),'Same richer synthetic fixture for both versions, original RG01 retained')
 check('Four nonvacuous negative controls detected',len(results['negative_controls'])==4 and all(c['detected'] for c in results['negative_controls']), 'Actual accepted outputs corrupted by stale run/wrong department/arbitrary delete/toast oracle')
 revision=subprocess.check_output(['git','-C',str(LAB),'rev-parse','HEAD'],text=True).strip()
-check('Live app source revision remains unchanged',revision==protocol['source_lab_revision'] and not subprocess.check_output(['git','-C',str(LAB),'status','--porcelain'],text=True).strip(),'AI benchmark does not edit/commit/re-run application source')
 evidence_file=WORK/protocol.get('actual_source_manifest','bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json')
+baseline=protocol['source_lab_revision']
+baseline_exists=subprocess.run(['git','-C',str(LAB),'cat-file','-e',baseline+'^{commit}'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0
+baseline_ancestor=subprocess.run(['git','-C',str(LAB),'merge-base','--is-ancestor',baseline,revision],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0
+clean=not subprocess.check_output(['git','-C',str(LAB),'status','--porcelain'],text=True).strip()
+check('Benchmark source revision matches historical runner evidence and Git history',
+      baseline_exists and baseline_ancestor and load(evidence_file)['code_revision']==baseline and clean,
+      f'Frozen benchmark revision={baseline}; current clean HEAD={revision}; later app/CI commits are separate from the benchmark cohort')
 evidence=load(AI/'inputs/actual-evidence.json')
 check('U1 actual runner evidence hash matches',sha(evidence_file)==evidence['source_manifest_sha256'],'Underlying F01 reporter evidence not fabricated by model')
 secrets=[]

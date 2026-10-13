@@ -1,0 +1,106 @@
+{
+  "scope": "INDEPENDENT EXPORTED-EVIDENCE CONSISTENCY CHECKS",
+  "tested_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+  "status": "VERIFIED",
+  "passed": 24,
+  "failed": 0,
+  "pending": [],
+  "checks": [
+    {
+      "check": "workflow_dispatch: actual API event and successful tested revision",
+      "result": "PASSED"
+    },
+    {
+      "check": "workflow_dispatch: source and API run agree",
+      "result": "PASSED"
+    },
+    {
+      "check": "workflow_dispatch: three executed F01-F03 business assertions pass",
+      "result": "PASSED"
+    },
+    {
+      "check": "workflow_dispatch: cleanup resolved and records absent",
+      "result": "PASSED"
+    },
+    {
+      "check": "workflow_dispatch: exported assertion screenshots match manifest hashes",
+      "result": "PASSED"
+    },
+    {
+      "check": "workflow_dispatch: evidence completeness",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: exact tested revision and all seven recorded checks",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: actual SIGKILL and separate watchdog process",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: reconciliation starts after real lease deadline",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: one exact owned ID absent and cleanup resolved",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: recovery does not relabel unexecuted assertions as pass",
+      "result": "PASSED"
+    },
+    {
+      "check": "cancel: subsequent persistent state has no owned leftover, one write, demo retained",
+      "result": "PASSED"
+    },
+    {
+      "check": "full suite: eleven successful executed cases on same source, cleanup33 resolved",
+      "result": "PASSED"
+    },
+    {
+      "check": "windows: actual sleep intervals cover all four observed missed slots",
+      "result": "PASSED"
+    },
+    {
+      "check": "windows: catch-up enabled, waking disabled, interactive identity",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: actual API event and successful tested revision",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: source and API run agree",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: three executed F01-F03 business assertions pass",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: cleanup resolved and records absent",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: exported assertion screenshots match manifest hashes",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: evidence completeness",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: genuine timer context and reviewed verification purpose",
+      "result": "PASSED"
+    },
+    {
+      "check": "schedule: diagnostic disabled and daily enabled with validated source",
+      "result": "PASSED"
+    },
+    {
+      "check": "windows: own task disabled; GitHub chosen as primary",
+      "result": "PASSED"
+    }
+  ]
+}

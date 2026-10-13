@@ -1,0 +1,98 @@
+﻿{
+    "scope":  "ACTUAL WINDOWS CONFIG + SYSTEM POWER EVENTS",
+    "captured_at":  "2026-10-13T10:10:51.7703670+07:00",
+    "settings":  {
+                     "task":  "AOCE-PortalLite-Live-Smoke",
+                     "state":  "Ready",
+                     "start_boundary":  "2026-10-09T01:17:00+07:00",
+                     "start_when_available":  true,
+                     "wake_to_run":  false,
+                     "logon_type":  "Interactive",
+                     "last_run":  "2026-10-13T08:10:10.0000000+07:00",
+                     "last_result":  0,
+                     "next_run":  "2026-10-14T01:17:17.0000000+07:00",
+                     "operational_log_enabled":  false
+                 },
+    "sleep_intervals":  [
+                            {
+                                "event_time":  "2026-10-13T08:07:53.5754867+07:00",
+                                "sleep_utc":  "2026-10-11T16:26:02.7117912Z",
+                                "wake_utc":  "2026-10-13T01:07:51.5655322Z",
+                                "record_id":  156669
+                            },
+                            {
+                                "event_time":  "2026-10-11T22:55:20.0261663+07:00",
+                                "sleep_utc":  "2026-10-11T03:05:22.8253451Z",
+                                "wake_utc":  "2026-10-11T15:55:18.3855921Z",
+                                "record_id":  156597
+                            },
+                            {
+                                "event_time":  "2026-10-11T08:40:23.9889098+07:00",
+                                "sleep_utc":  "2026-10-10T16:13:35.9614021Z",
+                                "wake_utc":  "2026-10-11T01:40:22.0101683Z",
+                                "record_id":  156563
+                            },
+                            {
+                                "event_time":  "2026-10-10T21:33:51.1626473+07:00",
+                                "sleep_utc":  "2026-10-09T10:02:27.3462177Z",
+                                "wake_utc":  "2026-10-10T14:33:49.5569967Z",
+                                "record_id":  156496
+                            },
+                            {
+                                "event_time":  "2026-10-09T13:15:27.9927912+07:00",
+                                "sleep_utc":  "2026-10-09T04:44:25.1565831Z",
+                                "wake_utc":  "2026-10-09T06:15:27.3443335Z",
+                                "record_id":  156417
+                            },
+                            {
+                                "event_time":  "2026-10-09T11:25:12.9947435+07:00",
+                                "sleep_utc":  "2026-10-09T02:16:26.8769388Z",
+                                "wake_utc":  "2026-10-09T04:25:12.7697279Z",
+                                "record_id":  156390
+                            },
+                            {
+                                "event_time":  "2026-10-09T08:04:26.6926863+07:00",
+                                "sleep_utc":  "2026-10-08T09:59:46.3040678Z",
+                                "wake_utc":  "2026-10-09T01:04:24.6816327Z",
+                                "record_id":  156355
+                            }
+                        ],
+    "task_invocations":  [
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-09T14:19:51.3799739+07:00",
+                                 "code_revision":  "b4f9af08af98236f698b11b9471138fb7d0b47bc"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-09T14:25:39.5837063+07:00",
+                                 "code_revision":  "d250e708264345ad2c6b700e9c66d19232c012c3"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-09T14:28:47.3731752+07:00",
+                                 "code_revision":  "39902a624538d91b9ce0c6bbbb92260481b2abe2"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-09T14:35:20.6665525+07:00",
+                                 "code_revision":  "68ae69680f53e68e541813c0f044c5d22067389a"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-10T21:36:53.1328995+07:00",
+                                 "code_revision":  "68ae69680f53e68e541813c0f044c5d22067389a"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-11T08:43:23.9506312+07:00",
+                                 "code_revision":  "68ae69680f53e68e541813c0f044c5d22067389a"
+                             },
+                             {
+                                 "task_name":  "AOCE-PortalLite-Live-Smoke",
+                                 "invoked_at":  "2026-10-13T08:11:09.9887970+07:00",
+                                 "code_revision":  "68ae69680f53e68e541813c0f044c5d22067389a"
+                             }
+                         ],
+    "historical_task_event_log":  "disabled; cannot retrospectively recover detailed Task Scheduler dispatch events"
+}

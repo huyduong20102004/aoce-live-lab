@@ -1,8 +1,25 @@
 # Bộ bài nộp AOCE — 7 lab, bản dry-run
 
+## M? nhanh
+
+| Nh?m | N?i dung |
+| --- | --- |
+| [labs/U1?U7](labs/README.md) | 17 file b?i gi?i, gom theo t?ng lab |
+| [live/recovery](live/recovery/README.md) | B?ng ch?ng m?i nh?t: GitHub schedule, force-cancel/watchdog, Windows retirement |
+| [live](live/README.md) | Benchmark AI, hosted CI, run artifacts v? log local |
+| [evidence](evidence/README.md) | T?nh to?n, source hashes v? ki?m tra b?i gi?i |
+| [review](review/01_review-decisions.md) | Draft/review v? c?c quy?t ??nh accept/reject |
+| [tools](tools) | Scripts t?nh to?n v? validation |
+
+[Quay l?i m?c l?c workspace](../docs/WORKSPACE-LAYOUT.md). C?c ph?n theo ng?y b?n d??i gi? l?ch s? c?a b?i n?p.
+
+**Cập nhật kiểm chứng 13/10/2026:** đã có scheduled event GitHub thật, cancellation/watchdog 7/7 và chẩn đoán Windows; GitHub là lịch chính, task local đã tắt. [Báo cáo mới nhất](live/recovery/README.md). Các trạng thái pending và SHA cũ bên dưới là snapshot lịch sử.
+
 **Bổ sung 2026-10-09:** đã tạo webapp và test project local, chạy browser flows/recovery/controller thật. Xem [bài nộp live-local và bằng chứng](live/README.md). Nội dung và bảng trạng thái bên dưới là snapshot dry-run ngày 2026-10-07; không trộn packet synthetic với actual local runs.
 
 **Bổ sung AI 2026-10-09:** đã chạy Codex CLI thật cho U1/U2: 9 benchmark samples, 16 before/after fixture responses và2 supplemental positive controls, lưu raw usage/output. Xem [AI benchmark/evidence](live/ai/README.md). Chi phí tiền vẫn UNKNOWN; không trộn với RATE-SYN-01 hoặc gọi model fixture output là app runtime pass.
+
+**GitHub update2026-10-13:** [Repo Public và bản nộp](https://github.com/huyduong20102004/aoce-live-lab/tree/main/submission) đã có; PR checks và final manual hosted smoke3/3 đều SUCCESS. [Actual hosted CI evidence](live/ci/README.md). Daily GitHub01:17 enabled với matching manual SHA, event=schedule ở slot tương lai vẫn pending.
 
 Ngày: 2026-10-07 (UTC+7). Version: aoce-solution-1. Mode: **DRY-RUN / SIMULATED**. Bộ bài nộp giải đủ yêu cầu artifact/analysis của 7 units trên packets; không sửa hai tài liệu gốc, không tạo git repo/PR thật, không deploy CI hoặc gọi app.
 
@@ -14,13 +31,13 @@ Workspace đầu vào chỉ có handout/course content, chưa có PortalLite, la
 
 | Unit | Files đúng handout | Nội dung đã giải / runtime còn thiếu |
 | --- | --- | --- |
-| U1 | [Benchmark](U1_benchmark.md), [Cost ledger](U1_cost-ledger.csv) | 9 samples, gate scores, costs/missing usage/config medians/pilot; live benchmark pending |
-| U2 | [Context/prompt](U2_context-and-prompt.md), [Regression matrix](U2_regression-matrix.md) | 8 fragments, compact≤250 từ, v3/diff/manifest, 8 fixtures +3 negatives; live model regression pending |
-| U3 | [Multi-flow design](U3_multi-flow-design.md), [Data/evidence](U3_data-and-evidence.md) | 3 contracts, routing/stops, layers, isolated seed/ownership/collision/manifests; actual flow runs pending |
-| U4 | [Change review](U4_change-review.md), [PR draft](U4_PR.md) | 7 inventory paths, merge250 từ/semantic diff, commit plan/review/rollback, VC matrix; actual branch/final-revision checks pending |
-| U5 | [CI design](U5_ci-design.md), [Workflow YAML](U5_workflow.yml), [Playwright config](U5_playwright-config.ts), [Run review](U5_run-review.md) | 8 scenarios/3 packets, cron/lanes/contracts/cleanup/ops; manual/scheduled runtime pending |
-| U6 | [Incident triage](U6_incident-triage.md), [Recovery/validation](U6_recovery-and-validation.md) | 4 incidents/3 retry outcomes, scoped locator/state recovery +4 negatives; live reproduction/fix pending |
-| U7 | [Metrics/claims](U7_metrics-and-claims.md), [Risk register](U7_risk-register.md), [Sprint memo](U7_sprint-review.md) | 10 rows/4 slots, denominators/unknowns, claim audit/10 risks/action owners/dates; actual telemetry pending |
+| U1 | [Benchmark](labs/U1/U1_benchmark.md), [Cost ledger](labs/U1/U1_cost-ledger.csv) | 9 samples, gate scores, costs/missing usage/config medians/pilot; live benchmark pending |
+| U2 | [Context/prompt](labs/U2/U2_context-and-prompt.md), [Regression matrix](labs/U2/U2_regression-matrix.md) | 8 fragments, compact≤250 từ, v3/diff/manifest, 8 fixtures +3 negatives; live model regression pending |
+| U3 | [Multi-flow design](labs/U3/U3_multi-flow-design.md), [Data/evidence](labs/U3/U3_data-and-evidence.md) | 3 contracts, routing/stops, layers, isolated seed/ownership/collision/manifests; actual flow runs pending |
+| U4 | [Change review](labs/U4/U4_change-review.md), [PR draft](labs/U4/U4_PR.md) | 7 inventory paths, merge250 từ/semantic diff, commit plan/review/rollback, VC matrix; actual branch/final-revision checks pending |
+| U5 | [CI design](labs/U5/U5_ci-design.md), [Workflow YAML](labs/U5/U5_workflow.yml), [Playwright config](labs/U5/U5_playwright-config.ts), [Run review](labs/U5/U5_run-review.md) | 8 scenarios/3 packets, cron/lanes/contracts/cleanup/ops; manual/scheduled runtime pending |
+| U6 | [Incident triage](labs/U6/U6_incident-triage.md), [Recovery/validation](labs/U6/U6_recovery-and-validation.md) | 4 incidents/3 retry outcomes, scoped locator/state recovery +4 negatives; live reproduction/fix pending |
+| U7 | [Metrics/claims](labs/U7/U7_metrics-and-claims.md), [Risk register](labs/U7/U7_risk-register.md), [Sprint memo](labs/U7/U7_sprint-review.md) | 10 rows/4 slots, denominators/unknowns, claim audit/10 risks/action owners/dates; actual telemetry pending |
 
 Tất cả owner/due dates là **đề xuất**, không đã giao việc. Source packets synthetic; giá/usage/observations/refs không telemetry thật. Source IDs/version không có exact timestamp dùng Not specified thay vì điền giả. [Source manifest](evidence/source-manifest.json) ghi snapshot SHA-256 hai files gốc và references technical official đã đọc.
 

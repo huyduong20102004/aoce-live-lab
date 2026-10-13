@@ -1,0 +1,45 @@
+{
+  "slots": [
+    {
+      "slot_vietnam": "2026-10-10T01:17:00+07:00",
+      "asleep": true,
+      "power_event_record_ids": [
+        156496
+      ],
+      "wake_vietnam": [
+        "2026-10-10T21:33:49.556996+07:00"
+      ]
+    },
+    {
+      "slot_vietnam": "2026-10-11T01:17:00+07:00",
+      "asleep": true,
+      "power_event_record_ids": [
+        156563
+      ],
+      "wake_vietnam": [
+        "2026-10-11T08:40:22.010168+07:00"
+      ]
+    },
+    {
+      "slot_vietnam": "2026-10-12T01:17:00+07:00",
+      "asleep": true,
+      "power_event_record_ids": [
+        156669
+      ],
+      "wake_vietnam": [
+        "2026-10-13T08:07:51.565532+07:00"
+      ]
+    },
+    {
+      "slot_vietnam": "2026-10-13T01:17:00+07:00",
+      "asleep": true,
+      "power_event_record_ids": [
+        156669
+      ],
+      "wake_vietnam": [
+        "2026-10-13T08:07:51.565532+07:00"
+      ]
+    }
+  ],
+  "historical_dispatch_detail": "UNKNOWN: TaskScheduler Operational log was disabled"
+}

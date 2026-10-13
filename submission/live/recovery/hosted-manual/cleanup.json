@@ -1,0 +1,33 @@
+{
+  "mode": "LIVE",
+  "run_id": "gh-38340873990-1",
+  "records": [
+    {
+      "employee_id": "E2E-AOCE-gh-38340873990-1-c2bda1e30-a1-F01",
+      "owner": "gh-38340873990-1",
+      "write_state": "CREATED",
+      "writes": 1,
+      "cleanup": "success",
+      "record_absent_after": true
+    },
+    {
+      "employee_id": "E2E-AOCE-gh-38340873990-1-c65df7bad-a1-F02",
+      "owner": "gh-38340873990-1",
+      "write_state": "CREATED",
+      "writes": 1,
+      "cleanup": "success",
+      "record_absent_after": true
+    },
+    {
+      "employee_id": "E2E-AOCE-gh-38340873990-1-cdce9d5f7-a1-F03",
+      "owner": "gh-38340873990-1",
+      "write_state": "NOT_WRITTEN",
+      "writes": 0,
+      "cleanup": "not-applicable",
+      "record_absent_after": true
+    }
+  ],
+  "unresolved_count": 0,
+  "cleanup_status": "resolved",
+  "time": "2026-10-13T03:16:31.909Z"
+}

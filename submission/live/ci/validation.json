@@ -1,0 +1,15 @@
+{
+  "scope": "ACTUAL HOSTED FINAL CI VERIFICATION",
+  "repo": "huyduong20102004/aoce-live-lab",
+  "revision": "3878132e26c9e883ccdf0d756118fff81b29ff06",
+  "worktree_clean": true,
+  "public_submission_required_files": 17,
+  "PR_success": true,
+  "hosted_manual_success": true,
+  "selected": 3,
+  "executed": 3,
+  "cleanup": "resolved",
+  "schedule_enabled": true,
+  "actual_scheduled_event": "PENDING",
+  "public_navigation_missing": 0
+}

@@ -22,8 +22,8 @@ tracked=git('ls-files').splitlines()
 check('No credentials/raw auth/state/artifacts tracked',not any(p=='.env' or p.startswith(('.lab/','node_modules/','playwright/.auth/')) for p in tracked),'Only reviewed source paths tracked')
 source=load(WORKSPACE/'bai-nop-AOCE/evidence/source-manifest.json')
 check('Original source packets unchanged',all(sha(WORKSPACE/item['name'])==item['sha256'] for item in source['files']),'Handout/content hashes match original snapshot')
-typecheck=(LIVE/'typecheck.txt').read_text(encoding='utf-8-sig')
-regression=(LIVE/'controller-regression.txt').read_text(encoding='utf-8-sig')
+typecheck=(LIVE/'local-checks/typecheck.txt').read_text(encoding='utf-8-sig')
+regression=(LIVE/'local-checks/controller-regression.txt').read_text(encoding='utf-8-sig')
 check('Actual TypeScript check', 'Exit code: 0' in typecheck and revision in typecheck,'Compiler command and current revision captured')
 check('Actual controller regression', 'Exit code: 0' in regression and revision in regression and '# pass 15' in regression and '# fail 0' in regression,'15 deterministic tests incl RG01–08, negative controls and auth redaction; not model calls')
 guards=load(LIVE/'runtime-guard-checks.json')
@@ -52,7 +52,7 @@ check('Current revision full robustness suite',any(r['suite']=='all' and r['sele
 failed=[r['run_id'] for r in runs if r['label']!='RUN-PASSED']
 check('Historical failures retained',bool(failed),', '.join(failed)+'; not overwritten as pass')
 scheduled=[r for r in current if r['trigger']=='windows-schedule']
-status=load(LIVE/'windows-schedule-status.json') if (LIVE/'windows-schedule-status.json').exists() else {}
+status=load(LIVE/'windows-history/windows-schedule-status.json') if (LIVE/'windows-history/windows-schedule-status.json').exists() else {}
 check('Actual OS scheduled launch, separate from manual',bool(scheduled) and all(r.get('scheduler_task')=='AOCE-PortalLite-Live-Smoke' for r in scheduled) and status.get('LastTaskResult')==0,'Requires manifest task marker plus observed Task Scheduler result0; no GitHub scheduled claim')
 for file in (LIVE/'runs').rglob('*'):
     if file.is_file() and file.suffix in ('.json','.md','.txt'):

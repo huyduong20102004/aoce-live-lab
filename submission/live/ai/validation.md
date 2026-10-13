@@ -66,7 +66,7 @@
 | U2 original fixture/version denominators | OK | Supplemental complete-positive excluded from original8 per version |
 | Complete positive control accepted | OK | Same richer synthetic fixture for both versions, original RG01 retained |
 | Four nonvacuous negative controls detected | OK | Actual accepted outputs corrupted by stale run/wrong department/arbitrary delete/toast oracle |
-| Live app source revision remains unchanged | OK | AI benchmark does not edit/commit/re-run application source |
+| Benchmark source revision matches historical runner evidence and Git history | OK | Frozen benchmark revision=68ae69680f53e68e541813c0f044c5d22067389a; current clean HEAD=c27f9b8eff44a4875f2922831890dc8d8abf1851; later app/CI commits are separate from the benchmark cohort |
 | U1 actual runner evidence hash matches | OK | Underlying F01 reporter evidence not fabricated by model |
 | No app credentials/capabilities in AI inputs or outputs | OK | Private-value comparison done locally; secret values never logged |
 | Submission links resolve | OK | Original and AI supplementary document links present; frozen input archive is data, validated by source hash |

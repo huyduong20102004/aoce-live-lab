@@ -1,0 +1,164 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 115119016143,
+      "run_id": 38343335559,
+      "workflow_name": "AOCE actual schedule verification",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/runs/38343335559",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVGu1kM8AAAAazaDIzw",
+      "head_sha": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+      "url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/jobs/115119016143",
+      "html_url": "https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38343335559/job/115119016143",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-13T03:47:07Z",
+      "started_at": "2026-10-13T03:47:09Z",
+      "completed_at": "2026-10-13T03:47:41Z",
+      "name": "verified-smoke / live",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-13T03:47:10Z",
+          "completed_at": "2026-10-13T03:47:11Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-13T03:47:11Z",
+          "completed_at": "2026-10-13T03:47:12Z"
+        },
+        {
+          "name": "Run actions/setup-node@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-13T03:47:12Z",
+          "completed_at": "2026-10-13T03:47:13Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-13T03:47:13Z",
+          "completed_at": "2026-10-13T03:47:15Z"
+        },
+        {
+          "name": "Generate ephemeral private lab accounts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-13T03:47:15Z",
+          "completed_at": "2026-10-13T03:47:15Z"
+        },
+        {
+          "name": "Run node node_modules/playwright/cli.js install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-13T03:47:15Z",
+          "completed_at": "2026-10-13T03:47:33Z"
+        },
+        {
+          "name": "Run npm run typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-13T03:47:33Z",
+          "completed_at": "2026-10-13T03:47:33Z"
+        },
+        {
+          "name": "Run npm run context:regression",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-13T03:47:33Z",
+          "completed_at": "2026-10-13T03:47:34Z"
+        },
+        {
+          "name": "Execute local application smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-13T03:47:34Z",
+          "completed_at": "2026-10-13T03:47:38Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-13T03:47:38Z",
+          "completed_at": "2026-10-13T03:47:39Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-13T03:47:39Z",
+          "completed_at": "2026-10-13T03:47:39Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-13T03:47:39Z",
+          "completed_at": "2026-10-13T03:47:39Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-13T03:47:39Z",
+          "completed_at": "2026-10-13T03:47:39Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/check-runs/115119016143",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000004,
+      "runner_name": "GitHub Actions 1000000004",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 115119017393,
+      "run_id": 38343335559,
+      "workflow_name": "AOCE actual schedule verification",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/runs/38343335559",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVGu1kM8AAAAazaDNsQ",
+      "head_sha": "c27f9b8eff44a4875f2922831890dc8d8abf1851",
+      "url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/actions/jobs/115119017393",
+      "html_url": "https://github.com/huyduong20102004/aoce-live-lab/actions/runs/38343335559/job/115119017393",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-13T03:47:08Z",
+      "started_at": "2026-10-13T03:47:08Z",
+      "completed_at": "2026-10-13T03:47:07Z",
+      "name": "verified-smoke / pr",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/huyduong20102004/aoce-live-lab/check-runs/115119017393",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}

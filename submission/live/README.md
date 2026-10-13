@@ -1,6 +1,23 @@
 # AOCE — bài nộp bổ sung LIVE-LOCAL
 
-**Hosted CI update2026-10-13:** [GitHub PR/manual Actions đã chạy thành công](../hosted-ci/README.md). Các mục "GitHub chưa chạy" trong snapshot ngày2026-10-09 bên dưới là trạng thái lịch sử, không thay actual hosted evidence mới. Daily GitHub schedule slot vẫn cần event=schedule thực tế.
+## M? nhanh
+
+| Folder / file | N?i dung |
+| --- | --- |
+| [recovery](recovery/README.md) | B?o c?o m?i nh?t, scheduled run GitHub th?t, cancel/watchdog v?24/24 evidence checks |
+| [ai](ai/README.md) | Actual Codex CLI benchmark U1/U2 v? model responses |
+| [ci](ci/README.md) | Hosted PR/manual CI, API snapshots v? artifacts |
+| [runs](runs) | Manifest, assertions, screenshots v? cleanup theo run ID |
+| [local-checks](local-checks/README.md) | Log compiler/controller v? review local ban ??u |
+| [windows-history](windows-history/README.md) | L?ch s? task Windows ?? t?t, XML v? invocation |
+| [actual-metrics.md](actual-metrics.md) | Metrics ?? export, t?ch theo revision/cohort |
+| [validation.md](validation.md) | Snapshot validator local ban ??u |
+
+[Quay l?i b?i n?p](../ASSIGNMENTS.md). C?c b?o c?o c? theo ng?y/revision ? b?n d??i l? l?ch s?; tr?ng th?i hi?n t?i xem `recovery/README.md`. C?c file metrics/guard/validation ? root live l? ???ng d?n ??u ra c?a scripts.
+
+**Cập nhật kiểm chứng 13/10/2026:** đã có scheduled event GitHub thật, cancellation/watchdog 7/7 và chẩn đoán Windows; GitHub là lịch chính, task local đã tắt. [Báo cáo mới nhất](recovery/README.md). Các trạng thái pending và SHA cũ bên dưới là snapshot lịch sử.
+
+**Hosted update2026-10-13:** [GitHub PR/manual CI đã thực thi và repo đã publish](ci/README.md). Final mainSHA3878132 có fresh hosted/browser validation. Các trạng thái "GitHub chưa chạy" ở snapshot2026-10-09 chỉ là lịch sử; scheduled daily event mới vẫn cần proof riêng.
 
 **AI update2026-10-09:** U1/U2 đã có actual Codex CLI benchmark/fixture outputs. Xem [AI cohort riêng](ai/README.md). Các dòng "provider benchmark/model outputs chưa có" bên dưới là giới hạn tại thời điểm hoàn tất webapp trước experiment; được cập nhật bằng cohort CLI, còn monetary billing/backend model snapshot và hosted CI chưa có.
 
@@ -27,13 +44,13 @@ Scripts require source committed/clean, namespace unique và preflight. `lab:ini
 
 | Check | Actual result tại revision cuối | Artifact |
 | --- | --- | --- |
-| TypeScript project | exit0 | [compiler log](typecheck.txt) |
-| Controller/context regression | 15/15, RG01–08 +negative/source/tool/redaction controls | [test output](controller-regression.txt) |
+| TypeScript project | exit0 | [compiler log](local-checks/typecheck.txt) |
+| Controller/context regression | 15/15, RG01–08 +negative/source/tool/redaction controls | [test output](local-checks/controller-regression.txt) |
 | Manual three-flow smoke | selected3/executed3/pass3; retry0; cleanup resolved | [run mv0nfj0v](runs/mv0nfj0v-fcf1b44e/manifest.json) |
 | Full browser suite | selected11/executed11/pass11; 3 business+8 controls; retry0 | [run mv0nfnvq](runs/mv0nfnvq-faeb5798/manifest.json) |
 | Data reconciliation full suite | 33 exact reserved owned IDs verified absent; unresolved0, unowned demo giữ nguyên | [cleanup ledger](runs/mv0nfnvq-faeb5798/cleanup.json) |
 | Runtime failure guards | Missing password nonzero; no-tests exit8; forged GitHub event nonzero | [guard checks](runtime-guard-checks.json) |
-| Windows scheduler verification | Actual OS launch, selected3/executed3/pass3; cleanup resolved; task result0 | [scheduled run](runs/mv0nhq5q-5bc239db/manifest.json), [schedule proof](schedule-evidence.md) |
+| Windows scheduler verification | Actual OS launch, selected3/executed3/pass3; cleanup resolved; task result0 | [scheduled run](runs/mv0nhq5q-5bc239db/manifest.json), [schedule proof](windows-history/schedule-evidence.md) |
 | Independent artifact/secret/linkage check | xem actual report; không dùng screenshot thay assertions | [validation](validation.md) |
 
 Screenshots sau login, source/oracle/actor/SHA/case IDs và cleanup refs được export từng run. Raw Playwright JSON/HTML/trace giữ private ở aoce-live-lab/.lab/runs/<run>; có thể chứa auth headers nên không commit/publish/gửi AI. Custom reporter xuất verdict từ runner thật; screenshot chỉ hỗ trợ quan sát. Actual costs monetary UNKNOWN (runner modelcalls0/usageN/A, chưa có compute/CI rate); không dùng RATE-SYN-01 thành provider invoice. [Actual metrics](actual-metrics.md) tách mỗi code revision, tách controls khỏi business cases và pre-body blocks khỏi executed.
@@ -48,12 +65,12 @@ Additional LOCAL-AUTH-01: direct Viewer create trả403 HR Admin role required v
 
 Windows task `AOCE-PortalLite-Live-Smoke`, kiểm chứng bằng one-time OS trigger sau successful manual cùng SHA rồi cấu hình daily **01:17 UTC+7**. Task action chạy scheduled-entry.ps1 hidden dưới user hiện tại, Interactive logon, IgnoreNew, timeout20 phút. Máy phải bật và user signed-in; không đảm bảo job khi máy ngủ/tắt. Source đổi thì task block đến khi có manual smoke proof SHA mới.
 
-Actual task dispatch/start/result, run ID và expected slot nằm ở [schedule evidence](schedule-evidence.md); manifest trigger=windows-schedule không được gọi GitHub CI. Daily slot đầu sau khi bật chỉ được coi executed khi có actual run; one-time validation không chứng minh ngày tương lai. GitHub workflow source sẵn nhưng chưa remote/hosted Actions run URL.
+Actual task dispatch/start/result, run ID và expected slot nằm ở [schedule evidence](windows-history/schedule-evidence.md); manifest trigger=windows-schedule không được gọi GitHub CI. Daily slot đầu sau khi bật chỉ được coi executed khi có actual run; one-time validation không chứng minh ngày tương lai. GitHub workflow source sẵn nhưng chưa remote/hosted Actions run URL.
 
 Watchdog script hỗ trợ đọc ledger và cleanup exact expired-owned records ngoài runner; chưa fault-injection force-cancel process thật trong revision cuối. Forced kill/mất nguồn vẫn có thể bỏ in-job cleanup; không claim always bảo đảm mọi crash. Rerun mới bị block nếu server còn unresolved owned data. Owner local operator (người dùng) thực hiện/giám sát quyền và môi trường này; chưa gán trainer/team đã nhận việc.
 
 ## Lịch sử failures và giới hạn completion
 
-Giữ nguyên các run cũ: readiness check sai Fetch property; tracing double-start fixture; Department locator exact-label không match và screenshot body chưa được export. Đã sửa ở commits có thật, không đổi những runs đó thành pass và không reuse old SHA cho revision cuối. [Review/validation bổ sung](LIVE_completion-and-review.md) ghi facts/fixes/gaps và provenance.
+Giữ nguyên các run cũ: readiness check sai Fetch property; tracing double-start fixture; Department locator exact-label không match và screenshot body chưa được export. Đã sửa ở commits có thật, không đổi những runs đó thành pass và không reuse old SHA cho revision cuối. [Review/validation bổ sung](local-checks/LIVE_completion-and-review.md) ghi facts/fixes/gaps và provenance.
 
 U1 actual provider-backed calls/usage≥3 samples/config và U2 before/after **model** outputs đã bổ sung qua Codex CLI/ChatGPT; [actual AI evidence](ai/README.md), khác với Node regression. API monetary invoice chưa có và không áp giá API vào subscription như số tiền thực trả. U5 GitHub hosted PR/manual/schedule chưa chạy vì repo hiện local. Không tự cấp production-ready từ những cohorts nhỏ. Webapp local, source repo, controller, flows, recovery/model checks, scheduling proof và evidence hiện đã có để tiếp tục lab.

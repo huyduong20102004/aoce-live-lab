@@ -1,0 +1,11 @@
+{
+  "scope": "ACTUAL LOCAL FORCE-CANCEL + OUT-OF-RUNNER WATCHDOG",
+  "run_id": "cancel-mv63ymwj-83bc5d",
+  "supervisor_pid": 8836,
+  "started_at": "2026-10-13T03:15:14.420Z",
+  "assertion_outcome": "NOT_EXECUTED",
+  "checks": [],
+  "status": "FAILED/UNKNOWN",
+  "error": "fetch failed",
+  "watchdog_started": false
+}

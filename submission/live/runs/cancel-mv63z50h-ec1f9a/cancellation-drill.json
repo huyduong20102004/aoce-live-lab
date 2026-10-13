@@ -1,0 +1,50 @@
+{
+  "scope": "ACTUAL LOCAL FORCE-CANCEL + OUT-OF-RUNNER WATCHDOG",
+  "run_id": "cancel-mv63z50h-ec1f9a",
+  "supervisor_pid": 6596,
+  "started_at": "2026-10-13T03:15:37.890Z",
+  "assertion_outcome": "NOT_EXECUTED",
+  "checks": [
+    {
+      "check": "owned write committed before cancel",
+      "result": "PASSED",
+      "writes": 1
+    },
+    {
+      "check": "force-killed runner leaves record; its cleanup did not run",
+      "result": "PASSED"
+    },
+    {
+      "check": "negative control: watchdog does not delete active-lease data",
+      "result": "PASSED",
+      "watchdog_pid": 12372
+    },
+    {
+      "check": "standalone process outside cancelled runner reconciles expired owned ID",
+      "result": "PASSED"
+    },
+    {
+      "check": "record absent, exactly1 write, no duplicate retry",
+      "result": "PASSED"
+    },
+    {
+      "check": "unowned demo preserved",
+      "result": "PASSED"
+    },
+    {
+      "check": "idempotent repeat skips released run",
+      "result": "PASSED"
+    }
+  ],
+  "victim_pid": 3340,
+  "owned_employee_id": "E2E-AOCE-cancel-mv63z50h-ec1f9a-ccace6350-a1-F01",
+  "lease_deadline": 1791861353135,
+  "victim_exit": {
+    "code": null,
+    "signal": "SIGKILL"
+  },
+  "cancelled_at": "2026-10-13T03:15:38.180Z",
+  "watchdog_pid": 16436,
+  "status": "RECOVERY-VERIFIED",
+  "code_revision": "c27f9b8eff44a4875f2922831890dc8d8abf1851"
+}
