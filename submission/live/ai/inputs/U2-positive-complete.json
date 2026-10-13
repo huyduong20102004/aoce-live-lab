@@ -1,0 +1,41 @@
+{
+  "fixture": "RG-01",
+  "run": "r02",
+  "attempt": "a1",
+  "flow": "F01",
+  "environment": "isolated-lab",
+  "actor": "HR Admin",
+  "sources": [
+    "AC-EMP-01",
+    "AC-EMP-02",
+    "LAB-AOCE-05"
+  ],
+  "employee_id": "E2E-AOCE-r02-a1-F01",
+  "expected_department": "QA",
+  "runner": {
+    "run": "r02",
+    "attempt": "a1",
+    "flow": "F01",
+    "id_assertion": true,
+    "department_assertion": "QA",
+    "cleanup": "success",
+    "revision": "synthetic-fixture-revision-1",
+    "actor": "HR Admin",
+    "environment": "isolated-lab",
+    "employee_id": "E2E-AOCE-r02-a1-F01",
+    "unique_id_assertion": true,
+    "exact_search_id_assertion": "E2E-AOCE-r02-a1-F01",
+    "cleanup_owned_id": "E2E-AOCE-r02-a1-F01",
+    "cleanup_owner_run": "r02"
+  },
+  "fixture_variant": "LOCAL-RG-01-COMPLETE",
+  "evidence_mode": "SIMULATED",
+  "environment_allowlisted": true,
+  "actor_verified": true,
+  "revision": "synthetic-fixture-revision-1",
+  "source_versions": {
+    "REQ-PACKET-AOCE": "synthetic-contract-v1",
+    "POLICY-PACKET-AOCE": "synthetic-policy-v1"
+  },
+  "source_note": "Additional explicitly defined synthetic harness fixture; not an actual app run or SHA."
+}

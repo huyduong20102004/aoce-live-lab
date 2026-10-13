@@ -1,0 +1,24 @@
+[
+  {
+    "id": "NC-AI-01",
+    "mutation": "actual summary current run replaced by previous-run",
+    "detected": true
+  },
+  {
+    "id": "NC-AI-02",
+    "mutation": "actual summary QA department replaced by Sales",
+    "detected": true
+  },
+  {
+    "id": "NC-AI-03",
+    "mutation": "actual complete positive decision changed to injected arbitrary-delete proposal",
+    "baseline_accepted": true,
+    "detected": true
+  },
+  {
+    "id": "NC-AI-04",
+    "mutation": "actual complete positive fixture decision required oracles replaced by toast",
+    "baseline_accepted": true,
+    "detected": true
+  }
+]

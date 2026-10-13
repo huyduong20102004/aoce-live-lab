@@ -1,0 +1,481 @@
+{
+  "mode": "LIVE-LOCAL",
+  "generated_at": "2026-10-09T07:38:20.291Z",
+  "cost_total": "UNKNOWN",
+  "cost_reason": "No provider calls at runner runtime; no monetary rate for local compute/CI. Synthetic packet ledger excluded.",
+  "groups": [
+    {
+      "revision": "0565842df95421db138cc0f0181e78062d371838",
+      "runs": [
+        {
+          "run_id": "mv0mm4yl-1e3694b0",
+          "trigger": "manual-local",
+          "label": "RUN-FAILED/UNKNOWN",
+          "started_at": "2026-10-09T07:10:46.991Z",
+          "end_to_end_seconds": 0.334
+        },
+        {
+          "run_id": "mv0mmqly-2d3e1e4a",
+          "trigger": "manual-local",
+          "label": "RUN-FAILED/UNKNOWN",
+          "started_at": "2026-10-09T07:11:15.048Z",
+          "end_to_end_seconds": 0.319
+        },
+        {
+          "run_id": "mv0mnbio-7d9ddcf5",
+          "trigger": "manual-local",
+          "label": "RUN-FAILED/UNKNOWN",
+          "started_at": "2026-10-09T07:11:42.150Z",
+          "end_to_end_seconds": 0.328
+        }
+      ],
+      "business_metrics": {
+        "selected": 0,
+        "executed": 0,
+        "blocked_before_body": 0,
+        "first_pass": 0,
+        "eventual_pass": 0,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 0,
+        "retry_overhead": 0,
+        "evidence_full": 0,
+        "cleanup_needed": 0,
+        "cleanup_success": 0,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 0,
+          "median": null,
+          "min": null,
+          "max": null
+        }
+      },
+      "robustness_controls": {
+        "selected": 0,
+        "executed": 0,
+        "passed": 0,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 0,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "76f4b77330711e13c358a1770bb895195cffb1c1",
+      "runs": [
+        {
+          "run_id": "mv0mnwwh-acbc4787",
+          "trigger": "manual-local",
+          "label": "RUN-FAILED/UNKNOWN",
+          "started_at": "2026-10-09T07:12:09.859Z",
+          "end_to_end_seconds": 7.158
+        }
+      ],
+      "business_metrics": {
+        "selected": 3,
+        "executed": 0,
+        "blocked_before_body": 3,
+        "first_pass": 0,
+        "eventual_pass": 0,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 0,
+        "retry_overhead": 0,
+        "evidence_full": 0,
+        "cleanup_needed": 0,
+        "cleanup_success": 0,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 0,
+          "median": null,
+          "min": null,
+          "max": null
+        }
+      },
+      "robustness_controls": {
+        "selected": 0,
+        "executed": 0,
+        "passed": 0,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 0,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "47f0fab3bab844307774c3f52f3cbc96f6de21fe",
+      "runs": [
+        {
+          "run_id": "mv0mpki6-2c57eadc",
+          "trigger": "manual-local",
+          "label": "RUN-FAILED/UNKNOWN",
+          "started_at": "2026-10-09T07:13:27.105Z",
+          "end_to_end_seconds": 97.128
+        }
+      ],
+      "business_metrics": {
+        "selected": 3,
+        "executed": 3,
+        "blocked_before_body": 0,
+        "first_pass": 1,
+        "eventual_pass": 1,
+        "failed": 2,
+        "flaky_pass": 0,
+        "attempts": 3,
+        "retry_overhead": 0,
+        "evidence_full": 2,
+        "cleanup_needed": 1,
+        "cleanup_success": 1,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 3,
+          "median": 45.21,
+          "min": 0.546,
+          "max": 45.368
+        }
+      },
+      "robustness_controls": {
+        "selected": 0,
+        "executed": 0,
+        "passed": 0,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 0,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "f9a0f8721ec9e11667050b1192abe686da7810ae",
+      "runs": [
+        {
+          "run_id": "mv0msou8-a3f5c23f",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:15:52.691Z",
+          "end_to_end_seconds": 6.785
+        }
+      ],
+      "business_metrics": {
+        "selected": 3,
+        "executed": 3,
+        "blocked_before_body": 0,
+        "first_pass": 3,
+        "eventual_pass": 3,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 3,
+        "retry_overhead": 0,
+        "evidence_full": 3,
+        "cleanup_needed": 2,
+        "cleanup_success": 2,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 3,
+          "median": 1.063,
+          "min": 0.501,
+          "max": 1.102
+        }
+      },
+      "robustness_controls": {
+        "selected": 0,
+        "executed": 0,
+        "passed": 0,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 0,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "b4f9af08af98236f698b11b9471138fb7d0b47bc",
+      "runs": [
+        {
+          "run_id": "mv0mv3dh-4849517b",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:17:44.839Z",
+          "end_to_end_seconds": 5.761
+        },
+        {
+          "run_id": "mv0mv87p-723cef25",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:17:51.106Z",
+          "end_to_end_seconds": 19.039
+        },
+        {
+          "run_id": "mv0mxt3m-5c736751",
+          "trigger": "windows-schedule",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:19:51.517Z",
+          "end_to_end_seconds": 5.604
+        }
+      ],
+      "business_metrics": {
+        "selected": 9,
+        "executed": 9,
+        "blocked_before_body": 0,
+        "first_pass": 9,
+        "eventual_pass": 9,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 9,
+        "retry_overhead": 0,
+        "evidence_full": 9,
+        "cleanup_needed": 6,
+        "cleanup_success": 6,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 9,
+          "median": 0.917,
+          "min": 0.471,
+          "max": 3.053
+        }
+      },
+      "robustness_controls": {
+        "selected": 8,
+        "executed": 8,
+        "passed": 8,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 1,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "8da3165ce08ebc090dbd13679214fcbf5c7edfe9",
+      "runs": [
+        {
+          "run_id": "mv0mzz1g-18362a62",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:21:32.499Z",
+          "end_to_end_seconds": 5.515
+        },
+        {
+          "run_id": "mv0n03oi-a9547ca3",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:21:38.513Z",
+          "end_to_end_seconds": 13.002
+        }
+      ],
+      "business_metrics": {
+        "selected": 6,
+        "executed": 6,
+        "blocked_before_body": 0,
+        "first_pass": 6,
+        "eventual_pass": 6,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 6,
+        "retry_overhead": 0,
+        "evidence_full": 6,
+        "cleanup_needed": 4,
+        "cleanup_success": 4,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 6,
+          "median": 0.784,
+          "min": 0.414,
+          "max": 0.979
+        }
+      },
+      "robustness_controls": {
+        "selected": 8,
+        "executed": 8,
+        "passed": 8,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 0,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "d250e708264345ad2c6b700e9c66d19232c012c3",
+      "runs": [
+        {
+          "run_id": "mv0n31fl-c686a80c",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:23:55.569Z",
+          "end_to_end_seconds": 5.488
+        },
+        {
+          "run_id": "mv0n361t-b648196b",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:24:01.555Z",
+          "end_to_end_seconds": 12.637
+        },
+        {
+          "run_id": "mv0n59ry-c4fc10dc",
+          "trigger": "windows-schedule",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:25:39.706Z",
+          "end_to_end_seconds": 6.726
+        }
+      ],
+      "business_metrics": {
+        "selected": 9,
+        "executed": 9,
+        "blocked_before_body": 0,
+        "first_pass": 9,
+        "eventual_pass": 9,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 9,
+        "retry_overhead": 0,
+        "evidence_full": 9,
+        "cleanup_needed": 6,
+        "cleanup_success": 6,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 9,
+          "median": 0.861,
+          "min": 0.421,
+          "max": 1.085
+        }
+      },
+      "robustness_controls": {
+        "selected": 8,
+        "executed": 8,
+        "passed": 8,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 1,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "39902a624538d91b9ce0c6bbbb92260481b2abe2",
+      "runs": [
+        {
+          "run_id": "mv0n72e1-3c08d864",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:27:03.435Z",
+          "end_to_end_seconds": 6.272
+        },
+        {
+          "run_id": "mv0n77qg-c63b0265",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:27:10.362Z",
+          "end_to_end_seconds": 12.937
+        },
+        {
+          "run_id": "mv0n9aob-6bcdfc74",
+          "trigger": "windows-schedule",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:28:47.496Z",
+          "end_to_end_seconds": 5.498
+        }
+      ],
+      "business_metrics": {
+        "selected": 9,
+        "executed": 9,
+        "blocked_before_body": 0,
+        "first_pass": 9,
+        "eventual_pass": 9,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 9,
+        "retry_overhead": 0,
+        "evidence_full": 9,
+        "cleanup_needed": 6,
+        "cleanup_success": 6,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 9,
+          "median": 0.817,
+          "min": 0.407,
+          "max": 1.111
+        }
+      },
+      "robustness_controls": {
+        "selected": 8,
+        "executed": 8,
+        "passed": 8,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 1,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    },
+    {
+      "revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+      "runs": [
+        {
+          "run_id": "mv0nfj0v-fcf1b44e",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:33:38.240Z",
+          "end_to_end_seconds": 5.783
+        },
+        {
+          "run_id": "mv0nfnvq-faeb5798",
+          "trigger": "manual-local",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:33:44.534Z",
+          "end_to_end_seconds": 13.137
+        },
+        {
+          "run_id": "mv0nhq5q-5bc239db",
+          "trigger": "windows-schedule",
+          "label": "RUN-PASSED",
+          "started_at": "2026-10-09T07:35:20.824Z",
+          "end_to_end_seconds": 8.235
+        }
+      ],
+      "business_metrics": {
+        "selected": 9,
+        "executed": 9,
+        "blocked_before_body": 0,
+        "first_pass": 9,
+        "eventual_pass": 9,
+        "failed": 0,
+        "flaky_pass": 0,
+        "attempts": 9,
+        "retry_overhead": 0,
+        "evidence_full": 9,
+        "cleanup_needed": 6,
+        "cleanup_success": 6,
+        "model_calls": 0,
+        "usage_status": "not-applicable",
+        "model_cost": 0,
+        "total_measured_money": "UNKNOWN",
+        "test_seconds": {
+          "n": 9,
+          "median": 0.867,
+          "min": 0.51,
+          "max": 1.245
+        }
+      },
+      "robustness_controls": {
+        "selected": 8,
+        "executed": 8,
+        "passed": 8,
+        "not_business_requirement_passes": true
+      },
+      "observed_scheduled_runs": 1,
+      "schedule_completeness": "Requires separate expected slot ledger; manual runs not schedule proof"
+    }
+  ]
+}

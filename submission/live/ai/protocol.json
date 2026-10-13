@@ -1,0 +1,151 @@
+{
+  "prepared_at": "2026-10-09T08:04:24.169145+00:00",
+  "mode": "ACTUAL CODEX CLI BENCHMARK INPUTS",
+  "cli_version": "codex-cli 0.160.0",
+  "requested_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "authentication": "ChatGPT (verified by codex login status; auth payload never read)",
+  "source_lab_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "U1_order": [
+    "A1",
+    "B1",
+    "C1",
+    "B2",
+    "C2",
+    "A2",
+    "C3",
+    "A3",
+    "B3"
+  ],
+  "U2_versions": [
+    "v1",
+    "v3"
+  ],
+  "U2_cases": [
+    "RG-01",
+    "RG-02",
+    "RG-03",
+    "RG-04",
+    "RG-05",
+    "RG-06",
+    "RG-07",
+    "RG-08"
+  ],
+  "fairness": "Same task/evidence/schema/model/effort/tool exposure. A/B/C change prompt and context together; attribution only to config bundle. Fresh ephemeral sessions; cache order not controlled. No human QA review-time measurement.",
+  "monetary_cost": "UNKNOWN",
+  "cost_reason": "ChatGPT auth; API rates not applied as invoice. No actual provider billing export.",
+  "input_files": {
+    "actual-evidence.json": {
+      "sha256": "648705aa92d67e61de2262f000c7c9c50cbb6a6289314150f40e540586f9d061",
+      "bytes": 1194
+    },
+    "archive-reference.md": {
+      "sha256": "4ced19a0f8f92d945f092f6c02d986a8e8a43da5ec37f07d2b41e50b9d0c2a6a",
+      "bytes": 96637
+    },
+    "decision.schema.json": {
+      "sha256": "2b03ce4b2e9adfdc70d1be7b436dfaa1e1faf8395a20bd21e72a642e5727961e",
+      "bytes": 904
+    },
+    "probe.schema.json": {
+      "sha256": "938365dcb368fd4af0ac6dbe82955b7ab88490ce219b8b968f73923faacee173",
+      "bytes": 169
+    },
+    "probe.txt": {
+      "sha256": "5eb8097cfdd5d16e214567fee9f272336b1d70d9b74bd865e5aad1358887d564",
+      "bytes": 67
+    },
+    "summary.schema.json": {
+      "sha256": "04b95dfdb9994c6317a4837cdfafbecc1dd75e3026364966ad39db2eb1866441",
+      "bytes": 1913
+    },
+    "U1-A.txt": {
+      "sha256": "d3ea4c09009a5ecaead3e0bd5ba7bc02f82345d251612d3ed5c02905491a8e8a",
+      "bytes": 100981
+    },
+    "U1-B.txt": {
+      "sha256": "2a2b080c7f02aca607427ed12c95f92db31f5adb0f4daa5830ebf689c361243e",
+      "bytes": 2282
+    },
+    "U1-C.txt": {
+      "sha256": "61a815a4a70adb36d7d81ca068bb1ff7ab47f044d80cf35dc3007392551140fc",
+      "bytes": 4466
+    },
+    "U2-fixtures.json": {
+      "sha256": "620dc4177f516a9f2b828eee89d50be2bd477b13fdb3c068f98dbcfb5e49e388",
+      "bytes": 2446
+    },
+    "U2-v1-prompt.txt": {
+      "sha256": "078c9b716bd19959812187f56781128d5f9e92ae30f8f12104e5b7c330d43e7a",
+      "bytes": 234
+    },
+    "U2-v1-RG-01.txt": {
+      "sha256": "6696a252fda8373c3cac3a1c10cfdd5cc245d847d79b5cab5bcc5eeea947ca14",
+      "bytes": 1420
+    },
+    "U2-v1-RG-02.txt": {
+      "sha256": "339c0eb9277d4577d1bb134b0085bfa63b2c52351a22f6c3e8ac943f466b014f",
+      "bytes": 1174
+    },
+    "U2-v1-RG-03.txt": {
+      "sha256": "8264b7e622e158a9dda5b9cd8592cd14220b1f584878ed5977cd15abad1e1849",
+      "bytes": 1231
+    },
+    "U2-v1-RG-04.txt": {
+      "sha256": "ea7800c897536a659761a362d355ab9bf41c4ec2b2506428b9573c2c51f8b0ff",
+      "bytes": 1317
+    },
+    "U2-v1-RG-05.txt": {
+      "sha256": "819aa82ceff89b78885259c7af3facf1a6ee140d5bacab307b4f4c2c8852e929",
+      "bytes": 1219
+    },
+    "U2-v1-RG-06.txt": {
+      "sha256": "fb0e24814f1a7fd34cd197aa2650b6d4a200142e3079e00707ac9f2c57ed64af",
+      "bytes": 1240
+    },
+    "U2-v1-RG-07.txt": {
+      "sha256": "44a483bcc9631b550011b162c272b15e0af6c3b386351042f5cb0168fdc877d1",
+      "bytes": 1129
+    },
+    "U2-v1-RG-08.txt": {
+      "sha256": "765a995f8ac74f96d2468a0debf4edb263a20ac2e7c7834a3ecb31aaaa67e5b8",
+      "bytes": 1145
+    },
+    "U2-v3-prompt.txt": {
+      "sha256": "5fcd664430482a18b643a28bc3ed87f31a4a1c590e20969f517ef5fa9825f1be",
+      "bytes": 1174
+    },
+    "U2-v3-RG-01.txt": {
+      "sha256": "448dc10323e54dc78b5a4eaecb37028459d522bf686b478e51389a417acf8c6b",
+      "bytes": 2360
+    },
+    "U2-v3-RG-02.txt": {
+      "sha256": "9a8289b3895534227c1dde65ce6b7fbc0acc33d10d6d3e045a1c1ce7e5cfe4eb",
+      "bytes": 2114
+    },
+    "U2-v3-RG-03.txt": {
+      "sha256": "06f0f0cc47394e663cc474a903dcda0dfe912ac8645cee86daf27b42bfd18642",
+      "bytes": 2171
+    },
+    "U2-v3-RG-04.txt": {
+      "sha256": "8aa797a7db52189b0531adfdd9e32333a022350317437a852ce420e3b8f149e3",
+      "bytes": 2257
+    },
+    "U2-v3-RG-05.txt": {
+      "sha256": "5dc4cff97dddbd000e1c20130a4c18305d3a02f22522a22d4e8fab3fa55ad548",
+      "bytes": 2159
+    },
+    "U2-v3-RG-06.txt": {
+      "sha256": "96a773a3a15c0354f52476644427be8e5aa1b9524d99edcc56be27eaca2cf3df",
+      "bytes": 2180
+    },
+    "U2-v3-RG-07.txt": {
+      "sha256": "363577dbf1688e8b4ba0d91c8ae317d6c1e1f52d1055f32efa5a2d824ca98eb7",
+      "bytes": 2069
+    },
+    "U2-v3-RG-08.txt": {
+      "sha256": "f753eddd832fca3b8b7d452a2714c422d1bc3eb08ceb7d5b20b8a95019b2028c",
+      "bytes": 2085
+    }
+  }
+}

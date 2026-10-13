@@ -1,0 +1,6 @@
+{
+  "gate": "REJECT",
+  "findings": [
+    "positive matching runner fixture not recognized"
+  ]
+}

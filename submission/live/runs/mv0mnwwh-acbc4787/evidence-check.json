@@ -1,0 +1,14 @@
+{
+  "mode": "LIVE",
+  "run_id": "mv0mnwwh-acbc4787",
+  "status": "INCOMPLETE",
+  "gaps": [
+    "cleanup unknown/unresolved",
+    "case 4219922fea2e2bd3c691-58b0190ef47804478632 lacks assertion/ownership metadata",
+    "case 4219922fea2e2bd3c691-58b0190ef47804478632 screenshot missing",
+    "case 4219922fea2e2bd3c691-aff42dca07351c3c1fca lacks assertion/ownership metadata",
+    "case 4219922fea2e2bd3c691-aff42dca07351c3c1fca screenshot missing",
+    "case 4219922fea2e2bd3c691-fda22b0a2107895cb2b6 lacks assertion/ownership metadata",
+    "case 4219922fea2e2bd3c691-fda22b0a2107895cb2b6 screenshot missing"
+  ]
+}

@@ -1,0 +1,9 @@
+﻿{
+    "scope":  "temporary tool dependencies only",
+    "node":  "v22.16.0",
+    "typescript":  "7.0.2",
+    "playwright_test":  "1.63.0",
+    "node_types":  "22.20.5",
+    "config_sha256":  "b2ae507ffadf138c7443768519234ffc12198fe45121ae44d4254aa60a720f07",
+    "exit_code":  0
+}

@@ -1,0 +1,23 @@
+{
+  "mode": "DISCOVERY",
+  "selected_count": 3,
+  "project": "chromium",
+  "grep": "@smoke",
+  "cases": [
+    {
+      "id": "4219922fea2e2bd3c691-58b0190ef47804478632",
+      "title": "F01 @smoke create unique employee and search exact ID + QA",
+      "flow": "F01"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-aff42dca07351c3c1fca",
+      "title": "F02 @smoke change independent owned seed department and search",
+      "flow": "F02"
+    },
+    {
+      "id": "4219922fea2e2bd3c691-fda22b0a2107895cb2b6",
+      "title": "F03 @smoke Viewer Create disabled and attempted ID absent",
+      "flow": "F03"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "scope": "ACTUAL LOCAL ARTIFACT VALIDATION, NOT APP/CI RUNTIME",
+  "date": "2026-10-07",
+  "timezone": "UTC+7",
+  "checks": [
+    {
+      "check": "17 required deliverables",
+      "status": "OK",
+      "detail": "U1_benchmark.md, U1_cost-ledger.csv, U2_context-and-prompt.md, U2_regression-matrix.md, U3_multi-flow-design.md, U3_data-and-evidence.md, U4_change-review.md, U4_PR.md, U5_ci-design.md, U5_workflow.yml, U5_playwright-config.ts, U5_run-review.md, U6_incident-triage.md, U6_recovery-and-validation.md, U7_metrics-and-claims.md, U7_risk-register.md, U7_sprint-review.md"
+    },
+    {
+      "check": "Original source unchanged: L3_AIQE_AOCE_exercises_vi.md",
+      "status": "OK",
+      "detail": "b6f6023b3a19ccdab9c7a344c9c4e4d1822331df74b19ae4e8ffba1aa9ed02f5"
+    },
+    {
+      "check": "Original source unchanged: L3_AIQE_AOCE_course_content_vi.md",
+      "status": "OK",
+      "detail": "fe0e922ca4adc832b1cc2f15f55d33a23f53d98bb5fe8e6876b854cf89dac497"
+    },
+    {
+      "check": "U1 nine sample IDs",
+      "status": "OK",
+      "detail": "A1–C3 present; no dropped rejected samples"
+    },
+    {
+      "check": "U1 source-derived cost A1",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost A2",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost A3",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost B1",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost B2",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost B3",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost C1",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost C2",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 source-derived cost C3",
+      "status": "OK",
+      "detail": "Uncached partition/model/CI/total checked against original BENCH table"
+    },
+    {
+      "check": "U1 rubric scores/ledger consistency",
+      "status": "OK",
+      "detail": "A=10, B=1, C1/2=10, C3=5; hard gates separate"
+    },
+    {
+      "check": "U1 all-sample config cost bounds",
+      "status": "OK",
+      "detail": "C accepted=2; rejected C3 contributes known CI; total remains UNKNOWN"
+    },
+    {
+      "check": "U1 config median A",
+      "status": "OK",
+      "detail": "Latency/QA calculated independently from source rows"
+    },
+    {
+      "check": "U1 config median B",
+      "status": "OK",
+      "detail": "Latency/QA calculated independently from source rows"
+    },
+    {
+      "check": "U1 config median C",
+      "status": "OK",
+      "detail": "Latency/QA calculated independently from source rows"
+    },
+    {
+      "check": "U2 compact word budget",
+      "status": "OK",
+      "detail": "182 whitespace-delimited words; limit250, not tokens"
+    },
+    {
+      "check": "U2 eight fragment IDs",
+      "status": "OK",
+      "detail": "Keep/drop/quarantine source manifest"
+    },
+    {
+      "check": "U2 eight fixtures and >=2 negatives",
+      "status": "OK",
+      "detail": "Walkthrough only; no model/runner executed"
+    },
+    {
+      "check": "U3 three flow contracts/stop scenarios",
+      "status": "OK",
+      "detail": "Structural coverage only; UI/backend boundary reviewed semantically"
+    },
+    {
+      "check": "U5 YAML syntax + minimum permissions",
+      "status": "OK",
+      "detail": "PyYAML parse; no GitHub execution/actionlint claim"
+    },
+    {
+      "check": "U5 cron UTC conversion",
+      "status": "OK",
+      "detail": "18:17 UTC -> 01:17 next Vietnam day"
+    },
+    {
+      "check": "U5 environment concurrency/no forced cancellation",
+      "status": "OK",
+      "detail": "Shared environment group; not cross-repo lock"
+    },
+    {
+      "check": "U5 live authorization gates",
+      "status": "OK",
+      "detail": "Actual variables/repo/manual proof absent; no deployment"
+    },
+    {
+      "check": "U5 no suppressed failures or no-tests pass",
+      "status": "OK",
+      "detail": "Wrapper script implementations still prerequisite"
+    },
+    {
+      "check": "U5 failure artifact export",
+      "status": "OK",
+      "detail": "Safe export paths; force cancel still requires external reconciler"
+    },
+    {
+      "check": "U5 actual draft config typecheck and hash",
+      "status": "OK",
+      "detail": "tsc 7.0.2, Playwright types 1.63.0, Node types 22.20.5; config unchanged since compile; not live project runtime"
+    },
+    {
+      "check": "U5 eight scenarios/three packets",
+      "status": "OK",
+      "detail": "Source cards addressed, not actual CI evidence"
+    },
+    {
+      "check": "U6 incidents/retry outcomes/negative controls",
+      "status": "OK",
+      "detail": "4 incidents, 3 retry outcomes, >=2 proposed negative controls"
+    },
+    {
+      "check": "U7 all 10 source rows preserved",
+      "status": "OK",
+      "detail": "Outcome/attempts/evidence/cleanup/calls/usage/cost/time checked against original table"
+    },
+    {
+      "check": "U7 denominators/outcome partitions",
+      "status": "OK",
+      "detail": "selected10/executed8/attempts11/pass4+2/fail2/full7/cleanup4of6/fullpasses5"
+    },
+    {
+      "check": "U7 source-derived subtotal and lower-bound cost",
+      "status": "OK",
+      "detail": "All cohort costs included; E08 missing model usage !=zero"
+    },
+    {
+      "check": "U7 test-duration stats",
+      "status": "OK",
+      "detail": "n8, excludes not-executed; not E2E latency"
+    },
+    {
+      "check": "U7 schedule source-derived metrics",
+      "status": "OK",
+      "detail": "Completeness3/4; SL-04 missing, no zero fill"
+    },
+    {
+      "check": "U7 >=6 complete risk rows",
+      "status": "OK",
+      "detail": "10 proposed risk rows with source/control/detection/owner/action/closure/residual"
+    },
+    {
+      "check": "All local Markdown links resolve",
+      "status": "OK",
+      "detail": "All referenced files present"
+    },
+    {
+      "check": "Draft/manual-first provenance disclosed",
+      "status": "OK",
+      "detail": "AI-authored draft; no fabricated human/peer review"
+    },
+    {
+      "check": "No deployed workflow or app/auth payload created",
+      "status": "OK",
+      "detail": "Submission-only drafts; original workspace documents preserved"
+    }
+  ],
+  "errors": 0
+}

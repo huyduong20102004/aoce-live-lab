@@ -1,0 +1,38 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "A",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "REQ-PACKET-AOCE",
+    "AC-EMP-01",
+    "AC-EMP-02",
+    "POLICY-PACKET-AOCE",
+    "LAB-AOCE-05",
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+    "tests/e2e/smoke.spec.ts",
+    "L3_AIQE_AOCE_exercises_vi.md",
+    "L3_AIQE_AOCE_course_content_vi.md"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing",
+    "Search SLA, API endpoint, audit schema, role enforcement backend, actual pricing and production permissions: Not specified in REQ-PACKET-AOCE.",
+    "No live budget supplied; one runner retry after proven safe setup/cleanup, one tool read recovery and 20 minutes/run are design parameters."
+  ],
+  "rationale": "Supplied actual local Playwright evidence matches the stated run, attempt, flow and revision. F01 assertions prove absence before creation, one exact search row, visible QA department, exact-ID lookup and one owned write, satisfying AC-EMP-01/02. Supplied cleanup evidence reports success and record absence afterward. No new write, retry or cleanup is needed; LAB-AOCE-05 requires stopping mutations and reconciling any unknown write before retry. The referenced archive documents and their fixture results remain synthetic provenance only; conflicting archive statements are ignored as current proof. Runtime model calls were 0; subscription tokens do not establish billable monetary cost."
+}

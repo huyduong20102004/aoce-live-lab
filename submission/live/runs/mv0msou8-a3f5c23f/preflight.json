@@ -1,0 +1,16 @@
+{
+  "mode": "LIVE",
+  "status": "READY",
+  "run_id": "mv0msou8-a3f5c23f",
+  "code_revision": "f9a0f8721ec9e11667050b1192abe686da7810ae",
+  "app_build": "portallite-local-1",
+  "actors": [
+    "HR Admin",
+    "Viewer"
+  ],
+  "namespace": "E2E-AOCE-<suiteRun>-<caseHash>-<attempt>-<flow>",
+  "character_limit": 100,
+  "lease": "acquired",
+  "durable_ledger": true,
+  "time": "2026-10-09T07:15:52.763Z"
+}

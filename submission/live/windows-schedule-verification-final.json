@@ -1,0 +1,9 @@
+﻿{
+    "TaskName":  "AOCE-PortalLite-Live-Smoke",
+    "LastRunTime":  "2026-10-09T14:35:35.0000000+07:00",
+    "LastTaskResult":  0,
+    "NextRunTime":  null,
+    "NumberOfMissedRuns":  0,
+    "TriggerStartBoundary":  "2026-10-09T14:35:20+07:00",
+    "Timezone":  "SE Asia Standard Time"
+}

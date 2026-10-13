@@ -1,0 +1,10 @@
+sample,input_total,cached,uncached,output,model_cost,ci_cost,measured_total,usage_status,quality_score,gate,reason
+A1,18000,2000,16000,2400,0.0261,0.080,0.1061,COMPLETE,10,ACCEPT,Required ID+department; matching EV-bench-1; owned cleanup; SIMULATED
+A2,17500,1500,16000,2300,0.025575,0.082,0.107575,COMPLETE,10,ACCEPT,Required ID+department; matching EV-bench-1; owned cleanup; SIMULATED
+A3,19000,2000,17000,2500,0.0275,0.084,0.1115,COMPLETE,10,ACCEPT,Required ID+department; matching EV-bench-1; owned cleanup; SIMULATED
+B1,6000,1000,5000,900,0.00885,0.070,0.07885,COMPLETE,1,REJECT,Missing department oracle; toast-only pass; unowned cleanup; missing synthetic label
+B2,6200,1000,5200,950,0.00925,0.072,0.08125,COMPLETE,1,REJECT,Missing department oracle; toast-only pass; unowned cleanup; missing synthetic label
+B3,5900,900,5000,920,0.008905,0.068,0.076905,COMPLETE,1,REJECT,Missing department oracle; toast-only pass; unowned cleanup; missing synthetic label
+C1,8500,1500,7000,1400,0.012975,0.074,0.086975,COMPLETE,10,ACCEPT,Required ID+department; matching EV-bench-1; owned cleanup; SIMULATED
+C2,8200,1200,7000,1450,0.0131,0.076,0.0891,COMPLETE,10,ACCEPT,Required ID+department; matching EV-bench-1; owned cleanup; SIMULATED
+C3,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,0.078,UNKNOWN,MISSING,5,REJECT,EV-other-1 belongs to bench-previous; current-pass unsupported; usage missing

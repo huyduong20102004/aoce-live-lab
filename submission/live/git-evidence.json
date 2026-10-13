@@ -1,0 +1,104 @@
+{
+  "mode": "ACTUAL LOCAL GIT EVIDENCE",
+  "generated_at": "2026-10-09T07:36:14.440547+00:00",
+  "branch": "feat/aoce-local-live",
+  "revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "status_porcelain": "",
+  "remotes": "",
+  "commits": [
+    {
+      "sha": "68ae69680f53e68e541813c0f044c5d22067389a",
+      "author": "AOCE Lab Automation",
+      "subject": "Use actual cleanup applicability and render complete metrics table"
+    },
+    {
+      "sha": "39902a624538d91b9ce0c6bbbb92260481b2abe2",
+      "author": "AOCE Lab Automation",
+      "subject": "Verify actual F02 seed before routing and keep pre-body blocks out of metrics"
+    },
+    {
+      "sha": "d250e708264345ad2c6b700e9c66d19232c012c3",
+      "author": "AOCE Lab Automation",
+      "subject": "Redact helper capabilities and session headers from exported errors"
+    },
+    {
+      "sha": "8da3165ce08ebc090dbd13679214fcbf5c7edfe9",
+      "author": "AOCE Lab Automation",
+      "subject": "Classify zero-test discovery as explicit nonzero NO-TESTS"
+    },
+    {
+      "sha": "b4f9af08af98236f698b11b9471138fb7d0b47bc",
+      "author": "AOCE Lab Automation",
+      "subject": "Gate schedules on matching manual evidence and verify failure guards"
+    },
+    {
+      "sha": "f9a0f8721ec9e11667050b1192abe686da7810ae",
+      "author": "AOCE Lab Automation",
+      "subject": "Scope department by accessible combobox and preserve screenshot bodies"
+    },
+    {
+      "sha": "47f0fab3bab844307774c3f52f3cbc96f6de21fe",
+      "author": "AOCE Lab Automation",
+      "subject": "Use runner-managed tracing and fresh helper HTTP connections"
+    },
+    {
+      "sha": "76f4b77330711e13c358a1770bb895195cffb1c1",
+      "author": "AOCE Lab Automation",
+      "subject": "Correct native fetch readiness response before browser execution"
+    },
+    {
+      "sha": "0565842df95421db138cc0f0181e78062d371838",
+      "author": "AOCE Lab Automation",
+      "subject": "Implement reviewed browser flows, recovery controls and evidence pipeline"
+    },
+    {
+      "sha": "6f19de87baab33d3feeb1d36fab52e8cf5f79fb9",
+      "author": "AOCE Lab Automation",
+      "subject": "Create isolated PortalLite application and owned data contract"
+    }
+  ],
+  "tracked_files": [
+    ".env.example",
+    ".github/workflows/lab.yml",
+    ".gitignore",
+    "README.md",
+    "controller/contracts.ts",
+    "docs/LOCAL-LAB-CONTRACT.md",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.ts",
+    "public/app.js",
+    "public/directory.html",
+    "public/directory.js",
+    "public/favicon.svg",
+    "public/index.html",
+    "public/style.css",
+    "reporters/manifest.ts",
+    "scripts/cli.mjs",
+    "scripts/init.mjs",
+    "scripts/live-run.mjs",
+    "scripts/metrics.mjs",
+    "scripts/runtime-guard-check.mjs",
+    "scripts/runtime.mjs",
+    "scripts/schedule.ps1",
+    "scripts/scheduled-entry.ps1",
+    "scripts/watchdog.mjs",
+    "server/lib.mjs",
+    "server/server.mjs",
+    "tests/controller-regression.test.ts",
+    "tests/e2e/controls.spec.ts",
+    "tests/e2e/smoke.spec.ts",
+    "tests/elements/EmployeeElements.ts",
+    "tests/fixtures/lab.ts",
+    "tests/pages/EmployeePage.ts",
+    "tests/steps/EmployeeSteps.ts",
+    "tsconfig.json"
+  ],
+  "node": "v22.16.0",
+  "tool_versions": {
+    "@playwright/test": "1.63.0",
+    "typescript": "7.0.2",
+    "tsx": "4.20.6",
+    "@types/node": "22.20.5"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "C",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "REQ-PACKET-AOCE",
+    "POLICY-PACKET-AOCE",
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+    "tests/e2e/smoke.spec.ts"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing",
+    "Search SLA, API endpoint, audit schema, role enforcement backend, actual pricing and production permissions: Not specified",
+    "No live budget granted"
+  ],
+  "rationale": "Matching actual local Playwright evidence and reviewed F01 assertions prove the ID was absent before creation, exactly one matching search row appeared with QA visible, and exact-ID lookup confirmed one owned write. This satisfies AC-EMP-01 and AC-EMP-02. The matching cleanup ledger reports owned-ID-only success and record absence afterward. Manifest SHA-256: 5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78; app build: portallite-local-1. Runtime model calls: 0; no monetary cost is inferred. No new execution, retry or cleanup was performed."
+}

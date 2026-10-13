@@ -1,0 +1,38 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "C",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "REQ-PACKET-AOCE",
+    "POLICY-PACKET-AOCE",
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+    "tests/e2e/smoke.spec.ts"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing",
+    "Search SLA: Not specified",
+    "API endpoint: Not specified",
+    "Audit schema: Not specified",
+    "Backend role enforcement: Not specified",
+    "Actual pricing: Not specified",
+    "Production permissions: Not specified",
+    "Live budget allocation: not supplied; policy budgets are design parameters"
+  ],
+  "rationale": "The supplied matching local Playwright runner passed. Reviewed F01 assertions establish absence before creation, exactly one search row, exact employee-ID lookup, visible QA department, and one owned write, proving AC-EMP-01 and AC-EMP-02. Manifest SHA-256: 5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78. The matching independent cleanup ledger reports successful owned-ID-only cleanup and record absence afterward. No new execution, write, retry, or cleanup is needed. Previous-run, fixture/archive, toast, and stale observations provide no current proof. Zero runtime model calls does not establish monetary cost."
+}

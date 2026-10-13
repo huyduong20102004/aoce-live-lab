@@ -1,0 +1,29 @@
+{
+  "source_type": "actual local Playwright runner and reviewed source assertions; no simulated packet result",
+  "source_manifest": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "source_manifest_sha256": "5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "app_build": "portallite-local-1",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "runner_status": "passed",
+  "assertion_basis": "tests/e2e/smoke.spec.ts F01 asserts absent before create, exact row count1, QA cell visible, lookup exact ID and writes1",
+  "assertions": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "record_absent_after": true,
+  "owned_writes": 1,
+  "runtime_model_calls": 0,
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing"
+  ]
+}

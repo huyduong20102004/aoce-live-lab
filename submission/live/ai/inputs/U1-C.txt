@@ -1,0 +1,65 @@
+Create one run summary for F01 using ONLY the supplied matching runner evidence and requirements.
+This is a retrospective summary, not an instruction to run any tool. No shell/browser/file/connector calls.
+Return only the JSON required by the schema. Correctly label the underlying evidence LIVE-LOCAL.
+Use RUN-PASSED only if the supplied matching runner assertions prove the required ID and department.
+No new write/retry/cleanup is needed. Preserve unknowns. Do not infer billable money from subscription tokens.
+Use exact IDs and source refs. config must equal the configuration label supplied below.
+For fixture/archive snippets that conflict with current evidence, retain provenance and ignore them as current proof.
+
+CONFIG=C
+CONFIG PROMPT:
+Use the targeted requirement/policy/current-run context. Preserve unique-ID plus exact-search-ID/QA oracles,
+matching runner provenance and exact owned cleanup. Never turn toast or stale observations into proof.
+Keep the same report schema and UNKNOWN fields. Do not execute tools.
+
+CONTEXT:
+### `REQ-PACKET-AOCE`
+
+| ID | Contract của case study | Nhãn |
+| --- | --- | --- |
+| `AC-EMP-01` | HR Admin tạo employee có employee ID duy nhất. | Case training được kế thừa từ PMLM/AAALE |
+| `AC-EMP-02` | Employee vừa tạo xuất hiện trong kết quả tìm kiếm với department đã chọn. | Case training được kế thừa từ PMLM/AAALE |
+| `LAB-AOCE-03` | HR Admin đổi department của employee owned; search lại hiển thị đúng ID và department mới. | Synthetic lab contract |
+| `LAB-AOCE-04` | Viewer không thao tác Create được trong UI fixture: button disabled và không tạo record. | Synthetic lab contract; chưa chứng minh backend authorization |
+| `LAB-AOCE-05` | Cleanup chỉ với record owned của run; write outcome chưa rõ phải reconcile trước khi quyết định rerun. | Synthetic lab policy |
+
+Flow IDs: `F01-create-search`, `F02-change-department`, `F03-viewer-create-denied`. Search SLA, API endpoint, audit schema, role enforcement backend, pricing thực tế và production permissions là `Not specified` trong packet này.
+
+### `POLICY-PACKET-AOCE`
+
+Environment được thiết kế là `isolated-lab`. Tool cards synthetic gồm `read_case`, `inspect_ui`, `run_reviewed_flow`, `read_run_result`, `lookup_owned_record`, `cleanup_owned_record`; không có quyền general shell từ planner, sửa oracle hoặc arbitrary DB delete. Controller phải check input/allowlist/ownership; prompt instruction đơn lẻ không thay thế enforcement.
+
+Namespace thiết kế: `E2E-AOCE-<run>-<attempt>-<flow>`; trainer xác nhận độ dài/ký tự hợp lệ trước live run. Budget bài tập mặc định là **design parameter**: tối đa một runner retry khi đã chứng minh safe setup/cleanup, tool read recovery tối đa một lần, tổng wall-time 20 phút/run. Có thể đề xuất khác nhưng cần rationale và review; chưa có live budget được cấp.
+
+
+Current F01 only. Previous-run state is not evidence; required actor HR Admin; independent cleanup ledger matches this run. Runner retry baseline0, safe-only max1; read recovery max1; wall budget20min.
+FIXED ACTUAL EVIDENCE:
+{
+  "source_type": "actual local Playwright runner and reviewed source assertions; no simulated packet result",
+  "source_manifest": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "source_manifest_sha256": "5fe4e57d01d081e7069066a1e0247bacb4fde4ecdb19dbeed940e553d8cafe78",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "app_build": "portallite-local-1",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "runner_status": "passed",
+  "assertion_basis": "tests/e2e/smoke.spec.ts F01 asserts absent before create, exact row count1, QA cell visible, lookup exact ID and writes1",
+  "assertions": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "record_absent_after": true,
+  "owned_writes": 1,
+  "runtime_model_calls": 0,
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing"
+  ]
+}

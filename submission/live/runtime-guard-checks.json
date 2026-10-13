@@ -1,0 +1,27 @@
+{
+  "mode": "LIVE-LOCAL SCRIPT GUARD CHECK",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "checks": [
+    {
+      "scenario": "CI-52",
+      "required": "missing secret must block",
+      "exit_code": 1,
+      "detected": true,
+      "writes": 0
+    },
+    {
+      "scenario": "CI-53",
+      "required": "no tests must fail",
+      "exit_code": 8,
+      "detected": true,
+      "writes": 0
+    },
+    {
+      "scenario": "LOCAL-TRIGGER",
+      "required": "manual invocation cannot claim GitHub schedule",
+      "exit_code": 1,
+      "detected": true,
+      "writes": 0
+    }
+  ]
+}

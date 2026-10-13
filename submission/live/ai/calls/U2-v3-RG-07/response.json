@@ -1,0 +1,19 @@
+{
+  "fixture": "RG-07",
+  "mode": "SIMULATED",
+  "action": "REJECT_BEFORE_DISPATCH",
+  "verdict": "REJECTED",
+  "tool_calls": [],
+  "mutations_frozen": true,
+  "required_oracles": [
+    "AC-EMP-01/02: unique ID, exact search ID, selected department",
+    "Matching runner assertions bound to the validated run, attempt, flow, and revision"
+  ],
+  "evidence_gaps": [
+    "F99 is unknown; no reviewed flow mapping is supplied",
+    "Required source, attempt, and revision are missing",
+    "Trusted actor validation and environment allowlist evidence are absent",
+    "Runner result and write state are unavailable"
+  ],
+  "reason": "Unknown flow F99 must be rejected before dispatch. Missing validation and result/state prohibit a write attempt. This synthetic packet establishes no live application pass."
+}

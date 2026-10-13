@@ -1,0 +1,29 @@
+{
+  "mode": "LIVE-LOCAL",
+  "run_id": "mv0nfj0v-fcf1b44e",
+  "attempt_id": "a1",
+  "flow_id": "F01-create-search",
+  "actor": "HR Admin",
+  "code_revision": "68ae69680f53e68e541813c0f044c5d22067389a",
+  "config": "B",
+  "employee_id": "E2E-AOCE-mv0nfj0v-fcf1b44e-c2bda1e30-a1-F01",
+  "expected_department": "QA",
+  "observed_department": "QA",
+  "source_refs": [
+    "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+    "tests/e2e/smoke.spec.ts"
+  ],
+  "oracle_checks": {
+    "unique_id": true,
+    "exact_search_id": true,
+    "department": true
+  },
+  "runner_evidence_ref": "bai-nop-AOCE/live/runs/mv0nfj0v-fcf1b44e/manifest.json",
+  "verdict": "RUN-PASSED",
+  "cleanup_scope": "owned-id-only",
+  "cleanup_outcome": "success",
+  "unknowns": [
+    "actual monetary cost of this Codex invocation unavailable from ChatGPT subscription billing"
+  ],
+  "rationale": "Matching local runner assertions prove HR Admin created a unique employee ID and search returned exactly that ID with department QA. One owned write occurred; cleanup succeeded and the record was absent afterward."
+}
