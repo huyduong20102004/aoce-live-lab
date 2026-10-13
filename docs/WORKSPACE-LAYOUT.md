@@ -28,6 +28,6 @@ AIQE Agent Optimization & CI Execution/
 
 `bai-nop-AOCE` là bản bài nộp làm việc tại máy. `aoce-live-lab/submission` là bản đã xuất bản trong repo Git; cấu trúc của bản này thuộc lịch sử commit riêng. Thư mục app giữ nguyên đường dẫn để server, scripts và gate kiểm tra SHA tiếp tục hoạt động.
 
-Bài nộp trên GitHub: [bản chính](https://github.com/huyduong20102004/aoce-live-lab/tree/main/submission), [bằng chứng bổ sung](https://github.com/huyduong20102004/aoce-live-lab/tree/evidence/recovery-schedule-20261013/submission/remaining-checks).
+Bài nộp trên GitHub: [bản chính](https://github.com/huyduong20102004/aoce-live-lab/tree/main/submission), [bằng chứng bổ sung](https://github.com/huyduong20102004/aoce-live-lab/tree/main/submission/remaining-checks).
 
 Từ thư mục workspace, kiểm tra bài giải bằng `python bai-nop-AOCE/tools/validate.py`; kiểm tra bằng chứng mới nhất bằng `python bai-nop-AOCE/live/recovery/tools/validate_remaining.py`.
