@@ -9,6 +9,7 @@
     "start": "node server/server.mjs",
     "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
     "context:regression": "node node_modules/tsx/dist/cli.mjs --test tests/controller-regression.test.ts",
+    "ci:checks": "node scripts/ci-static.mjs",
     "test": "node scripts/live-run.mjs --suite=all",
     "lab:smoke": "node scripts/live-run.mjs --suite=smoke",
     "lab:preflight": "node scripts/cli.mjs preflight",

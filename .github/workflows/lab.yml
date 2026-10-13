@@ -25,9 +25,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npm run typecheck
-      - run: npm run context:regression
-      - run: npm run lab:discover
+      - name: Collect static checks, context regression and nonempty discovery
+        run: npm run ci:checks
       - if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
@@ -42,6 +41,9 @@ jobs:
            (vars.AOCE_SCHEDULE_ENABLED == 'true' && vars.AOCE_MANUAL_VALIDATED_REVISION == github.sha)) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      LAB_EVIDENCE_DIR: evidence-export/live
+      LAB_RUN_ID: gh-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -62,6 +64,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: live-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ../bai-nop-AOCE/live/runs/
+          path: evidence-export/live/
           if-no-files-found: error
           retention-days: 7

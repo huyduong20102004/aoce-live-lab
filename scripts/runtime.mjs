@@ -95,7 +95,12 @@ export function execute(grep = '@smoke') {
   const manifest = readJson(path.join(runDir(), 'manifest.json'));
   const ready = readJson(path.join(runDir(), 'preflight.json'));
   if (!ready || ready.code_revision !== revision() || manifest.deadline < Date.now() + 60000) throw new Error('Preflight/revision/budget gate failed');
-  const result = cli(['test', '--project=chromium', ...(grep ? [`--grep=${grep}`] : [])], { timeout: Math.min(720000, manifest.deadline - Date.now() - 60000) });
+  const result = cli(['test', '--project=chromium', ...(grep ? [`--grep=${grep}`] : [])], { capture: true, timeout: Math.min(720000, manifest.deadline - Date.now() - 60000) });
+  // Raw runner output may include auth headers on failures. Keep it private; emit only redacted text.
+  fs.writeFileSync(path.join(runDir(),'runner.stdout.log'), result.stdout || '');
+  fs.writeFileSync(path.join(runDir(),'runner.stderr.log'), result.stderr || '');
+  if (result.stdout) console.log(redact(result.stdout));
+  if (result.stderr) console.error(redact(result.stderr));
   if (result.error || result.status !== 0) throw Object.assign(new Error(result.error ? 'Runner timed out/environment error' : 'Runner assertions failed'), { exitCode: result.status || 10 });
 }
 export async function reconcile() {
@@ -155,7 +160,11 @@ export function evidence() {
 export function shaFile(file) { return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'); }
 export function exportEvidence() {
   const manifest = readJson(path.join(runDir(), 'manifest.json'));
-  const destination = path.join(path.dirname(ROOT), 'bai-nop-AOCE', 'live', 'runs', runId());
+  if (process.env.LAB_EVIDENCE_DIR && process.env.LAB_EVIDENCE_DIR !== 'evidence-export/live')
+    throw new Error('Only the reviewed in-repo CI export directory is allowed');
+  const destination = process.env.LAB_EVIDENCE_DIR
+    ? path.join(ROOT,'evidence-export','live',runId())
+    : path.join(path.dirname(ROOT), 'bai-nop-AOCE', 'live', 'runs', runId());
   fs.mkdirSync(destination, { recursive: true });
   const sanitize=value=>typeof value==='string' ? redact(value) : Array.isArray(value) ? value.map(sanitize) :
     value && typeof value==='object' ? Object.fromEntries(Object.entries(value).map(([key,item])=>[key,sanitize(item)])) : value;
@@ -167,6 +176,6 @@ export function exportEvidence() {
     const file = path.join(ROOT, artifact.path);
     if (fs.existsSync(file)) fs.copyFileSync(file, path.join(destination, `${item.flow}-${crypto.createHash('sha256').update(item.logical_case_id).digest('hex').slice(0,12)}-${artifact.name}.png`));
   }
-  console.log(`Sanitized evidence exported: bai-nop-AOCE/live/runs/${runId()}`);
+  console.log(`Sanitized evidence exported: ${process.env.LAB_EVIDENCE_DIR ? 'evidence-export/live' : 'bai-nop-AOCE/live/runs'}/${runId()}`);
   return destination;
 }
