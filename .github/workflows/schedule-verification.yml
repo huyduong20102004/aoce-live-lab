@@ -1,0 +1,12 @@
+name: AOCE actual schedule verification
+"on":
+  schedule:
+    - cron: '*/5 * * * *'
+permissions:
+  contents: read
+jobs:
+  verified-smoke:
+    if: ${{ vars.AOCE_VERIFY_SCHEDULE_ENABLED == 'true' }}
+    uses: ./.github/workflows/lab.yml
+    with:
+      schedule_purpose: verification

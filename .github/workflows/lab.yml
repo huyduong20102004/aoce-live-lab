@@ -2,6 +2,12 @@ name: AOCE isolated local application
 "on":
   pull_request:
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      schedule_purpose:
+        type: string
+        required: false
+        default: daily
   schedule:
     - cron: '17 18 * * *'
 permissions:
@@ -38,12 +44,15 @@ jobs:
       ${{ github.event_name != 'pull_request' &&
           github.ref_name == github.event.repository.default_branch &&
           (github.event_name == 'workflow_dispatch' ||
-           (vars.AOCE_SCHEDULE_ENABLED == 'true' && vars.AOCE_MANUAL_VALIDATED_REVISION == github.sha)) }}
+           (vars.AOCE_SCHEDULE_ENABLED == 'true' && vars.AOCE_MANUAL_VALIDATED_REVISION == github.sha &&
+            (inputs.schedule_purpose != 'verification' || vars.AOCE_VERIFY_SCHEDULE_ENABLED == 'true'))) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
       LAB_EVIDENCE_DIR: evidence-export/live
       LAB_RUN_ID: gh-${{ github.run_id }}-${{ github.run_attempt }}
+      LAB_SCHEDULE_PURPOSE: ${{ inputs.schedule_purpose || 'daily' }}
+      LAB_SCHEDULE_EXPRESSION: ${{ github.event.schedule }}
     steps:
       - uses: actions/checkout@v6
         with:

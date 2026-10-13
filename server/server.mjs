@@ -102,8 +102,10 @@ const server = http.createServer(async (req, res) => {
         (r.deadline > Date.now() || Object.values(r.records).some(v => v.writeState !== 'NOT_WRITTEN' && v.cleanup !== 'success' && v.cleanup !== 'absent')));
       if (blocking) throw failure(409, 'Lab lease busy or unresolved owned data; reconcile first');
       const token = crypto.randomBytes(32).toString('base64url');
+      const leaseMs=input.leaseMs ?? 1200000;
+      if (!Number.isInteger(leaseMs) || leaseMs<2000 || leaseMs>1200000) throw failure(400,'Lease must be between2 seconds and20 minutes');
       state.runs[input.runId] = { runId: input.runId, tokenHash: sha(token), revision: input.revision,
-        started: new Date().toISOString(), deadline: Date.now() + 1200000, released: false, records: {} };
+        started: new Date().toISOString(), deadline: Date.now() + leaseMs, released: false, records: {} };
       audit('run-registered', { runId: input.runId, revision: input.revision });
       json(res, 201, { runId: input.runId, token, deadline: state.runs[input.runId].deadline }); return;
     }

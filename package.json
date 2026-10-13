@@ -18,6 +18,7 @@
     "lab:reconcile": "node scripts/cli.mjs reconcile",
     "lab:evidence": "node scripts/cli.mjs evidence",
     "lab:watchdog": "node scripts/watchdog.mjs",
+    "lab:cancel-drill": "node scripts/cancel-drill.mjs",
     "lab:metrics": "node scripts/metrics.mjs",
     "lab:scheduled": "node scripts/live-run.mjs --suite=smoke --trigger=windows-schedule"
   },

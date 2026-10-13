@@ -23,7 +23,9 @@ export function bootstrap(trigger = 'manual-local', suite = 'smoke') {
   const file = path.join(runDir(), 'manifest.json');
   if (fs.existsSync(file)) throw new Error('Never overwrite previous run evidence');
   atomicJson(file, { schema_version: 'aoce-live-run-1', run_id: runId(), code_revision: ref, mode: 'LIVE', label: 'NOT_STARTED',
-    trigger, suite, scheduler_task: trigger === 'windows-schedule' ? process.env.AOCE_SCHEDULER_TASK : null,
+    trigger, suite, schedule_purpose: process.env.LAB_SCHEDULE_PURPOSE || null,
+    schedule_expression: process.env.LAB_SCHEDULE_EXPRESSION || null,
+    scheduler_task: trigger === 'windows-schedule' ? process.env.AOCE_SCHEDULER_TASK : null,
     github_run_url: process.env.GITHUB_ACTIONS === 'true' ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}` : null,
     environment_alias: 'isolated-lab', app_build: BUILD, started_at: new Date().toISOString(),
     deadline: Date.now() + 1200000, command: suite === 'smoke' ? 'playwright test --project=chromium --grep=@smoke' : 'playwright test --project=chromium',
@@ -59,8 +61,12 @@ export async function preflight() {
   if ((await admin('/api/me')).role !== 'HR Admin' || (await viewer('/api/me')).role !== 'Viewer') throw new Error('Role mismatch');
   const grantFile = path.join(PRIVATE, 'grants', runId() + '.json');
   if (!fs.existsSync(grantFile)) {
-    const result = await admin('/api/lab/runs', { method: 'POST', body: JSON.stringify({ runId: runId(), revision: manifest.code_revision }) });
+    const leaseMs=process.env.LAB_LEASE_MS ? Number(process.env.LAB_LEASE_MS) : 1200000;
+    if (!Number.isInteger(leaseMs) || leaseMs<2000 || leaseMs>1200000) throw new Error('Invalid reviewed lease duration');
+    const requestTime=Date.now();
+    const result = await admin('/api/lab/runs', { method: 'POST', body: JSON.stringify({ runId: runId(), revision: manifest.code_revision, leaseMs }) });
     atomicJson(grantFile, { ...result, revision: manifest.code_revision });
+    if(result.deadline>requestTime+leaseMs+2000) throw new Error('Server did not enforce requested lease; reconcile before any repeat');
   }
   atomicJson(path.join(runDir(), 'preflight.json'), { mode: 'LIVE', status: 'READY', run_id: runId(), code_revision: manifest.code_revision,
     app_build: app.build, actors: ['HR Admin', 'Viewer'], namespace: 'E2E-AOCE-<suiteRun>-<caseHash>-<attempt>-<flow>',
